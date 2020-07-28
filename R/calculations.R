@@ -86,3 +86,67 @@ BinningUR <- function(){
 
   )
 }
+
+# 5. Borman 2012 --------------------------------------------------------------
+
+Borman2012 <- function(){
+  
+  rbind(
+    # Table 6 Outcome is reported in standard deviations of 2012 test score, so it is technically an effect size already
+    
+    # MCA Reading & Math scores
+    
+    # Minority subgroup
+    c("Borman","2012","No","Minority subgroup-Black","MCA reading score","Yes",
+      getgv(0.023, 0.049^2, 401-1)),
+    c("Borman","2012","No","Minority subgroup-Black","MCA math score","Yes",
+      getgv(0.073, 0.054^2, 403-1)),
+    c("Borman","2012","No","Minority subgroup-Hispanic","MCA reading score","Yes",
+      getgv(0.055, 0.084^2, 187-1)),
+    c("Borman","2012","No","Minority subgroup-Hispanic","MCA math score","Yes",
+      getgv(0.053, 0.074^2, 186-1)),
+    c("Borman","2012","No","Minority subgroup-Female","MCA reading score","Yes",
+      getgv(0.019, 0.039^2, 651-1)),
+    c("Borman","2012","No","Minority subgroup-Female","MCA math score","Yes",
+      getgv(0.104, 0.035^2, 654-1)),
+    # Majority subgroup
+    c("Borman","2012","No","Majority subgroup-Asian","MCA reading score","Yes",
+      getgv(-0.066, 0.050^2, 341-1)),
+    c("Borman","2012","No","Majority subgroup-Asian","MCA math score","Yes",
+      getgv(-0.075, 0.046^2, 342-1)),
+    c("Borman","2012","No","Majority subgroup-Male","MCA reading score","Yes",
+      getgv(-0.022, 0.042^2, 667-1)),
+    c("Borman","2012","No","Majority subgroup-Male","MCA math score","Yes",
+      getgv(-0.005, 0.039^2, 668-1))
+    
+  )
+  
+}
+
+# 6. Borman 2015 --------------------------------------------------------------
+
+Borman2015 <- function(){
+  
+  c("Borman", "2015", "No", rep(NA,7))
+  
+}
+
+# 7. Borman 2016 --------------------------------------------------------------
+Borman2016 <- function(){
+  
+  rbind(
+    c("Borman","2016","No","Interaction-URM","7th GPA","Yes",
+      d2g(0.11, 506, 506)),
+    c("Borman","2016","No","Interaction-URM","Fall Reading test","Yes",
+      d2g(0, 463, 463)),
+    c("Borman","2016","No","Interaction-URM","Fall Math test","Yes",
+      d2g(0.09, 463, 463)),
+    c("Borman","2016","No","Interaction-URM","Spring Reading test","Yes",
+      d2g(0.01, 463, 463)),
+    c("Borman","2016","No","Interaction-URM","Spring Math test","Yes",
+      d2g(0.08, 463, 463)),
+    c("Borman","2016","No","Interaction-URM","Spring Language Usage test","Yes",
+      d2g(0.04, 463, 463))
+  )
+  
+}
