@@ -145,7 +145,7 @@ dat[x,4] <- "No"
 dat[x,5] <- "Main"
 dat[x,6] <- "Amount of time until withdraw from class"
 dat[x,7] <- "No"
-dat[x,c(8:11)] <- mes(2.30, 2.32, 1.30, 1.23, 564, 541,dig = 5)[1,12:15]
+dat[x,c(8:11)] <- mes(67.32, 65.23, 24.98, 24.57, 564, 541,dig = 5)[1,12:15]
 
 
 ```
