@@ -1,0 +1,405 @@
+#' A priori power calculator
+#'
+#' This function performs an \emph{a priori} power estimation of a meta-analysis
+#' for different levels of assumed between-study heterogeneity.
+#'
+#' @usage power.analysis(d, OR, k, n1, n2, p = 0.05, heterogeneity = 'fixed')
+#'
+#' @param d The hypothesized, or plausible overall effect size of a treatment/intervention under study compared
+#' to control, expressed as the standardized mean difference (\emph{SMD}). Effect sizes must be positive
+#' numerics (i.e., expressed as positive effect sizes).
+#' @param OR The hypothesized, or plausible overall effect size of a treatment/intervention under study compared
+#' to control, expressed as the Odds Ratio (\emph{OR}). If both \code{d} and \code{OR} are specified, results
+#' will only be computed for the value of \code{d}.
+#' @param k The expected number of studies to be included in the meta-analysis.
+#' @param n1 The expected, or plausible mean sample size of the treatment group in the studies to be included in the meta-analysis.
+#' @param n2 The expected, or plausible mean sample size of the control group in the studies to be included in the meta-analysis.
+#' @param p The alpha level to be used for the power computation. Default is \eqn{\alpha = 0.05}.
+#' @param heterogeneity Which level of between-study heterogeneity to assume for the meta-analysis. Can be either
+#' \code{"fixed"} for no heterogeneity/a fixed-effect model, \code{"low"} for low heterogeneity, \code{"moderate"}
+#' for moderate-sized heterogeneity or \code{"high"} for high levels of heterogeneity. Default is \code{"fixed"}.
+#'
+#' @details While researchers conducting primary studies can plan the size of their sample
+#' based on the effect size they want to find, the situation is a different in
+#' meta-analysis, where one can only work with the published material.
+#' However, researchers have some control over the number of studies they want to include in their
+#' meta-analysis (e.g., through more leniently or strictly defined inclusion criteria).
+#' Therefore, one can change the power to some extent by including more or less studies into
+#' the meta-analysis. Conventionally, a power of \eqn{1-\beta = 0.8} is deemed sufficient to detect an existing effect.
+#' There are four things one has to make assumptions about when assessing the power of a meta-analysis a priori.
+#'
+#' \itemize{
+#' \item The number of included or includable studies
+#' \item The overall size of the studies we want to include (are the studies in the field rather small or large?)
+#' \item The effect size. This is particularly important, as assumptions have to be made
+#' about how big an effect size has to be to still be clinically meaningful. One study calculated
+#' that for interventions for depression, even effects as small as \emph{SMD}=0.24 may still
+#' be meaningful for patients (Cuijpers et al. 2014). If the aim is to study negative effects of an
+#' intervention (e.g., death or symptom deterioration), even very small effect sizes are extremely
+#' important and should be detected.
+#' \item The heterogeneity of our studies’ effect sizes, as this also affects the precision of the pooled estimate,
+#' and thus its potential to find significant effects.
+#' }
+#'
+#' The \code{power.analysis} function implements the formula by Borenstein et al. (2011) to calculate
+#' the power estimate. Odds Ratios are converted to \code{d} internally before the power is estimated, and
+#' are then reconverted.
+#'
+#' @references
+#'
+#' Harrer, M., Cuijpers, P., Furukawa, T.A, & Ebert, D. D. (2019).
+#' \emph{Doing Meta-Analysis in R: A Hands-on Guide}. DOI: 10.5281/zenodo.2551803. \href{https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/power-analysis.html}{Chapter 13}
+#'
+#'Cuijpers, P., Turner, E.H., Koole, S. L., Van Dijke, A., & Smit, F. (2014).
+#'What Is the Threshold for a Clinically Relevant Effect? The Case of Major Depressive Disorders.
+#'\emph{Depression and Anxiety, 31}(5): 374–78.
+#'
+#'Borenstein, M., Hedges, L.V., Higgins, J.P.T. and Rothstein, H.R. (2011). Introduction to Meta-Analysis. John Wiley & Sons.
+#'
+#' @author Mathias Harrer & David Daniel Ebert
+#'
+#' @return Returns a \code{list} with two elements:
+#'
+#' \itemize{
+#' \item \code{Plot}: A plot showing the effect size (x), power (y), estimated power (red point) and
+#' estimated power for changing effect sizes (blue line). A dashed line at 80\% power is also provided as a visual threshold for sufficient power.
+#' \item \code{Power}: The \strong{estimated power} of the meta-analysis, expressed as a value between 0 and 1 (i.e., 0\%-100\%).
+#' }
+#'
+#' @export power.analysis
+#'
+#' @import ggplot2
+#'
+#' @seealso \code{\link{power.analysis.subgroup}}
+#'
+#' @examples
+#'
+#' # Example 1: Using SMD and fixed-effect model (no heterogeneity)
+#' power.analysis(d=0.124, k=10, n1=50, n2=50, heterogeneity = 'fixed')
+#'
+#' # Example 2: Using OR and assuming moderate heterogeneity
+#' pa = power.analysis(OR=0.77, k=12, n1=50, n2=50, heterogeneity = 'high')
+#' summary(pa)
+#'
+#' # Only show plot
+#' plot(pa)
+
+
+power.analysis = function(d, OR, k, n1, n2, p = 0.05, heterogeneity = "fixed") {
+  
+  odds = FALSE
+  
+  if (missing(OR) & missing(d)) {
+    stop("Either 'd' or 'OR' must be provided.")
+  }
+  
+  if (!(heterogeneity %in% c("fixed", "low", "moderate", "high"))) {
+    stop("'heterogeneity' must be either 'fixed', 'low', 'moderate', 'high'.")
+  }
+  
+  # Cohen's d not provided: calculate from OR
+  if (missing(d)) {
+    odds = TRUE
+    d = log(OR) * (sqrt(3)/pi)
+    token1 = "log"
+  } else {
+    
+    token1 = "no.log"
+    
+  }
+  
+  es = d
+  
+  if (heterogeneity == "fixed") {
+    
+    het.factor = 1
+    v.d = ((n1 + n2)/(n1 * n2)) + ((d * d)/(2 * (n1 + n2)))
+    v.m = v.d/k
+    lambda = (d/sqrt(v.m))
+    plevel = 1 - (p/2)
+    zval = qnorm(p = plevel, 0, 1)
+    power = 1 - (pnorm(zval - lambda)) + (pnorm(-zval - lambda))
+    
+    token2 = "fixed"
+    
+  }
+  
+  if (heterogeneity == "low") {
+    
+    het.factor = 1.33
+    v.d = ((n1 + n2)/(n1 * n2)) + ((d * d)/(2 * (n1 + n2)))
+    v.m = v.d/k
+    v.m = 1.33 * v.m
+    lambda = (d/sqrt(v.m))
+    plevel = 1 - (p/2)
+    zval = qnorm(p = plevel, 0, 1)
+    power = 1 - (pnorm(zval - lambda)) + (pnorm(-zval - lambda))
+    
+    token2 = "low"
+    
+  }
+  
+  if (heterogeneity == "moderate") {
+    
+    het.factor = 1.67
+    v.d = ((n1 + n2)/(n1 * n2)) + ((d * d)/(2 * (n1 + n2)))
+    v.m = v.d/k
+    v.m = 1.67 * v.m
+    lambda = (d/sqrt(v.m))
+    plevel = 1 - (p/2)
+    zval = qnorm(p = plevel, 0, 1)
+    power = 1 - (pnorm(zval - lambda)) + (pnorm(-zval - lambda))
+    
+    token2 = "moderate"
+    
+  }
+  
+  if (heterogeneity == "high") {
+    
+    het.factor = 2
+    v.d = ((n1 + n2)/(n1 * n2)) + ((d * d)/(2 * (n1 + n2)))
+    v.m = v.d/k
+    v.m = 2 * v.m
+    lambda = (d/sqrt(v.m))
+    plevel = 1 - (p/2)
+    zval = qnorm(p = plevel, 0, 1)
+    power = 1 - (pnorm(zval - lambda)) + (pnorm(-zval - lambda))
+    
+    token2 = "high"
+    
+  }
+  
+  # Loop for data for plot
+  dvec = (1:1000)/1000
+  
+  if (d > 1) {
+    dvec = (1:(d * 1000))/1000
+  }
+  
+  powvect = vector()
+  
+  for (i in 1:length(dvec)) {
+    d = dvec[i]
+    v.d = ((n1 + n2)/(n1 * n2)) + ((d * d)/(2 * (n1 + n2)))
+    v.m = v.d/k
+    v.m = het.factor * v.m
+    lambda = (d/sqrt(v.m))
+    plevel = 1 - (p/2)
+    zval = qnorm(p = plevel, 0, 1)
+    powvect[i] = 1 - (pnorm(zval - lambda)) + (pnorm(-zval - lambda))
+  }
+  
+  # Generate plot
+  
+  if (odds == FALSE) {
+    plotdat = as.data.frame(cbind(dvec, powvect))
+    plot = ggplot(data = plotdat, aes(x = dvec, y = powvect)) + geom_line(color = "blue", size = 2) +
+      geom_point(aes(x = es, y = power), color = "red", size = 5) + theme_minimal() + geom_hline(yintercept = 0.8,
+                                                                                                 color = "black", linetype = "dashed") + ylab("Power") + xlab("Effect size (SMD)")
+  } else {
+    dvecs = exp(dvec * (pi/sqrt(3)))
+    dvec.inv = exp(-dvec * (pi/sqrt(3)))
+    dvec = as.vector(rbind(dvec.inv, dvecs))
+    powvect = as.vector(rbind(powvect, powvect))
+    plotdat = as.data.frame(cbind(dvec, powvect))
+    plot = ggplot(data = plotdat, aes(x = dvec, y = powvect)) + geom_line(color = "blue", size = 2) +
+      geom_point(aes(x = exp(es * (pi/sqrt(3))), y = power), color = "red", size = 5) + theme_minimal() +
+      geom_hline(yintercept = 0.8, color = "black", linetype = "dashed") + ylab("Power") + xlab("Effect size (OR)") +
+      scale_x_log10()
+  }
+  
+  return.list = list("Plot" = plot, "Power" = power)
+  class(return.list) = c("power.analysis", token1, token2)
+  invisible(return.list)
+  return.list
+  
+  
+}
+
+
+
+
+#' A priori power calculator for subgroup contrasts
+#'
+#' This function performs an \emph{a priori} power estimation for a test for subgroup differences
+#' within a meta-analysis.
+#'
+#' @usage power.analysis.subgroup(TE1, TE2, seTE1, seTE2, sd1, sd2, var1, var2,
+#'     two.tailed=TRUE)
+#'
+#' @param TE1 Pooled effect size (e.g., standardized mean difference, Hedges' \eqn{g}, log-Odds Ratio or other
+#' linear continuous effect size) of the first subgroup of studies.
+#' @param TE2 Pooled effect size (e.g., standardized mean difference, Hedges' \eqn{g}, log-Odds Ratio or other
+#' linear continuous effect size) of the second subgroup of studies.
+#' @param seTE1 Pooled standard error of the first subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param seTE2 Pooled standard error of the second subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param sd1 Pooled standard deviation of the first subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param sd2 Pooled standard deviation of the second subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param var1 Pooled variance of the first subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param var2 Pooled variance of the second subgroup of studies. Either \code{seTE1/seTE2},
+#' \code{sd1/sd2}, or \code{var1/var2} must be provided.
+#' @param two.tailed Logical. Should a two-tailed (\code{TRUE}) or one-tailed (\code{FALSE}) test (\eqn{\alpha = 0.05}) be assumed?
+#' Default is \code{TRUE}.
+#'
+#' @details This function provides an estimate of the power \eqn{1-\beta} of a subgroup contrast analysis provided the
+#' assumed effect sizes in each subgroup and their dispersion measures. The function implements the formulae
+#' described by Hedges and Pigott (2001).
+#'
+#' @references
+#' Hedges, L. V., & Pigott, T. D. (2001). The power of statistical tests in meta-analysis.
+#' \emph{Psychological methods, 6}(3), 203.
+#'
+#' @author Mathias Harrer & David Daniel Ebert
+#'
+#' @return  Returns a \code{list} with five elements:
+#' \itemize{
+#' \item \code{Power}: The estimated power of the subgroup contrast, expressed as a value between 0 and 1 (i.e., 0\%-100\%).
+#' \item \code{Plot}: A plot showing the effect size difference (x), power (y), estimated power (red point) and
+#' estimated power for changing effect size differences (blue line). A dashed line at 80\% power is also provided as a
+#' visual threshold for sufficient power.
+#' \item \code{Data}: A \code{data.frame} containing the data used to generate the plot in \code{Plot}.
+#' \item \code{Test}: The type of test used for the power calculations (\code{"one.tailed"} or \code{"two.tailed"}).
+#' \item \code{Gamma}: The analyzed effect size difference calculated from the inputs.
+#' }
+#'
+#' @export power.analysis.subgroup
+#'
+#' @import ggplot2
+#'
+#' @seealso \code{\link{power.analysis}}
+#'
+#' @examples
+#' # Example 1: using standard error and two-tailed test
+#' power.analysis.subgroup(TE1=0.30, TE2=0.66, seTE1=0.13, seTE2=0.14)
+#'
+#' # Example 2: using variance and one-tailed test
+#' pasg = power.analysis.subgroup(TE1=-0.91, TE2=-1.22, var1 = 0.0023, var2 = 0.0078,
+#'     two.tailed = FALSE)
+#' summary(pasg)
+#'
+#' # Only show plot
+#' plot(pasg)
+
+power.analysis.subgroup = function(TE1, TE2, seTE1, seTE2,
+                                   sd1, sd2, var1, var2, two.tailed = TRUE) {
+  gamma = abs(TE1 - TE2)
+  
+  if (missing(var1)) {
+    
+    if (missing(sd1)) {
+      
+      var1 = (((TE1 - 1.96 * seTE1) - TE1)/-1.96)^2
+      var2 = (((TE2 - 1.96 * seTE2) - TE2)/-1.96)^2
+      varg = var1 + var2
+      
+    } else {
+      
+      var1 = sd1^2
+      var2 = sd2^2
+      varg = var1 + var2
+      
+    }
+    
+  } else {
+    
+    varg = var1 + var2
+    
+  }
+  
+  # Define c_a
+  ca_1tail = 1.64
+  ca_2tail = 1.96
+  
+  # Calculate
+  onetail = (1 - pnorm(ca_1tail - (gamma/sqrt(varg))))
+  twotail = (1 - pnorm(ca_2tail - (gamma/sqrt(varg))) + pnorm(-ca_2tail - (gamma/sqrt(varg))))
+  
+  # Return
+  if (two.tailed == TRUE) {
+    
+    if (gamma > 1) {
+      
+      gammas = (1:((gamma + 3) * 1000))/1000
+      powervec = vector()
+      for (i in 1:length(gammas)) {
+        powervec[i] = (1 - pnorm(ca_2tail - (gammas[i]/sqrt(varg))) + pnorm(-ca_2tail - (gammas[i]/sqrt(varg))))
+      }
+      
+    } else {
+      
+      gammas = (1:1000)/1000
+      powervec = vector()
+      for (i in 1:length(gammas)) {
+        powervec[i] = (1 - pnorm(ca_2tail - (gammas[i]/sqrt(varg))) + pnorm(-ca_2tail - (gammas[i]/sqrt(varg))))
+      }
+      
+    }
+    
+    plotdat = as.data.frame(cbind(gammas, powervec))
+    plot = ggplot(data = plotdat, aes(x = gammas, y = powervec)) + geom_line(color = "blue", size = 2) +
+      geom_point(aes(x = gamma, y = twotail), color = "red", size = 5) + theme_minimal() + geom_hline(yintercept = 0.8,
+                                                                                                      color = "black", linetype = "dashed") + ylab("Power") + xlab("Effect size difference")
+    
+    returnlist = list(Power = twotail,
+                      Plot = plot,
+                      Data = data.frame(Power = plotdat$powervec,
+                                        EffectSizeDiff = plotdat$gammas),
+                      Test = "two.tailed",
+                      Gamma = gamma)
+    
+    class(returnlist) = "power.analysis.subgroup"
+    
+    invisible(returnlist)
+    
+    returnlist
+    
+    
+  } else {
+    
+    if (gamma > 1) {
+      
+      gammas = (1:((gamma + 3) * 1000))/1000
+      powervec = vector()
+      for (i in 1:length(gammas)) {
+        powervec[i] = (1 - pnorm(ca_1tail - (gammas[i]/sqrt(varg))))
+      }
+      
+    } else {
+      
+      gammas = (1:1000)/1000
+      powervec = vector()
+      for (i in 1:length(gammas)) {
+        powervec[i] = (1 - pnorm(ca_1tail - (gammas[i]/sqrt(varg))))
+      }
+      
+    }
+    
+    plotdat = as.data.frame(cbind(gammas, powervec))
+    plot = ggplot(data = plotdat, aes(x = gammas, y = powervec)) + geom_line(color = "blue", size = 2) +
+      geom_point(aes(x = gamma, y = onetail), color = "red", size = 5) + theme_minimal() + geom_hline(yintercept = 0.8,
+                                                                                                      color = "black", linetype = "dashed") + ylab("Power") + xlab("Effect size difference")
+    
+    returnlist = list(Power = onetail,
+                      Plot = plot,
+                      Data = data.frame(Power = plotdat$powervec,
+                                        EffectSizeDiff = plotdat$gammas),
+                      Test = "one.tailed",
+                      Gamma = gamma)
+    
+    class(returnlist) = "power.analysis.subgroup"
+    
+    invisible(returnlist)
+    
+    returnlist
+    
+  }
+  
+}
+
+
+
