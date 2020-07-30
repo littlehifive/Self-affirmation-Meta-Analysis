@@ -1708,7 +1708,7 @@ x<- nrow(dat[is.na(dat$author) == F,]) +1
 dat[x,2] <- "Jordt"
 dat[x,3] <- "2017"
 dat[x,4] <- "No"
-dat[x,5] <- "Interaction-URM"
+dat[x,5] <- "Interaction-White"
 dat[x,6] <- "Exam grades"
 dat[x,7] <- "Yes"
 dat[x,8:11] <- getB(esc_B(6.45, 278.3 * 0.042*2, 963, 970, es.type = "g"))

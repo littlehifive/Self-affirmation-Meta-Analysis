@@ -1,9 +1,9 @@
 
-getB <- function(x){
+extract_g <- function(x){
   return(as.numeric(unlist(x)[c(1,3,4,5)]))
 }
 
-getgv <- function(d,v_d,n){
+dv2g <- function(d,v_d,n){
   J= 1- 3/ (4*n-9)
   g = J*d
   v_g = J^2 * v_d
@@ -15,6 +15,13 @@ getgv <- function(d,v_d,n){
 d2g <- function(d, nt, nc){
   
   g = des(d, nt, nc, verbose = F, dig = 5)[1,12:15]
+  return(as.numeric(g))
+  
+}
+
+f2g <- function(d, nt, nc){
+  
+  g = fes(d, nt, nc, verbose = F, dig = 5)[1,12:15]
   return(as.numeric(g))
   
 }

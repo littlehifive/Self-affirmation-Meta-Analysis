@@ -2,7 +2,9 @@ the_plan <- drake_plan(
   
   dat <- data.frame(study = NA, author = NA, year = NA, adapted = NA, type = NA,  outcome = NA, adjusted = NA, es = NA, v = NA, lowerCI = NA, upperCI = NA),
   
-  dat <- effsize_cal(dat),
+  #dat <- effsize_cal(dat),
+  
+  kost <- haven::read_dta(file.path(here::here(),"Imports/Kost-smith.dta")),
   
   #  Sys.setenv(F_EXPORT_DATA = "TRUE")
   
