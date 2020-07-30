@@ -614,9 +614,9 @@ Kostsmith2010 <- function(){
   
   rbind(
     c("Kost-Smith","2010","No","Minority subgroup-Female","FMCE grade","Yes",
-      getB(esc_B(12.9-0.6, sd_ks, 55,41, es.type = "g"))),
+      extract_g(esc_B(12.9-0.6, sd_ks, 55,41, es.type = "g"))),
     c("Kost-Smith","2010","No","Minority subgroup-Male","FMCE grade","Yes",
-      getB(esc_B(-0.6, sd_ks, 137,75, es.type = "g")))
+      extract_g(esc_B(-0.6, sd_ks, 137,75, es.type = "g")))
   )
   
 }
@@ -641,19 +641,19 @@ Kostsmith2012 <- function(kost2012){
   # unadjusted
   unadjusted <- rbind(
   c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","No",
-    getB(esc_mean_sd(temp[4,3], temp[4,4], 89, temp[3,3], temp[3,4], 60, es.type = "g"))),
+    extract_g(esc_mean_sd(temp[4,3], temp[4,4], 89, temp[3,3], temp[3,4], 60, es.type = "g"))),
   c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","No",
-    getB(esc_mean_sd(temp[2,3], temp[2,4], 232, temp[1,3], temp[1,4], 150, es.type = "g"))),
+    extract_g(esc_mean_sd(temp[2,3], temp[2,4], 232, temp[1,3], temp[1,4], 150, es.type = "g"))),
   
   c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","No",
-    getB(esc_mean_sd(temp[4,5], temp[4,6], 89, temp[3,5], temp[3,6], 60, es.type = "g"))),
+    extract_g(esc_mean_sd(temp[4,5], temp[4,6], 89, temp[3,5], temp[3,6], 60, es.type = "g"))),
   c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","No",
-    getB(esc_mean_sd(temp[2,5], temp[2,6], 232, temp[1,5], temp[1,6], 150, es.type = "g"))),
+    extract_g(esc_mean_sd(temp[2,5], temp[2,6], 232, temp[1,5], temp[1,6], 150, es.type = "g"))),
   
   c("Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","No",
-    getB(esc_mean_sd(temp[4,7], temp[4,8], 89, temp[3,7], temp[3,8], 60, es.type = "g"))),
+    extract_g(esc_mean_sd(temp[4,7], temp[4,8], 89, temp[3,7], temp[3,8], 60, es.type = "g"))),
   c("Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","No",
-    getB(esc_mean_sd(temp[2,7], temp[2,8], 232, temp[1,7], temp[1,8], 150, es.type = "g")))
+    extract_g(esc_mean_sd(temp[2,7], temp[2,8], 232, temp[1,7], temp[1,8], 150, es.type = "g")))
   )
   
   # adjusted
@@ -693,3 +693,160 @@ Kostsmith2012 <- function(kost2012){
   return(rbind(unadjusted, adjusted))
   
 }
+
+
+
+# 31. Lauer 2013 --------------------------------------------------------------
+Lauer2013 <- function(){
+  
+  rbind(
+    c("Lauer","2013","No","Main-Main","Introductory biology learning gains","Yes",
+      extract_g(esc_B(0.07,sqrt(((131-1) * 15.1^2 + (138-1) * 14.4^2) /(131 + 138 - 2)), 132/2,132/2, es.type = "g"))),
+    c("Lauer","2013","No","Main-Main","Biochemistry learning gains","Yes",
+      extract_g(esc_B(0.06,sqrt(((122-1) * 8.8^2 + (97-1) * 12.7^2) /(122 + 97 - 2)), 185/2,185/2, es.type = "g"))
+    ),
+    c("Lauer","2013","No","Main-Main","Physics 1 learning gains","Yes",
+      extract_g(esc_B(0.25,sqrt(((13-1) * 10.8^2 + (52-1) * 20.7^2) /(13 + 52 - 2)), 44/2,44/2, es.type = "g"))),
+    c("Lauer","2013","No","Main-Main","Physics 2 learning gains","Yes",
+      extract_g(esc_B(-0.04,sqrt(((15-1) * 11.1^2 + (111-1) * 15.5^2) /(15 + 111 - 2)), 89/2,89/2, es.type = "g"))),
+    
+    c("Lauer","2013","No","Main-Main","Introductory biology learning gains","No",
+      extract_g(esc_B(-1.7,sqrt(((131-1) * 15.1^2 + (138-1) * 14.4^2) /(131 + 138 - 2)), 260/2,260/2, es.type = "g"))),
+    c("Lauer","2013","No","Main-Main","Biochemistry learning gains","No",
+      extract_g(esc_B(-1.5,sqrt(((122-1) * 8.8^2 + (97-1) * 12.7^2) /(122 + 97 - 2)), 212/2,12/2, es.type = "g"))),
+    c("Lauer","2013","No","Main-Main","Physics 1 learning gains","No",
+      extract_g(esc_B(3.96,sqrt(((13-1) * 10.8^2 + (52-1) * 20.7^2) /(13 + 52 - 2)), 65/2,65/2, es.type = "g"))),
+    c("Lauer","2013","No","Main-Main","Physics 2 learning gains","No",
+      extract_g(esc_B(-5.44,sqrt(((15-1) * 11.1^2 + (111-1) * 15.5^2) /(15 + 111 - 2)), 124/2,124/2, es.type = "g")))
+  )
+  
+}
+
+
+# 32. Lokhande 2019------------------------------------------------------------
+
+Lokhande2019 <- function(){
+  
+  rbind(
+    c("Lokhande","2019","No","Main-Main","Wave 1 Math scores","No",
+      extract_g(esc_mean_sd(5.23, 3.34, 374, 4.86, 3.46, 294, es.type = "g"))),
+    c("Lokhande","2019","No","Main-Main","Wave 2 Math scores","No",
+      extract_g(esc_mean_sd(6.02, 3.66, 374, 5.42, 3.54, 294, es.type = "g"))),
+    
+    c("Lokhande","2019","No","Minority subgroup-Female","Wave 1 Math scores","No",
+      d2g(0.2, 294*0.488,374*0.488)),
+    c("Lokhande","2019","No","Majority subgroup-Male","Wave 1 Math scores","No",
+      d2g(-0.05, 294*(1-0.488),374*(1-0.488))),
+    c("Lokhande","2019","No","Minority subgroup-Turkish","Wave 1 Math scores","No",
+      d2g(0.33, 294*0.198,374*0.198)),
+    c("Lokhande","2019","No","Minority subgroup-Arabic","Wave 1 Math scores","No",
+      d2g(0.24, 294*0.135,374*0.135)),
+    c("Lokhande","2019","No","Minority subgroup-Eastern European","Wave 1 Math scores","No",
+      d2g(-0.07, 294*0.174,374*0.174)),
+    
+    c("Lokhande","2019","No","Interaction-Female","Wave 1 Math scores","Yes",
+      extract_g(esc_B(0.63-0.55,3.39,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Turkish","Wave 1 Math scores","Yes",
+      extract_g(esc_B(1.2-0.55,3.39,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Arabic","Wave 1 Math scores","Yes",
+      extract_g(esc_B(0.75-0.55,3.39,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Eastern European","Wave 1 Math scores","Yes",
+      extract_g(esc_B(0.08-0.55,3.39,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-White","Wave 1 Math scores","Yes",
+      extract_g(esc_B(-0.55,3.39,374,294,es.type = "g"))),
+    
+    c("Lokhande","2019","No","Minority subgroup-Female","Wave 2 Math scores","No",
+      d2g(0.18, 294*0.488,374*0.488)),
+    c("Lokhande","2019","No","Majority subgroup-Male","Wave 2 Math scores","No",
+      d2g(0.18, 294*(1-0.488),374*(1-0.488))),
+    c("Lokhande","2019","No","Minority subgroup-Turkish","Wave 2 Math scores","No",
+      d2g(0.35, 294*0.198,374*0.198)),
+    c("Lokhande","2019","No","Minority subgroup-Arabic","Wave 2 Math scores","No",
+      d2g(0.35, 294*0.135,374*0.135)),
+    c("Lokhande","2019","No","Minority subgroup-Eastern European","Wave 2 Math scores","No",
+      d2g(0.2, 294*0.174,374*0.174)),
+    
+    c("Lokhande","2019","No","Interaction-Female","Wave 2 Math scores","Yes",
+      extract_g(esc_B(0.27-0.14,3.61,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Turkish","Wave 2 Math scores","Yes",
+      extract_g(esc_B(0.97-0.14,3.61,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Arabic","Wave 2 Math scores","Yes",
+      extract_g(esc_B(0.78-0.14,3.61,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-Eastern European","Wave 2 Math scores","Yes",
+      extract_g(esc_B(0.65-0.14,3.61,374,294,es.type = "g"))),
+    c("Lokhande","2019","No","Interaction-White","Wave 2 Math scores","Yes",
+      extract_g(esc_B(-0.14,3.61,374,294,es.type = "g")))
+  )
+  
+}
+
+
+# 33. Miyake 2010 ---------------------------------------------------------
+
+Miyake2010 <- function(){
+  
+  rbind(
+    
+        c("Miyake","2010","No","Majority subgroup-Male","Biology mean exam score","No",
+          extract_g(esc_mean_sd(69.4, 13.2, 178, 72.7, 12.5, 105, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","Biology mean exam score","No",
+          extract_g(esc_mean_sd(65.2, 13.8, 69, 62.7, 11.9, 47, es.type = "g"))),
+        c("Miyake","2010","No","Majority subgroup-Male","Biology final exam score","No",
+          extract_g(esc_mean_sd(70.4, 14.2, 178, 73.3, 12.8, 105, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","Biology final exam score","No",
+          extract_g(esc_mean_sd(66.7, 15.6, 69, 61.3, 13.6, 47, es.type = "g"))),
+        c("Miyake","2010","No","Majority subgroup-Male","Biology final course grade","No",
+          extract_g(esc_mean_sd(73.9, 10.8, 178, 76.0, 10.5, 105, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","Biology final course grade","No",
+          extract_g(esc_mean_sd(70.5, 12.1, 69, 69.3, 9.9, 47, es.type = "g"))),
+        c("Miyake","2010","No","Majority subgroup-Male","End-of-semester FMCE","No",
+          extract_g(esc_mean_sd(72.7, 26.3, 137, 74.7, 27.3, 75, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","End-of-semester FMCE","No",
+          extract_g(esc_mean_sd(63.6, 30.6, 55, 56.2, 25.1, 41, es.type = "g"))),
+        
+        c("Miyake","2010","No","Majority subgroup-Male","Biology final exam score","Yes",
+          extract_g(esc_mean_sd(70.4, 12.9, 178, 73.2, 12.8, 105, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","Biology final exam score","Yes",
+          extract_g(esc_mean_sd(68.5, 14.9, 69, 60.2, 14.7, 47, es.type = "g"))),
+        c("Miyake","2010","No","Majority subgroup-Male","Biology final course grade","Yes",
+          extract_g(esc_mean_sd(73.7, 9.7, 178, 75.7, 9.7, 105, es.type = "g"))),
+        c("Miyake","2010","No","Minority subgroup-Female","Biology final course grade","Yes",
+          extract_g(esc_mean_sd(72.3, 11.2, 69, 68.2, 11.1, 47, es.type = "g")))
+        
+        )
+  
+}
+
+
+# 34. Peters 2017 ---------------------------------------------------------
+
+
+Peters2017 <- function(){
+  
+  rbind(
+    
+    c("Peters","2017","No","Main","Final grades","No",
+      extract_g(esc_mean_sd(80.03, 13.55, 221/2, 80.03, 12.92, 221/2, es.type = "g")))
+    
+  )
+  
+}
+
+
+# 35. Powers 2016 ---------------------------------------------------------
+
+Powers2016 <- function(){
+  
+  rbind(
+    
+    c("Powers (Study 1)", "2016" , rep(NA,8)),
+    c("Powers (Study 2)", "2016" , rep(NA,8))
+    
+  )
+  
+}
+
+
+
+
+
