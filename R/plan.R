@@ -1,87 +1,20 @@
 the_plan <- drake_plan(
-  
-  dat = data.frame(study = NA, author = NA, year = NA, adapted = NA, type = NA,  outcome = NA, adjusted = NA, es = NA, v = NA, lowerCI = NA, upperCI = NA),
-  
+
   kost = haven::read_dta(file.path(here::here(),"Imports/Kost-smith.dta")),
   purdie = haven::read_sav(file.path(here::here(),"Imports/Purdie-Greenaway.sav")),
   turetsky = read.csv(file.path(here::here(),"Imports/Turetsky under review.csv"), as.is = T),
+
+  dat_cleaned = clean_master(kost, purdie, turetsky),
   
-  dat = rbind(
-    
-    Baker2019(),
-    Bancroft2017(),
-    Bayly2017(),
-    BinningUR(),
-    Borman2012(),
-    Borman2015(),
-    Borman2016(),
-    Borman2018(),
-    Bowen2013(),
-    Bratter2016(),
-    Churchill2018(),
-    Cohen2006(),
-    Cohen2009(),
-    Cook2012(),
-    DeClercq2019(),
-    Dee2015(),
-    deJong2016(),
-    Goyer2017(),
-    Gutmann2019(),
-    Hadden2019(),
-    Hanselman2014(),
-    Hanselman2017(),
-    Harackiewicz2014(),
-    Harackiewicz2016(),
-    Hayes2019(),
-    Jordt2017(),
-    Kim2019(),
-    Kinias2016(),
-    Kostsmith2010(),
-    Kostsmith2012(kost),
-    Lauer2013(),
-    Lokhande2019(),
-    Miyake2010(),
-    Peters2017(),
-    Powers2016(),
-    Protzko2016(),
-    PurdieGreenawayUR(purdie),
-    Rapa2016(),
-    Rozek2015(),
-    Schwalbe2018(),
-    SerraGarciaUR(),
-    Sherman2013(),
-    Shnabel2013(),
-    Silverman2014(),
-    Tibbetts2016(),
-    Tibbetts2018(),
-    TuretskyUR(turetsky),
-    Woolf2009(),
-    Wynne2011()
-  ),
-  
-  
-  dat_s = dat %>% 
-    as.data.frame() %>% 
-    `colnames<-`( c("author", "year", "adapted", "type",  "outcome", 
-                    "adjusted", "es", "v", "lowerCI", "upperCI")) %>% 
-    mutate_at(vars(es:upperCI), as.numeric) %>% 
-    mutate(
-      study = paste(author, year, sep = ", "),
-                    se = sqrt(v)) %>%
-    group_by(study) %>% 
-    mutate(id = cur_group_id()) %>%
-    select(id, study, author, year, adapted:es, v, se, lowerCI, upperCI) %>% 
-    mutate_at(vars(es:upperCI), round, digits = 4) %>% 
-    
-  
-  #  Sys.setenv(F_EXPORT_DATA = "TRUE")
+  #  run the following line to allow writing data:
+  # Sys.setenv(F_EXPORT_DATA = "TRUE")
   
   export_processed_dat = target(
     command = {
       if (isTRUE(F_EXPORT_DATA)) {
         message("Writing processed attendance datasets")
         
-        write.csv(dat, file.path(here::here(), "Exports"), row.names = F)
+        write.csv(dat_cleaned, file.path(here::here(), "Exports/master.csv"), row.names = F)
       }
       
       Sys.time()

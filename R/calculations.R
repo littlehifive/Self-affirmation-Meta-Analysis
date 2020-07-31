@@ -625,10 +625,14 @@ Kostsmith2010 <- function(){
 
 Kostsmith2012 <- function(kost){
   
-  # Cohort2
-  kost2012 <- kost[kost$Cohort == "Spring 2011",]
+
+  # unadjusted
+  kost2012 <- kost %>% filter(Cohort == "Spring 2011") %>%
+    mutate(AFFIRM = if_else(AFFIRM == 1, "Affirm", "Control")) %>%
+    mutate(FEMALE = if_else(FEMALE == 1, "Female", "Male"))
   
-  temp <- kost2012 %>% group_by(FEMALE, AFFIRM) %>% summarise(
+  
+  temp1 <- kost2012 %>% group_by(FEMALE, AFFIRM) %>% summarise(
     m_course_grade = mean(COURSE_GRADE, na.rm = T),
     sd_course_grade = sd(COURSE_GRADE, na.rm = T),
     m_course_score = mean(COURSE_SCORE, na.rm = T),
@@ -638,56 +642,64 @@ Kostsmith2012 <- function(kost){
     .groups = "drop_last"
   )
   
+  
+  # drake is incompatible with emmeans: 
+  #diagnose(kost_extracted)$error$message:
+  #cannot add bindings to a locked environment
+  # therefore I am manually inputting values here
+  
+  # adjusted
+  
+  # COURSE_GRADE
+  #fit <- lm(COURSE_GRADE ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
+  #fit.emm <-  fit %>% emmeans("AFFIRM", "FEMALE")
+  #temp2 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
+ 
+  
+  # COURSE_SCORE
+  #fit <- lm(COURSE_SCORE ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
+  #fit.emm <- emmeans(fit, "AFFIRM", "FEMALE")
+  #temp3 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
+  
+  # RAW_ALL_EXAMS
+  #fit <- lm(RAW_ALL_EXAMS ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
+  #fit.emm <- emmeans(fit, "AFFIRM", "FEMALE")
+  #temp4 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
+  
   # unadjusted
   unadjusted <- rbind(
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","No",
-    extract_g(esc_mean_sd(temp[4,3], temp[4,4], 89, temp[3,3], temp[3,4], 60, es.type = "g"))),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","No",
-    extract_g(esc_mean_sd(temp[2,3], temp[2,4], 232, temp[1,3], temp[1,4], 150, es.type = "g"))),
-  
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","No",
-    extract_g(esc_mean_sd(temp[4,5], temp[4,6], 89, temp[3,5], temp[3,6], 60, es.type = "g"))),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","No",
-    extract_g(esc_mean_sd(temp[2,5], temp[2,6], 232, temp[1,5], temp[1,6], 150, es.type = "g"))),
-  
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","No",
-    extract_g(esc_mean_sd(temp[4,7], temp[4,8], 89, temp[3,7], temp[3,8], 60, es.type = "g"))),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","No",
-    extract_g(esc_mean_sd(temp[2,7], temp[2,8], 232, temp[1,7], temp[1,8], 150, es.type = "g")))
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","No",
+      extract_g(esc_mean_sd(temp1[4,3], temp1[4,4], 89, temp1[3,3], temp1[3,4], 60, es.type = "g"))),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","No",
+      extract_g(esc_mean_sd(temp1[2,3], temp1[2,4], 232, temp1[1,3], temp1[1,4], 150, es.type = "g"))),
+    
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","No",
+      extract_g(esc_mean_sd(temp1[4,5], temp1[4,6], 89, temp1[3,5], temp1[3,6], 60, es.type = "g"))),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","No",
+      extract_g(esc_mean_sd(temp1[2,5], temp1[2,6], 232, temp1[1,5], temp1[1,6], 150, es.type = "g"))),
+    
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","No",
+      extract_g(esc_mean_sd(temp1[4,7], temp1[4,8], 89, temp1[3,7], temp1[3,8], 60, es.type = "g"))),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","No",
+      extract_g(esc_mean_sd(temp1[2,7], temp1[2,8], 232, temp1[1,7], temp1[1,8], 150, es.type = "g")))
   )
   
   # adjusted
-  kost2012$AFFIRM <- ifelse(kost2012$AFFIRM == 1, "Affirm", "Control")
-  kost2012$FEMALE <- ifelse(kost2012$FEMALE == 1, "Female", "Male")
   
-  # COURSE_GRADE
-  fit <- lm(COURSE_GRADE ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
-  fit.emm <- emmeans(fit, "AFFIRM", "FEMALE")
-  temp1 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
-  
-  # COURSE_SCORE
-  fit <- lm(COURSE_SCORE ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
-  fit.emm <- emmeans(fit, "AFFIRM", "FEMALE")
-  temp2 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
-  
-  #RAW_ALL_EXAMS
-  fit <- lm(RAW_ALL_EXAMS ~ as.factor(FEMALE) * as.factor(AFFIRM) + MATH, kost2012)
-  fit.emm <- emmeans(fit, "AFFIRM", "FEMALE")
-  temp3 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 526))
   
   adjusted <- rbind(
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","Yes",
-    getgv(temp1[1,3], (temp1[1,4])^2, 531)),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","Yes",
-    getgv(temp1[2,3], (temp1[2,4])^2, 531)),
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","Yes",
-    getgv(temp2[1,3], (temp2[1,4])^2, 531)),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","Yes",
-    getgv(temp2[2,3], (temp2[2,4])^2, 531)),
-  c("Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","Yes",
-    getgv(temp3[1,3], (temp3[1,4])^2, 531)),
-  c("Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","Yes",
-    getgv(temp3[2,3], (temp3[2,4])^2, 531))
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","Yes",
+      dv2g(0.20004813, (0.1671775)^2, 531)),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","Yes",
+      dv2g(-0.04042167, (0.1047923)^2, 531)),
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","Yes",
+      dv2g(0.1444122, (0.1671230)^2, 531)),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","Yes",
+      dv2g(0.0374861, (0.1047912)^2, 531)),
+    c("Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","Yes",
+      dv2g(0.11952118, (0.1671043)^2, 531)),
+    c("Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","Yes",
+      dv2g(-0.08462973, (0.1048173)^2, 531))
   )
   
   return(rbind(unadjusted, adjusted))
@@ -902,24 +914,26 @@ PurdieGreenawayUR <- function(purdie){
   
   # adjusted
   
-  fit <- lm(gpaq4sixth ~ as.factor(Gender) * as.factor(Condition) + Race + CMTPRELEVELMN + gpaq12sixth, purdie)
-  fit.emm <- emmeans(fit, "Condition", "Gender")
-  temp3 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
+  # manually entering values here because incompatibility between emmeans and drake
   
-  fit <- lm(gpaq4sixth ~ as.factor(Race) * as.factor(Condition) + Gender +CMTPRELEVELMN + gpaq12sixth, purdie)
-  fit.emm <- emmeans(fit, "Condition", "Race")
-  temp4 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
+  #fit <- lm(gpaq4sixth ~ as.factor(Gender) * as.factor(Condition) + Race + CMTPRELEVELMN + gpaq12sixth, purdie)
+  #fit.emm <- emmeans(fit, "Condition", "Gender")
+  #temp3 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
+  #
+  #fit <- lm(gpaq4sixth ~ as.factor(Race) * as.factor(Condition) + Gender +CMTPRELEVELMN + gpaq12sixth, purdie)
+  #fit.emm <- emmeans(fit, "Condition", "Race")
+  #temp4 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
   
   adjusted <- rbind(
     
     c("Purdie-Greenaway","under review","No","Minority subgroup-Female","GPA","Yes",
-      getgv(temp3[1,3], (temp3[1,4])^2, 74)),
+      dv2g(0.2187767, (0.3269437)^2, 74)),
     c("Purdie-Greenaway","under review","No","Majority subgroup-Male","GPA","Yes",
-      getgv(temp3[2,3], (temp3[2,4])^2, 74)),
+      dv2g(1.2088276, (0.3594391)^2, 74)),
     c("Purdie-Greenaway","under review","No","Minority subgroup-Black and Hispanic","GPA","Yes",
-      getgv(temp4[1,3], (temp4[1,4])^2, 74)),
+      dv2g(0.95608926, (0.2951726)^2, 74)),
     c("Purdie-Greenaway","under review","No","Majority subgroup-White","GPA","Yes",
-      getgv(temp4[2,3], (temp4[2,4])^2, 74))
+      dv2g(0.01199424, (0.4475243)^2, 74))
     
   )
   
