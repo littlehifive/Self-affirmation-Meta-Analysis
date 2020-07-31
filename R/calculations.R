@@ -623,7 +623,7 @@ Kostsmith2010 <- function(){
 
 # 30. Kost-Smith 2012 -----------------------------------------------------
 
-Kostsmith2012 <- function(kost2012){
+Kostsmith2012 <- function(kost){
   
   # Cohort2
   kost2012 <- kost[kost$Cohort == "Spring 2011",]
@@ -842,6 +842,422 @@ Powers2016 <- function(){
     c("Powers (Study 1)", "2016" , rep(NA,8)),
     c("Powers (Study 2)", "2016" , rep(NA,8))
     
+  )
+  
+}
+
+
+# 36. Protzko 2016 -------------------------------------------------------
+
+Protzko2016 <- function(){
+  
+  rbind(
+    c("Protzko","2016","No","Majority subgroup-White and Asian","GPA","No",
+      extract_g(esc_mean_sd(3.316, 0.586, 124/2, 3.262, 0.603, 124/2, es.type = "g"))),
+    c("Protzko","2016","No","Minority subgroup-Black and Hispanic","GPA","No",
+      extract_g(esc_mean_sd(1.991, 1.022, 119/2, 2.051, 1.073, 119/2, es.type = "g"))),
+    
+    c("Protzko","2016","No","Interaction-Black and Hispanic","GPA","Yes",
+      extract_g(esc_B(-0.07-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g"))),
+    c("Protzko","2016","No","Interaction-White","GPA","Yes",
+      extract_g(esc_B(-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g")))
+      )
+  
+}
+
+
+# 37. Purdie-Greenaway under review ---------------------------------------
+
+PurdieGreenawayUR <- function(purdie){
+  
+  purdie <- purdie[is.na(purdie$Condition) == F,] # 74 in affirmation & control
+  purdie$Condition <- ifelse(purdie$Condition == 1, "Affirm", "Control")
+  purdie$Gender <- ifelse(purdie$Gender == 1, "Female", "Male")
+  purdie$Race <- ifelse(purdie$Race == 1, "White", "URM")
+  
+  temp1 <- purdie %>% group_by(Gender, Condition) %>% summarise(
+    m = mean(gpaq4sixth, na.rm = T),
+    sd = sd(gpaq4sixth, na.rm = T),
+    .groups = "drop_last"
+  )
+  
+  temp2 <- purdie %>% group_by(Race, Condition) %>% summarise(
+    m = mean(gpaq4sixth, na.rm = T),
+    sd = sd(gpaq4sixth, na.rm = T),
+    .groups = "drop_last"
+  )
+  
+  # unadjusted
+  
+  unadjusted <- rbind(
+    c("Purdie-Greenaway","under review","No","Minority subgroup-Female","GPA","No",
+      extract_g(esc_mean_sd(temp1[1,3], temp1[1,4], 21, temp1[2,3], temp1[2,4], 19, es.type = "g"))),
+    c("Purdie-Greenaway","under review","No","Majority subgroup-Male","GPA","No",
+      extract_g(esc_mean_sd(temp1[3,3], temp1[3,4], 17, temp1[4,3], temp1[4,4], 17, es.type = "g"))),
+    c("Purdie-Greenaway","under review","No","Minority subgroup-Black and Hispanic","GPA","No",
+      extract_g(esc_mean_sd(temp2[1,3], temp2[1,4], 26, temp2[2,3], temp2[2,4], 26, es.type = "g"))),
+    c("Purdie-Greenaway","under review","No","Majority subgroup-White","GPA","No",
+      extract_g(esc_mean_sd(temp2[3,3], temp2[3,4], 12, temp2[4,3], temp2[4,4], 10, es.type = "g")))
+  )
+  
+  # adjusted
+  
+  fit <- lm(gpaq4sixth ~ as.factor(Gender) * as.factor(Condition) + Race + CMTPRELEVELMN + gpaq12sixth, purdie)
+  fit.emm <- emmeans(fit, "Condition", "Gender")
+  temp3 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
+  
+  fit <- lm(gpaq4sixth ~ as.factor(Race) * as.factor(Condition) + Gender +CMTPRELEVELMN + gpaq12sixth, purdie)
+  fit.emm <- emmeans(fit, "Condition", "Race")
+  temp4 <- as.data.frame(eff_size(fit.emm, sigma = sigma(fit), edf = 67))
+  
+  adjusted <- rbind(
+    
+    c("Purdie-Greenaway","under review","No","Minority subgroup-Female","GPA","Yes",
+      getgv(temp3[1,3], (temp3[1,4])^2, 74)),
+    c("Purdie-Greenaway","under review","No","Majority subgroup-Male","GPA","Yes",
+      getgv(temp3[2,3], (temp3[2,4])^2, 74)),
+    c("Purdie-Greenaway","under review","No","Minority subgroup-Black and Hispanic","GPA","Yes",
+      getgv(temp4[1,3], (temp4[1,4])^2, 74)),
+    c("Purdie-Greenaway","under review","No","Majority subgroup-White","GPA","Yes",
+      getgv(temp4[2,3], (temp4[2,4])^2, 74))
+    
+  )
+  
+  return(rbind(unadjusted, adjusted))
+  
+}
+
+
+# 38. Rapa 2016  ---------------------------------------------------------------------
+
+Rapa2016 <- function(){
+  
+  rbind(
+    c("Rapa","2016","Yes","Main-Main","GPA","No",
+      extract_g(esc_mean_sd(3.64, 0.51, 25, 3.33, 0.63, 28, es.type = "g")))
+  )
+  
+}
+
+
+# 39. Rozek 2015 --------------------------------------------------------------------
+
+Rozek2015 <- function(){
+  
+  rbind(
+    
+  c("Rozek", "2015", rep(NA, 8))
+  
+  ) 
+}
+
+
+# 40. Schwalbe 2018 --------------------------------------------------------------------
+
+Schwalbe2018 <- function(){
+  
+  rbind(
+    c("Schwalbe","2018","Yes","Main-Main","Pass rates","Yes",
+      extract_g(esc_B(0.042, 0.4, 2719, 1744, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Functional skills","Pass rates","Yes",
+      extract_g(esc_B(0.041, 0.4, 2719*0.431, 1744*0.426, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Pass rates","Yes",
+      extract_g(esc_B(0.07, 0.4, 2719*0.027, 1744*0.028, es.type = "g"))),
+    
+    c("Schwalbe","2018","Yes","Main-Main","Pass rates","No",
+      extract_g(esc_B(0.041, 0.4, 2719, 1744, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Functional skills","Pass rates","No",
+      extract_g(esc_B(0.038, 0.4, 2719*0.431, 1744*0.426, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Pass rates","No",
+      extract_g(esc_B(0.071, 0.4, 2719*0.027, 1744*0.028, es.type = "g"))),
+    
+    c("Schwalbe","2018","Yes","Main-Main","Attendance","Yes",
+      extract_g(esc_B(0.023, 0.39, 2459, 2042, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Functional skills","Attendance","Yes",
+      extract_g(esc_B(0.044, 0.39, 2459*0.431, 2042*0.426, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Attendance","Yes",
+      extract_g(esc_B(0.160, 0.39, 2459*0.027, 2042*0.028, es.type = "g"))),
+    
+    c("Schwalbe","2018","Yes","Main-Main","Attendance","No",
+      extract_g(esc_B(0.018, 0.39, 2459, 2042, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Functional skills","Attendance","No",
+      extract_g(esc_B(0.047, 0.39, 2459*0.431, 2042*0.426, es.type = "g"))),
+    c("Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Attendance","No",
+      extract_g(esc_B(0.188, 0.39, 2459*0.027, 2042*0.028, es.type = "g")))
+  )
+  
+}
+
+
+# 41. Serra-Garcia under review --------------------------------------------------------------------
+
+SerraGarciaUR <- function(){
+  
+  rbind(
+    
+    # Study 1 reanalyzed Miyake 2013
+    c("Serra-Garcia (Study 1)", "under review", rep(NA, 8)),
+    
+    # Study 2 is an independent replication study
+    
+    c("Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics quiz grade","No",
+      extract_g(esc_mean_sd(66.95299, 16.23619, 39, 63.25759, 16.39845, 22, es.type = "g"))),
+    c("Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics final exam score","No",
+      extract_g(esc_mean_sd(69.38462, 19.58331, 39, 75.27273, 21.20238, 22, es.type = "g"))),
+    c("Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics final grade","No",
+      extract_g(esc_mean_sd(68.53846, 15.03128, 39, 68.63636, 14.8566, 22, es.type = "g"))),
+    
+    c("Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics quiz grade","No",
+      extract_g(esc_mean_sd(70.71377, 15.95548, 46, 76.64394, 12.67724, 22, es.type = "g"))),
+    c("Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics final exam score","No",
+      extract_g(esc_mean_sd(78.41304, 16.42299, 46, 73.40909, 18.50266, 22, es.type = "g"))),
+    c("Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics final grade","No",
+      extract_g(esc_mean_sd(73.84783, 14.1625, 46, 75.68182, 12.16312, 22, es.type = "g")))
+    
+  )
+  
+}
+
+
+# 42. Sherman 2013 --------------------------------------------------------------------
+
+Sherman2013 <- function(){
+  
+  rbind(
+    c("Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 1 GPA","No",
+      extract_g(esc_mean_se(2.62,0.06,41,2.4,0.06,40, es.type = "g"))),
+    c("Sherman (Study 1)","2013","No","Majority subgroup-White","Year 1 GPA","No",
+      extract_g(esc_mean_se(3.4,0.05,51,3.44,0.05,52, es.type = "g"))),
+    
+    c("Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 2 GPA","No",
+      extract_g(esc_mean_se(2.09,0.09,41,1.7,0.09,40, es.type = "g"))),
+    c("Sherman (Study 1)","2013","No","Majority subgroup-White","Year 2 GPA","No",
+      extract_g(esc_mean_se(3.11,0.08,51,3.09,0.08,52, es.type = "g"))),
+    
+    c("Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 3 GPA","No",
+      extract_g(esc_mean_se(1.92,0.1,41,1.67,0.11,40, es.type = "g"))),
+    c("Sherman (Study 1)","2013","No","Majority subgroup-White","Year 3 GPA","No",
+      extract_g(esc_mean_se(3.12,0.1,51,3.27,0.09,52, es.type = "g"))),
+    
+    c("Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 1 GPA","Yes",
+      d2g(0.29,92,92)),
+    c("Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 2 GPA","Yes",
+      d2g(0.43,92,92)),
+    c("Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 3 GPA","Yes",
+      d2g(0.24,92,92)),
+    
+    c("Sherman (Study 2)","2013","No","Minority subgroup-Hispanic","GPA","No",
+      extract_g(esc_mean_se(2.84,0.12,26,2.46,0.11,29, es.type = "g"))),
+    c("Sherman (Study 2)","2013","No","Majority subgroup-White","GPA","No",
+      extract_g(esc_mean_se(3.58,0.09,46,3.69,0.09,50, es.type = "g"))),
+    
+    c("Sherman (Study 2)","2013","No","Interaction-Hispanic","GPA","Yes",
+      d2g(0.45,75.5,75.5)),
+    c("Sherman (Study 2)","2013","No","Interaction-White","GPA","Yes",
+      d2g(0.13,75.5,75.5))
+  )
+  
+}
+
+
+
+# 43. Shnabel 2013 --------------------------------------------------------------------
+
+Shnabel2013 <- function(){
+  
+  # uses Cohen 2006 & 2009
+  rbind(
+    
+    c("Shnabel (Study 1)", "2013", rep(NA,8))
+    
+  )
+  
+}
+
+
+
+# 44. Silverman 2014 ------------------------------------------------------
+
+Silverman2014 <- function(){
+  
+  rbind(
+    
+    c("Silverman (Study 2)","2014","No","Minority subgroup-Blind","Instructor-graded student progress","Yes",
+      d2g(0.64,35/2,35/2))
+    
+  )
+  
+}
+
+
+# 45. Tibbetts 2016 -------------------------------------------------------
+
+Tibbetts2016 <- function(){
+  
+  rbind(
+    c("Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S1 Semester Grade","No",
+      extract_g(esc_mean_sd(3.11, 0.5, 72, 3.07, 0.52, 69, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S2 Semester Grade","No",
+      extract_g(esc_mean_sd(3.15, 0.6, 72, 2.99, 0.74, 69, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S3 Semester Grade","No",
+      extract_g(esc_mean_sd(3.27, 0.53, 72, 3.04, 0.7, 69, es.type = "g"))),
+    
+    c("Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S1 Semester Grade","No",
+      extract_g(esc_mean_sd(3.21, 0.58, 304, 3.24, 0.5, 304, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S2 Semester Grade","No",
+      extract_g(esc_mean_sd(3.27, 0.64, 304, 3.28, 0.59, 304, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S3 Semester Grade","No",
+      extract_g(esc_mean_sd(3.35, 0.56, 304, 3.37, 0.56, 304, es.type = "g"))),
+    
+    c("Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","GPA","No",
+      extract_g(esc_mean_sd(3.16, 0.58, 76, 2.98, 0.7, 74, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","GPA","No",
+      extract_g(esc_mean_sd(3.25, 0.57, 323, 3.28, 0.49, 315, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Interaction-First generation","GPA","Yes",
+      extract_g(esc_beta(0.09+0.08, sqrt(((399-1) * 0.54 ^2 + (389-1) * 0.65 ^2) / (399 + 389- 2)), 399, 389, es.type = "g"))),
+    c("Tibbetts (Study 1a)","2016","No","Interaction-Continuing generation","GPA","Yes",
+      extract_g(esc_beta(0.08, sqrt(((399-1) * 0.54 ^2 + (389-1) * 0.65 ^2) / (399 + 389- 2)), 399, 389, es.type = "g")))
+  )
+  
+}
+
+
+# 46. Tibbetts 2018 --------------------------------------------------------------------
+
+
+Tibbetts2018 <- function(){
+  
+  rbind(
+    
+    c("Tibbetts (Study 1b)","2018","Yes","Minority subgroup-First generation","Course Grade","No",
+      extract_g(esc_mean_sd(2.52, 1, 438/2, 2.33, 1.24, 438/4, es.type = "g"))),
+    c("Tibbetts (Study 1b)","2018","Yes","Majority subgroup-Continuting generation","Course Grade","No",
+      extract_g(esc_mean_sd(2.47, 1.21, 438/2, 2.63, 1.14, 438/4, es.type = "g"))),
+    
+    c("Tibbetts (Study 1b)","2018","No","Minority subgroup-First generation","Course Grade","No",
+      extract_g(esc_mean_sd(2.18, 0.74, 438/4, 1.25, 1.24, 438/4, es.type = "g"))),
+    c("Tibbetts (Study 1b)","2018","No","Majority subgroup-Continuting generation","Course Grade","No",
+      extract_g(esc_mean_sd(2.34, 1.1, 438/4, 2.54, 1.15, 438/4, es.type = "g")))
+    
+  )
+  
+}
+
+
+# 47. Turetsky under review -----------------------------------------------
+
+TuretskyUR <- function(turetsky){
+
+  temp1 <- turetsky %>% group_by(RaceMarg, Intervention) %>% summarise(
+    m_course_score = mean(CoursePointTotal, na.rm = T),
+    sd_course_score = sd(CoursePointTotal, na.rm = T),
+    m_continuation = mean(TookSpringClass, na.rm = T),
+    sd_continuation = sd(TookSpringClass, na.rm = T),
+    .groups = "drop_last"
+  )
+  
+  temp2 <- turetsky %>% group_by(Gender, Intervention) %>% summarise(
+    m_course_score = mean(CoursePointTotal, na.rm = T),
+    sd_course_score = sd(CoursePointTotal, na.rm = T),
+    m_continuation = mean(TookSpringClass, na.rm = T),
+    sd_continuation = sd(TookSpringClass, na.rm = T),
+    .groups = "drop_last"
+  )
+
+  
+  rbind(
+    
+    c("Turetsky","under review","No","Minority subgroup-URM","Course point total","No",
+      extract_g(esc_mean_sd(temp1[2,3], temp1[2,4], 40, temp1[1,3], temp1[1,4], 42, es.type = "g"))),
+    c("Turetsky","under review","No","Majority subgroup-White and Asian","Course point total","No",
+      extract_g(esc_mean_sd(temp1[4,3], temp1[4,4], 105, temp1[3,3], temp1[3,4], 103, es.type = "g"))),
+    
+    c("Turetsky","under review","No","Minority subgroup-Female","Course point total","No",
+      extract_g(esc_mean_sd(temp2[2,3], temp2[2,4], 96, temp2[1,3], temp2[1,4], 96, es.type = "g"))),
+    c("Turetsky","under review","No","Majority subgroup-Male","Course point total","No",
+      extract_g(esc_mean_sd(temp2[4,3], temp2[4,4], 46, temp2[3,3], temp2[3,4], 48, es.type = "g"))),
+    
+    c("Turetsky","under review","No","Minority subgroup-URM","Biology track persistence","No",
+      extract_g(esc_mean_sd(temp1[2,5], temp1[2,6], 40, temp1[1,5], temp1[1,6], 42, es.type = "g"))),
+    c("Turetsky","under review","No","Majority subgroup-White and Asian","Biology track persistence","No",
+      extract_g(esc_mean_sd(temp1[4,5], temp1[4,6], 105, temp1[3,5], temp1[3,6], 103, es.type = "g"))),
+    c("Turetsky","under review","No","Minority subgroup-Female","Biology track persistence","No",
+      extract_g(esc_mean_sd(temp2[2,5], temp2[2,6], 96, temp2[1,5], temp2[1,6], 96, es.type = "g"))),
+    c("Turetsky","under review","No","Majority subgroup-Male","Biology track persistence","No",
+      extract_g(esc_mean_sd(temp2[4,5], temp2[4,6], 46, temp2[3,5], temp2[3,6], 48, es.type = "g")))
+    
+    
+  )
+  
+}
+
+
+# 48. Woolf 2009 ----------------------------------------------------------
+
+Woolf2009 <- function(){
+  
+  rbind(
+    
+    c("Woolf","2009","No","Majority subgroup-White","Summative written essay score","Yes",
+      extract_g(esc_mean_sd(0.063, 0.9, 79, 0.244, 1, 84, es.type = "g"))),
+    c("Woolf","2009","No","Minority subgroup-URM","Summative written essay score","Yes",
+      extract_g(esc_mean_sd(-0.098, 1.09, 95, -0.175, 0.96, 77, es.type = "g"))),
+    c("Woolf","2009","No","Majority subgroup-White","OSCE score","Yes",
+      extract_g(esc_mean_sd(0.271, 0.96, 79, -0.002, 0.96, 84, es.type = "g"))),
+    c("Woolf","2009","No","Minority subgroup-URM","OSCE score","Yes",
+      extract_g(esc_mean_sd(0.001, 1, 95, -0.286, 0.97, 77, es.type = "g")))
+
+  )
+  
+}
+
+
+# 49. Wynne 2011---------------------------------------------------------------
+
+
+Wynne2011 <- function(){
+  
+  rbind(
+    c("Wynne","2011","No","Minority subgroup-Black and Hispanic","Time 1 GPA in History","No",
+      extract_g(esc_mean_sd(80.63, 7.20, 100/2, 78.60, 6.77, 100/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black and Hispanic","Time 2 GPA in History","No",
+      extract_g(esc_mean_sd(79.43, 9.23, 100/2, 78.40, 7.16, 100/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black","Time 1 GPA in History","No",
+      extract_g(esc_mean_sd(80.23, 6.91, 71/2, 78.39, 6.46, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black","Time 2 GPA in History","No",
+      extract_g(esc_mean_sd(78.89, 8.66, 71/2, 78.39, 7.21, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","Time 1 GPA in History","No",
+      extract_g(esc_mean_sd(81.69, 8.11, 29/2, 79.06, 7.61, 29/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","Time 2 GPA in History","No",
+      extract_g(esc_mean_sd(80.92, 10.87, 29/2, 78.44, 7.28, 29/2, es.type = "g"))),
+    
+    c("Wynne","2011","No","Main-Main","Time 1 GPA Overall","No",
+      extract_g(esc_mean_sd(79.81, 7.17, 100/2, 78.09, 6.52, 100/2, es.type = "g"))),
+    c("Wynne","2011","No","Main-Main","Time 2 GPA in Overall","No",
+      extract_g(esc_mean_sd(77.92, 8.48, 100/2, 76.52, 6.94, 100/2, es.type = "g"))),
+    
+    c("Wynne","2011","No","Minority subgroup-Black","Time 1 GPA in Overall","No",
+      extract_g(esc_mean_sd(79.49, 7.07, 71/2, 77.85, 6.52, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black","Time 2 GPA in Overall","No",
+      extract_g(esc_mean_sd(77.53, 8.53, 71/2, 76.08, 7.24, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","Time 1 GPA in Overall","No",
+      extract_g(esc_mean_sd(80.66, 7.65, 29/2, 78.64, 6.68, 29/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","Time 2 GPA in Overall","No",
+      extract_g(esc_mean_sd(78.97, 8.57, 29/2, 77.51, 6.34, 29/2, es.type = "g"))),
+    
+    c("Wynne","2011","No","Main-Main","MCAS ELA scores","No",
+      extract_g(esc_mean_sd(249.5, 11.29, 100/2, 246.8, 11.27, 100/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black","MCAS ELA scores","No",
+      extract_g(esc_mean_sd(248.7, 11.35, 71/2, 247.3, 11.39, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","MCAS ELA scores","No",
+      extract_g(esc_mean_sd(251.8, 11.21, 29/2, 245.6, 11.25, 29/2, es.type = "g"))),
+    
+    c("Wynne","2011","No","Main-Main","MCAS Math scores","No",
+      extract_g(esc_mean_sd(249.3, 12.14, 100/2, 246.0, 12.37, 100/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Black","MCAS Math scores","No",
+      extract_g(esc_mean_sd(249.9, 13.34, 71/2, 245.8, 12.33, 71/2, es.type = "g"))),
+    c("Wynne","2011","No","Minority subgroup-Hispanic","MCAS Math scores","No",
+      extract_g(esc_mean_sd(247.5, 8.29, 29/2, 246.5, 12.87, 29/2, es.type = "g")))
   )
   
 }
