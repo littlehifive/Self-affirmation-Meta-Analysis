@@ -1,9 +1,11 @@
 the_plan <- drake_plan(
 
+  # effect sizes from these three studies were calculated using the original datasets
   kost = haven::read_dta(file.path(here::here(),"Imports/Kost-smith.dta")),
   purdie = haven::read_sav(file.path(here::here(),"Imports/Purdie-Greenaway.sav")),
   turetsky = read.csv(file.path(here::here(),"Imports/Turetsky under review.csv"), as.is = T),
 
+  # derive cleaned master dataset
   dat_cleaned = clean_master(kost, purdie, turetsky),
   
   #  run the following line to allow writing data:

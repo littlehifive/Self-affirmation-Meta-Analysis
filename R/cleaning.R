@@ -54,8 +54,9 @@ clean_master <- function(kost, purdie, turetsky){
    )
  
   
-
-dat <- dat %>% 
+# clean master data and create project clusters
+   
+dat_s <- dat %>% 
   as.data.frame() %>% 
   `colnames<-`( c("author", "year", "adapted", "type",  "outcome", 
                   "adjusted", "es", "v", "lowerCI", "upperCI")) %>% 
@@ -65,9 +66,35 @@ dat <- dat %>%
     se = sqrt(v)) %>%
   group_by(study) %>% 
   mutate(id = cur_group_id()) %>%
-  select(id, study, author, year, adapted:es, v, se, lowerCI, upperCI) %>% 
+  mutate(cluster = case_when(
+    study %in% c("Bancroft, 2017","Bratter, 2016") ~ "Bratter et al.",
+    study %in% c("Cohen (Study 1), 2006","Cohen (Study 2), 2006","Cohen, 2009", 
+                 "Cook (Study 1), 2012","Goyer (Study 2), 2017","Powers (Study 1), 2016",
+                 "Powers (Study 2), 2016","Shnabel (Study 1), 2013") ~ "Cohen et al.",
+    study %in% c("Harackiewicz, 2014","Tibbetts (Study 1a), 2016") ~ "Harackiewicz et al.",
+    study %in% c("Kost-Smith, 2010","Kost-Smith, 2012","Miyake, 2010",
+                 "Serra-Garcia (Study 1), under review") ~ "Miyake et al.",
+    study %in% c("Borman, 2015","Borman, 2016","Borman, 2018","Hanselman, 2014",
+                 "Hanselman (Study 1), 2017","Hanselman (Study 2), 2017","Rozek, 2015") ~ "MWAP",
+    study %in% c("Goyer (Study 1), 2017","Sherman (Study 1), 2013") ~ "Sherman et al.",
+    TRUE ~ study
+    )) %>%
+  mutate(type_s = gsub("(.*)(-)(.*)", "\\1", type),
+         group = gsub("(.*)(-)(.*)", "\\3", type)) %>% 
+  mutate(group_s = case_when(
+    group %in% c("Black", "Hispanic", "Asian","URM", "White", "Black and Hispanic", 
+                 "Turkish", "Arabic", "Eastern European", "White and Asian", 
+                 "Black Caribbeans") ~ "Race",
+    group %in% c("First generation","Continuing generation") ~ "First generation",
+    group %in% c("URM or First generation") ~ "Mixed",
+    group %in% c("FSM","nonFSM") ~ "FSM status",
+    group %in% c("Female","Male")  ~ "Gender",
+    group %in% c("Blind") ~ "Disability",
+    group %in% c("Main") ~ "None"
+  )) %>% 
+  select(id, cluster, study, author, year, type_s, group, group_s, 
+         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
   mutate_at(vars(es:upperCI), round, digits = 4)
-# need to work on creating clusters...
 
 return(dat)
 
