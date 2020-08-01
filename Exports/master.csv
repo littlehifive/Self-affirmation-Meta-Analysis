@@ -1,270 +1,270 @@
-"V1","V2","V3","V4","V5","V6","V7","V8","V9","V10"
-"Baker","2019","No","Interaction-Black","GPA","No","0.252097640351885","0.00361646933610544","0.134231114014031","0.369964166689739"
-"Baker","2019","No","Interaction-Hispanic","GPA","No","-0.0133710990576457","0.00358801195946597","-0.130772973789042","0.104030775673751"
-"Baker","2019","No","Interaction-Asian","GPA","No","0.134008706053833","0.00359599560892695","0.0164762890315934","0.251541123076074"
-"Baker","2019","No","Interaction-Female","GPA","No","-0.0873870020949337","0.00359136073304769","-0.204843650975534","0.0300696467856663"
-"Baker","2019","No","Interaction-White","GPA","No","0.00235955447288372","0.00358793417806241","-0.115041047724838","0.119760156670606"
-"Baker","2019","No","Interaction-White","GPA","No","0.00235955447288372","0.00358793417806241","-0.115041047724838","0.119760156670606"
-"Baker","2019","No","Main","GPA","No","-0.0157843828553997","0.00362159137046655","-0.133734347310793","0.102165581599993"
-"Baker","2019","No","Main","Amount of time until withdraw from class","No","0.0842844328034495","0.00362469727654144","-0.0337160982348304","0.20228496384173"
-"Bancroft","2017",NA,NA,NA,NA,NA,NA,NA,NA
-"Bayly","2017","Yes","Minority subgroup-URM or First generation","GPA","No","-0.178257137943033","0.0103528518665301","-0.377681444691287","0.0211671688052208"
-"Bayly","2017","No","Minority subgroup-URM or First generation","GPA","No","-0.0895619830932847","0.0101368396788331","-0.28689482931564","0.10777086312907"
-"Bayly","2017","No","Minority subgroup-URM","GPA","Yes","-0.0558642648376284","0.0136900244482273","-0.285188631559006","0.173460101883749"
-"Bayly","2017","No","Minority subgroup-First generation","GPA","Yes","-0.0223070785521266","0.0180844310726716","-0.28587983370969","0.241265676605437"
-"Binning","under review","No","Minority subgroup-URM","GPA","Yes","0.362889196428553","0.0249476258980537","0.0533164625493308","0.672461930307775"
-"Borman","2012","No","Minority subgroup-Black","MCA reading score","Yes","0.0229566310496543","0.00239195385419477","-0.0729022752985544","0.118815537397863"
-"Borman","2012","No","Minority subgroup-Black","MCA math score","Yes","0.0728630393996248","0.00290506842573982","-0.0327783864915572","0.178504465290807"
-"Borman","2012","No","Minority subgroup-Hispanic","MCA reading score","Yes","0.0547755102040816","0.00699851755102041","-0.109192489795918","0.218743510204082"
-"Borman","2012","No","Minority subgroup-Hispanic","MCA math score","Yes","0.0527824897400821","0.00543114558135792","-0.0916622708618331","0.197227250341997"
-"Borman","2012","No","Minority subgroup-Female","MCA reading score","Yes","0.0189780007719027","0.00151747984688858","-0.0573734928598996","0.0953294944037051"
-"Borman","2012","No","Minority subgroup-Female","MCA math score","Yes","0.103880138301959","0.00122217796215809","0.035359200922013","0.172401075681905"
-"Borman","2012","No","Majority subgroup-Asian","MCA reading score","Yes","-0.0658534418948927","0.00248890944065886","-0.163635825314582","0.0319289415247965"
-"Borman","2012","No","Majority subgroup-Asian","MCA math score","Yes","-0.0748339483394834","0.00210664063071037","-0.164794332103321","0.0151264354243542"
-"Borman","2012","No","Majority subgroup-Male","MCA reading score","Yes","-0.0219751412429379","0.00176001581154841","-0.104202124293785","0.0602518418079096"
-"Borman","2012","No","Majority subgroup-Male","MCA math score","Yes","-0.0049943587814968","0.00151756981879504","-0.0813481158330199","0.0713593982700263"
-"Borman","2015",NA,NA,NA,NA,NA,NA,NA,NA
-"Borman","2016","No","Interaction-URM","7th GPA","Yes","0.10992","0.00395","-0.01331","0.23314"
-"Borman","2016","No","Interaction-URM","Fall Reading test","Yes","0","0.00431","-0.12871","0.12871"
-"Borman","2016","No","Interaction-URM","Fall Math test","Yes","0.08993","0.00432","-0.03885","0.2187"
-"Borman","2016","No","Interaction-URM","Spring Reading test","Yes","0.00999","0.00431","-0.11872","0.1387"
-"Borman","2016","No","Interaction-URM","Spring Math test","Yes","0.07994","0.00432","-0.04883","0.2087"
-"Borman","2016","No","Interaction-URM","Spring Language Usage test","Yes","0.03997","0.00431","-0.08876","0.16869"
-"Borman","2018","No","Interaction-URM","7th-9th GPA","Yes","0.17394994978482","0.00436429788115263","0.0444691767268465","0.303430722842793"
-"Borman","2018","No","Interaction-White and Asian","7th-9th GPA","Yes","0.035251578142323","0.00434850255832596","-0.0939946732907156","0.164497829575362"
-"Borman","2018","No","Minority subgroup-URM","7th-9th GPA","Yes","0.202214713267525","0.012409077302382","-0.0161175094113795","0.420546935946429"
-"Bowen","2013","No","Minority subgroup-Black","Social Studies grades","Yes","0.56995","0.03163","0.22137","0.91853"
-"Bratter","2016","No","Minority subgroup-Black","Semester English grades","No","0.204419755431969","0.0178096296396695","-0.0571427779565193","0.465982288820457"
-"Bratter","2016","No","Minority subgroup-Black","STAAR Reading","No","-0.0931192178027941","0.0177358041792257","-0.354139066485591","0.167900630880003"
-"Bratter","2016","No","Minority subgroup-Black","STAAR Algebra","No","-0.199378121677857","0.0178050912647866","-0.460907326342228","0.0621510829865131"
-"Bratter","2016","No","Minority subgroup-Hispanic","Semester English grades","No","-0.0230334727044942","0.00728693671068466","-0.190342968260184","0.144276022851196"
-"Bratter","2016","No","Minority subgroup-Hispanic","STAAR Reading","No","-0.0899361025550963","0.00729383826724049","-0.257324809905405","0.0774526047952125"
-"Bratter","2016","No","Minority subgroup-Hispanic","STAAR Algebra","No","-0.0215035491122378","0.00728687449021572","-0.18881233036932","0.145805232144844"
-"Churchill","2018","No","Main","Music examination grade","No","0.206219937132106","0.0601462735062851","-0.274456079424368","0.686895953688581"
-"Cohen (Study 1)","2006","No","Minority subgroup-Black","GPA in targeted course","Yes","0.258918223010812","0.0403403966704347","-0.134738953501875","0.6525753995235"
-"Cohen (Study 1)","2006","No","Interaction-White","GPA in targeted course","Yes","0.0890631559558284","0.0360722648574939","-0.283186921303042","0.461313233214698"
-"Cohen (Study 1)","2006","No","Minority subgroup-Black","GPA in non-targeted course","Yes","0.305772570957235","0.0809650461570648","-0.251922588361872","0.863467730276341"
-"Cohen (Study 2)","2006","No","Minority subgroup-Black","GPA in targeted course","Yes","0.338701878517653","0.0588213117795289","-0.136650250940363","0.814054007975669"
-"Cohen (Study 2)","2006","No","Interaction-White","GPA in targeted course","Yes","0.0297158983104252","0.0303064141375194","-0.311489086870306","0.370920883491156"
-"Cohen (Study 2)","2006","No","Minority subgroup-Black","GPA in non-targeted course","Yes","0.207270669666676","0.0582894425181185","-0.265927484508263","0.680468823841615"
-"Cohen","2009","No","Minority subgroup-Black","GPA","Yes","0.240014758185662","0.0230231730480856","-0.0573781993401268","0.537407715711451"
-"Cohen","2009","No","Majority subgroup-White","GPA","Yes","-0.0695735569904461","0.0212895739535135","-0.355550866671729","0.216403752690837"
-"Cook","2012",NA,NA,NA,NA,NA,NA,NA,NA
-"De Clercq","2019","No","Main","Test score","No","-0.047269771724878","0.0169333156850072","-0.302316110459174","0.207776567009418"
-"De Clercq","2019","No","Main","Study time","No","-0.120899112795251","0.0247708142718882","-0.42937287663996","0.187574651049457"
-"Dee","2015","No","Interaction-Black","Final grades in the treated subject","No","0.0211010408771375","0.00170367238900815","-0.0597975828832725","0.101999664637548"
-"Dee","2015","No","Interaction-Hispanic","Final grades in the treated subject","No","0.0538797515386773","0.00170419609984458","-0.0270313054309389","0.134790808508293"
-"Dee","2015","No","Interaction-Female","Final grades in the treated subject","No","-0.0259142929929294","0.00170372060907438","-0.106814061606487","0.0549854756206281"
-"Dee","2015","No","Interaction-White","Final grades in the treated subject","No","-0.00259121364558587","0.00170357894350165","-0.0834876187527549","0.0783051914615831"
-"Dee","2015","No","Interaction-Black","Final grades in the treated subject","Yes","-0.000832889472611035","0.00170357766059384","-0.081729264119598","0.0800634851743759"
-"Dee","2015","No","Interaction-Hispanic","Final grades in the treated subject","Yes","0.0547135633006599","0.00170421539377798","-0.0261979516820118","0.135625078283332"
-"Dee","2015","No","Interaction-Female","Final grades in the treated subject","Yes","-0.0398940940445791","0.00170391664330159","-0.120798516786098","0.04101032869694"
-"Dee","2015","No","Interaction-White","Final grades in the treated subject","Yes","0.00583025061139354","0.00170358475587071","-0.0750662924991719","0.086726793721959"
-"de Jong (Study 1)","2016","No","Minority subgroup-URM","Dutch","No","-0.0991830099615305","0.0144810955828369","-0.335040026732292","0.136674006809231"
-"de Jong (Study 1)","2016","No","Minority subgroup-URM","English","No","0.00855236450788545","0.0144633741876553","-0.22716029181368","0.24426502082945"
-"de Jong (Study 1)","2016","No","Minority subgroup-URM","Mathematics","No","-0.074658965255097","0.0144733578940392","-0.310452960825637","0.161135030315443"
-"de Jong (Study 1)","2016","No","Majority subgroup-URM","Dutch","No","-0.157544870446635","0.0681883643827525","-0.669348342325079","0.35425860143181"
-"de Jong (Study 1)","2016","No","Majority subgroup-URM","English","No","0.0784826350615937","0.0680259571463615","-0.432710981013618","0.589676251136805"
-"de Jong (Study 1)","2016","No","Majority subgroup-URM","Mathematics","No","-0.122384386431855","0.068102704631969","-0.633866287794556","0.389097514930846"
-"de Jong (Study 2)","2016","Yes","Minority subgroup-URM","Cito scores","No","-0.0190926029133709","0.0232694673675736","-0.318072034767838","0.279886828941096"
-"de Jong (Study 2)","2016","No","Minority subgroup-URM","Cito scores","No","-0.0571961759163739","0.0225523280445732","-0.351532445332858","0.237140093500111"
-"de Jong (Study 2)","2016","Yes","Majority subgroup-URM","Cito scores","No","-0.070079965674384","0.500345318861721","-1.45646228615253","1.31630235480376"
-"de Jong (Study 2)","2016","No","Majority subgroup-URM","Cito scores","No","-0.457932068200228","0.693971585818508","-2.0906792224325","1.17481508603205"
-"Goyer (Study 1)","2017","No","Interaction-Hispanic","Course Difficulty Scores","No","0.41828","0.02192","0.12811","0.70844"
-"Goyer (Study 1)","2017","No","Interaction-White","Course Difficulty Scores","No","-0.10955","0.02148","-0.39679","0.17769"
-"Goyer (Study 1)","2017","No","Interaction-Hispanic","Course Difficulty Scores","Yes","0.47803","0.02206","0.18691","0.76915"
-"Goyer (Study 1)","2017","No","Interaction-White","Course Difficulty Scores","Yes","-0.2191","0.02157","-0.50698","0.06879"
-"Goyer (Study 1)","2017","No","Interaction-Hispanic","Course Difficulty Scores","Yes","0.47803","0.02206","0.18691","0.76915"
-"Goyer (Study 2)","2017",NA,NA,NA,NA,NA,NA,NA,NA
-"Gutmann","2019","No","Minority subgroup-Female","Physics 100 final grades","No","-0.220061749571184","0.0270197623341738","-0.542240456165772","0.102116957023405"
-"Gutmann","2019","No","Majority subgroup-Male","Physics 100 final grades","No","-0.326969633507853","0.0160983797593268","-0.575653239086166","-0.0782860279295409"
-"Gutmann","2019","No","Minority subgroup-Female","Physics 212 final grades","No","-0.115569172216936","0.0151133493451482","-0.356524443676851","0.125386099242978"
-"Gutmann","2019","No","Majority subgroup-Male","Physics 212 final grades","No","0.0851141993957704","0.00538912934347076","-0.0587707521658063","0.228999150957347"
-"Hadden","2019","No","Minority subgroup-FSM","GCSE Mathematics","No","0.448880897151564","0.0322384657059194","0.0969679271552176","0.800793867147909"
-"Hadden","2019","No","Majority subgroup-nonFSM","GCSE Mathematics","No","0.0428428724584611","0.00922831248698588","-0.145439315767759","0.231125060684681"
-"Hadden","2019","No","Minority subgroup-FSM","GCSE Mathematics","Yes","0.529211125564944","0.0325490751918337","0.175606923099666","0.882815328030223"
-"Hadden","2019","No","Majority subgroup-nonFSM","GCSE Mathematics","Yes","0.0524712123896307","0.00922937344677469","-0.135821798730253","0.240764223509515"
-"Hanselman","2014",NA,NA,NA,NA,NA,NA,NA,NA
-"Hanselman (Study 1)","2017","No","Minority subgroup-Black and Hispanic","WKCE Mathematcis, Grade 8","Yes","0.100769581749049","0.00487766808830545","-0.0361174144486692","0.237656577946768"
-"Hanselman (Study 1)","2017","No","Minority subgroup-Black and Hispanic","WKCE Reading, Grade 8","Yes","-0.0299315589353612","0.00501802547615261","-0.16877408365019","0.108910965779468"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","7th GPA","Yes","-0.00199664241745943","0.00175808219595042","-0.0841784443200895","0.0801851594851707"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","8th GPA","Yes","-0.0718791270285394","0.00335271457322971","-0.185368282036933","0.0416100279798545"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","WKCE Mathematcis, Grade 7","Yes","-0.0848573027420258","0.00220158932588122","-0.176822652490207","0.00710804700615555"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","WKCE Mathematcis, Grade 8","Yes","-0.0798656966983772","0.00192950517650794","-0.165960917739228","0.00622952434247341"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","WKCE Reading, Grade 7","Yes","-0.00499160604364857","0.00301485183829366","-0.112610632344712","0.102627420257415"
-"Hanselman (Study 2)","2017","No","Minority subgroup-Black and Hispanic","WKCE Reading, Grade 8","Yes","-0.00499160604364857","0.00312547945946742","-0.114567341913822","0.104584129826525"
-"Harackiewicz","2014","No","Majority subgroup-Continuing generation","Biology Course Grade","No","-0.057903264962766","0.00621432850656613","-0.212409210014209","0.0966026800886766"
-"Harackiewicz","2014","No","Majority subgroup-Continuing generation","GPA","No","-0.0479459539067105","0.00621350828805907","-0.202441702135005","0.106549794321584"
-"Harackiewicz","2014","No","Majority subgroup-Continuing generation","Continuation","No","-0.0905362178390428","0.0104645876358442","-0.291033805053055","0.109961369374969"
-"Harackiewicz","2014","No","Minority subgroup-First generation","Biology Course Grade","No","0.292753283345577","0.0262550583386108","-0.0248277699978107","0.610334336688964"
-"Harackiewicz","2014","No","Minority subgroup-First generation","GPA","No","0.327157592931811","0.026324993388895","0.00915385386812456","0.645161331995498"
-"Harackiewicz","2014","No","Minority subgroup-First generation","Continuation","No","0.613355981329058","0.0498895338625579","0.175579109033774","1.05113285362434"
-"Harackiewicz","2014","No","Interaction-First generation","Biology Course Grade","Yes","0.180341802340685","0.00503323110470858","0.0412916314534305","0.31939197322794"
-"Harackiewicz","2014","No","Interaction-First generation","GPA","Yes","0.200571971837303","0.00503806850859467","0.0614549969147499","0.339688946759856"
-"Harackiewicz","2014","No","Interaction-First generation","Continuation","Yes","0.210993110588161","0.00506842372022301","0.071457663453514","0.350528557722809"
-"Harackiewicz","2016","No","Interaction-URM","Biology course grade","Yes","-0.0739463117179788","0.00769758070508935","-0.245905432725183","0.0980128092892257"
-"Harackiewicz","2016","No","Interaction-White and Asian","Biology course grade","Yes","0.0246337072683222","0.00769289286673949","-0.147273044081331","0.196540458617975"
-"Harackiewicz","2016","No","Interaction-First generation","Biology course grade","Yes","-0.148198883892505","0.00771348718998153","-0.320335583652509","0.0239378158674984"
-"Harackiewicz","2016","No","Interaction-Continuing generation","Biology course grade","Yes","0.0986478946268754","0.00770169198254839","-0.0733571419291212","0.270652931182872"
-"Hayes (Study 1)","2019","No","Minority subgroup-Hispanic","Semester Grade","No","-0.296119248438297","0.0523025754095237","-0.744358235644826","0.152119738768231"
-"Hayes (Study 2)","2019","No","Minority subgroup-First generation","GPA","No","-0.11243068791241","0.051364709851552","-0.556632688956573","0.331771313131753"
-"Jordt","2017","No","Interaction-Female","Exam grades","Yes","-0.0705799005755601","0.00207063898278962","-0.159766639415537","0.0186068382644171"
-"Jordt","2017","No","Interaction-Male","Exam grades","Yes","0.278394513321556","0.00208941248456643","0.188804379830718","0.367984646812394"
-"Jordt","2017","No","Interaction-URM","Exam grades","Yes","0.766457104990879","0.00222142215923575","0.674080150353472","0.858834059628286"
-"Jordt","2017","No","Interaction-White","Exam grades","Yes","0.278394513321556","0.00208941248456643","0.188804379830718","0.367984646812394"
-"Kim","2019","Yes","Interaction-Female","GPA","Yes","0.24188","0.01819","-0.02246","0.50622"
-"Kinias (Study 2)","2016","No","Majority subgroup-Male","MBA core course grade","No","-0.138532723669268","0.0150738739243762","-0.379168685131444","0.102103237792908"
-"Kinias (Study 2)","2016","No","Minority subgroup-Female","MBA core course grade","No","0.292393783715697","0.0311019495365238","-0.0532604631667372","0.638048030598131"
-"Kinias (Study 2)","2016","No","Interaction-Female","MBA core course grade","Yes","0.287237661118329","0.0102055816677236","0.0892368487013312","0.485238473535327"
-"Kinias (Study 2)","2016","No","Interaction-Male","MBA core course grade","Yes","-0.131498802575832","0.010122926764909","-0.328696181646398","0.0656985764947338"
-"Kost-Smith","2010","No","Minority subgroup-Female","FMCE grade","Yes","0.457869465315224","0.0436816425209508","0.0482339798351279","0.86750495079532"
-"Kost-Smith","2010","No","Minority subgroup-Male","FMCE grade","Yes","-0.0219254302997509","0.0206337453423169","-0.303463497085043","0.259612636485541"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","No","0.0177376784385043","0.0279036883872423","-0.309662489376163","0.345137846253172"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","No","-0.217532954183045","0.0110391948137626","-0.423461612438007","-0.0116042959280826"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","No","0.0154881862558692","0.0279034349940023","-0.311910494995866","0.342886867507604"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","No","-0.157339588722194","0.0110095426735858","-0.362991490768478","0.0483123133240902"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","No","0.0513258183826097","0.0279115528445997","-0.276120483893287","0.378772120658506"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","No","-0.13724238590677","0.0110017629248474","-0.342821614504507","0.0683368426909674"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics course grade","Yes","0.199764373787234","0.0278690867331857","-0.127438749049645","0.526967496624113"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics course grade","Yes","-0.0403643342978723","0.010950295251648","-0.245465904839716","0.164737236243972"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics course score","Yes","0.14420736","0.0278509190054554","-0.18288909435461","0.47130381435461"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics course score","Yes","0.0374329282269504","0.0109500653633536","-0.16766648937305","0.24253234582695"
-"Kost-Smith","2012","No","Minority subgroup-Female","Physics exam score","Yes","0.119351646411348","0.0278446866730102","-0.207708207931915","0.44641150075461"
-"Kost-Smith","2012","No","Majority subgroup-Male","Physics exam score","Yes","-0.0845096878297872","0.0109555206362621","-0.289660188868085","0.120640813208511"
-"Lauer","2013","No","Main-Main","Introductory biology learning gains","Yes","0.00470190213019569","0.0303031150215884","-0.336484510984673","0.345888315245064"
-"Lauer","2013","No","Main-Main","Biochemistry learning gains","Yes","0.00556819739324678","0.0216217061104945","-0.282631201732801","0.293767596519295"
-"Lauer","2013","No","Main-Main","Physics 1 learning gains","Yes","0.0126299336860981","0.0909109705059673","-0.578327551711973","0.603587419084169"
-"Lauer","2013","No","Main-Main","Physics 2 learning gains","Yes","-0.00261673930653726","0.044943859366716","-0.41812845394321","0.412894975330135"
-"Lauer","2013","No","Main-Main","Introductory biology learning gains","No","-0.114927746576009","0.0154101645984106","-0.35823313641543","0.128377643263412"
-"Lauer","2013","No","Main-Main","Biochemistry learning gains","No","-0.138642838797237","0.176187625660671","-0.961332032047847","0.684046354453373"
-"Lauer","2013","No","Main-Main","Physics 1 learning gains","No","0.203162034860843","0.0618636879723354","-0.284328282829669","0.690652352551355"
-"Lauer","2013","No","Main-Main","Physics 2 learning gains","No","-0.363369927414641","0.0327970951936128","-0.718318783765311","-0.00842107106397044"
-"Lokhande","2019","No","Main-Main","Wave 1 Math scores","No","0.108915060296912","0.00608405648457272","-0.0439628401604891","0.261792960754314"
-"Lokhande","2019","No","Main-Main","Wave 2 Math scores","No","0.166123635814316","0.00609586043932312","0.0130975045348572","0.319149767093775"
-"Lokhande","2019","No","Minority subgroup-Female","Wave 1 Math scores","No","0.19954","0.01245","-0.01918","0.41825"
-"Lokhande","2019","No","Majority subgroup-Male","Wave 1 Math scores","No","-0.04989","0.01182","-0.26295","0.16317"
-"Lokhande","2019","No","Minority subgroup-Turkish","Wave 1 Math scores","No","0.3281","0.03074","-0.01552","0.67171"
-"Lokhande","2019","No","Minority subgroup-Arabic","Wave 1 Math scores","No","0.23795","0.04455","-0.17574","0.65164"
-"Lokhande","2019","No","Minority subgroup-Eastern European","Wave 1 Math scores","No","-0.06954","0.03448","-0.43347","0.29439"
-"Lokhande","2019","No","Interaction-Female","Wave 1 Math scores","Yes","0.0235561766394477","0.00607557361246023","-0.129215109420341","0.176327462699237"
-"Lokhande","2019","No","Interaction-Turkish","Wave 1 Math scores","Yes","0.192254920357252","0.00610288590919882","0.0391406332786723","0.345369207435831"
-"Lokhande","2019","No","Interaction-Arabic","Wave 1 Math scores","Yes","0.0589117017402042","0.00607776094450269","-0.0938870822547285","0.211710485735137"
-"Lokhande","2019","No","Interaction-Eastern European","Wave 1 Math scores","Yes","-0.138712420366566","0.00608959188738002","-0.291659850780429","0.0142350100472965"
-"Lokhande","2019","No","Interaction-White","Wave 1 Math scores","Yes","-0.162466130921494","0.00609495884420526","-0.315480945282195","-0.00945131656079221"
-"Lokhande","2019","No","Minority subgroup-Female","Wave 2 Math scores","No","0.17958","0.01244","-0.03903","0.3982"
-"Lokhande","2019","No","Majority subgroup-Male","Wave 2 Math scores","No","0.1796","0.01186","-0.03385","0.39305"
-"Lokhande","2019","No","Minority subgroup-Turkish","Wave 2 Math scores","No","0.34798","0.03079","0.00408","0.69188"
-"Lokhande","2019","No","Minority subgroup-Arabic","Wave 2 Math scores","No","0.34701","0.0449","-0.06831","0.76234"
-"Lokhande","2019","No","Minority subgroup-Eastern European","Wave 2 Math scores","No","0.19868","0.03463","-0.16603","0.5634"
-"Lokhande","2019","No","Interaction-Female","Wave 2 Math scores","Yes","0.0359492904324294","0.006076126847791","-0.116828951065184","0.188727531930043"
-"Lokhande","2019","No","Interaction-Turkish","Wave 2 Math scores","Yes","0.230997339118587","0.00611518742468643","0.0777288143890797","0.384265863848093"
-"Lokhande","2019","No","Interaction-Arabic","Wave 2 Math scores","Yes","0.177643080014114","0.00609883120195184","0.0245796653237893","0.33070649470444"
-"Lokhande","2019","No","Interaction-Eastern European","Wave 2 Math scores","Yes","0.14135781525037","0.00609014770212974","-0.0115965949824713","0.294312225483212"
-"Lokhande","2019","No","Interaction-White","Wave 2 Math scores","Yes","-0.0387156105374581","0.00607628179777225","-0.191495800055194","0.114064578980278"
-"Miyake","2010","No","Majority subgroup-Male","Biology mean exam score","No","-0.254237030663826","0.0152565983563208","-0.496327084837218","-0.0121469764904334"
-"Miyake","2010","No","Minority subgroup-Female","Biology mean exam score","No","0.190065655450439","0.0359271341934627","-0.18143482442777","0.561566135328647"
-"Miyake","2010","No","Majority subgroup-Male","Biology final exam score","No","-0.211135869507847","0.0152209698926226","-0.452943084151114","0.0306713451354198"
-"Miyake","2010","No","Minority subgroup-Female","Biology final exam score","No","0.361836027683329","0.0363411986138039","-0.0117991124863212","0.735471167852979"
-"Miyake","2010","No","Majority subgroup-Male","Biology final course grade","No","-0.195921416635074","0.0152099692284159","-0.437641234719947","0.0457984014498003"
-"Miyake","2010","No","Minority subgroup-Female","Biology final course grade","No","0.10583063426782","0.0358182687245006","-0.265106563022672","0.476767831558311"
-"Miyake","2010","No","Majority subgroup-Male","End-of-semester FMCE","No","-0.0747598721569746","0.0206458798760758","-0.356380711870485","0.206860967556536"
-"Miyake","2010","No","Minority subgroup-Female","End-of-semester FMCE","No","0.258568924823142","0.0429259193245097","-0.147507609127715","0.664645458774"
-"Miyake","2010","No","Majority subgroup-Male","Biology final exam score","Yes","-0.217095753736273","0.0152255032879713","-0.458938975483513","0.0247474680109664"
-"Miyake","2010","No","Minority subgroup-Female","Biology final exam score","Yes","0.556375468109155","0.0371214028910266","0.17875086539864","0.93400007081967"
-"Miyake","2010","No","Majority subgroup-Male","Biology final course grade","Yes","-0.205634759618474","0.0152168974548029","-0.447409623802803","0.0361401045658544"
-"Miyake","2010","No","Minority subgroup-Female","Biology final course grade","Yes","0.364969151840597","0.0363511447306632","-0.0087171143880872","0.738655418069281"
-"Peters","2017","No","Main","Final grades","No","0","0.0180995475113122","-0.263682889922541","0.263682889922541"
-"Powers (Study 1)","2016",NA,NA,NA,NA,NA,NA,NA,NA
-"Powers (Study 2)","2016",NA,NA,NA,NA,NA,NA,NA,NA
-"Protzko","2016","No","Majority subgroup-White and Asian","GPA","No","0.0902638629007804","0.0322913261324291","-0.261937499395464","0.442465225197025"
-"Protzko","2016","No","Minority subgroup-Black and Hispanic","GPA","No","-0.0568944197111252","0.0336272225535484","-0.416307261292743","0.302518421870492"
-"Protzko","2016","No","Interaction-Black and Hispanic","GPA","Yes","-0.0878768924202567","0.0106770046908159","-0.290399172301082","0.114645387460569"
-"Protzko","2016","No","Interaction-White","GPA","Yes","-0.00123649870769216","0.0106666687134671","-0.203660728030098","0.201187730614714"
-"Purdie-Greenaway","under review","No","Minority subgroup-Female","GPA","No","0.518451860089062","0.103748123567176","-0.112851667865273","1.1497553880434"
-"Purdie-Greenaway","under review","No","Majority subgroup-Male","GPA","No","0.70640425106151","0.125344772748676","0.0124973531974647","1.40031114892555"
-"Purdie-Greenaway","under review","No","Minority subgroup-Black and Hispanic","GPA","No","0.865843716827813","0.0843539473805391","0.296596656909767","1.43509077674586"
-"Purdie-Greenaway","under review","No","Majority subgroup-White","GPA","No","0.187717802117538","0.184198670271998","-0.653466842699813","1.02890244693489"
-"Purdie-Greenaway","under review","No","Minority subgroup-Female","GPA","Yes","0.21648983554007","0.104669182697414","-0.417621457728223","0.850601128808362"
-"Purdie-Greenaway","under review","No","Majority subgroup-Male","GPA","Yes","1.19619177142857","0.126509611756852","0.499055253574913","1.89332828928223"
-"Purdie-Greenaway","under review","No","Minority subgroup-Black and Hispanic","GPA","Yes","0.946095295609756","0.0853149161202338","0.373604438243903","1.51858615297561"
-"Purdie-Greenaway","under review","No","Majority subgroup-White","GPA","Yes","0.0118688646689895","0.196112885850776","-0.856109972794425","0.879847702132404"
-"Rapa","2016","Yes","Main-Main","GPA","No","0.529644492761743","0.0784407206681932","-0.0192879241280185","1.0785769096515"
-"Rozek","2015",NA,NA,NA,NA,NA,NA,NA,NA
-"Schwalbe","2018","Yes","Main-Main","Pass rates","Yes","0.105108642493741","0.000942414897668268","0.0449401455754921","0.16527713941199"
-"Schwalbe","2018","Yes","Minority subgroup-Functional skills","Pass rates","Yes","0.102561113364002","0.00220206842028304","0.0105874478022322","0.194534778925772"
-"Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Pass rates","Yes","0.173832560678989","0.0342250951803692","-0.188761280650018","0.536426402007996"
-"Schwalbe","2018","Yes","Main-Main","Pass rates","No","0.102599702434185","0.000942356494904519","0.0424330699075976","0.162766334960772"
-"Schwalbe","2018","Yes","Minority subgroup-Functional skills","Pass rates","No","0.0950398783768508","0.00220168003921332","0.00307432391768288","0.187005432836019"
-"Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Pass rates","No","0.176334816957146","0.0342287242250488","-0.186278247610887","0.538947881525179"
-"Schwalbe","2018","Yes","Main-Main","Attendance","Yes","0.058983409091131","0.000896771945829041","0.000290032109941683","0.11767678607232"
-"Schwalbe","2018","Yes","Minority subgroup-Functional skills","Attendance","Yes","0.112925536519757","0.00209642315596591","0.0231852266005651","0.202665846438949"
-"Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Attendance","Yes","0.414899073627906","0.0332569162333757","0.0574706553204266","0.772327491935385"
-"Schwalbe","2018","Yes","Main-Main","Attendance","No","0.0461532122245988","0.000896622048758614","-0.0125352591989492","0.104841683648147"
-"Schwalbe","2018","Yes","Minority subgroup-Functional skills","Attendance","No","0.12065191374473","0.00209689112847979","0.0309015882771646","0.210402239212296"
-"Schwalbe","2018","Yes","Minority subgroup-Black Caribbeans","Attendance","No","0.491644743343633","0.0335419455152909","0.132687917996969","0.850601568690298"
-"Serra-Garcia (Study 1)","under review",NA,NA,NA,NA,NA,NA,NA,NA
-"Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics quiz grade","No","0.223898112787912","0.0715171712779131","-0.300249069248424","0.748045294824248"
-"Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics final exam score","No","-0.288133338785022","0.0717937825149504","-0.813293180274308","0.237026502704264"
-"Serra-Garcia (Study 2)","under review","No","Minority subgroup-Female","Physics final grade","No","-0.00645654495066722","0.0710959216861826","-0.529057784402666","0.516144694501331"
-"Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics quiz grade","No","-0.391086077784225","0.0683443983878541","-0.90347478963496","0.12130263406651"
-"Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics final exam score","No","0.289085437862481","0.0678224263605777","-0.221342870505813","0.799513746230776"
-"Serra-Garcia (Study 2)","under review","No","Majority subgroup-Male","Physics final grade","No","-0.13372346778116","0.0673282127078616","-0.642288661820415","0.374841726258095"
-"Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 1 GPA","No","0.577806112672272","0.0514909300372073","0.13305867043435","1.02255355491019"
-"Sherman (Study 1)","2013","No","Majority subgroup-White","Year 1 GPA","No","-0.111732098949233","0.0389001270529422","-0.498298052175389","0.274833854276924"
-"Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 2 GPA","No","0.682861769521776","0.0523242600741402","0.23452987193016","1.13119366711339"
-"Sherman (Study 1)","2013","No","Majority subgroup-White","Year 2 GPA","No","0.0349162809216352","0.0388446196614732","-0.351373774393117","0.421206336236388"
-"Sherman (Study 1)","2013","No","Minority subgroup-Hispanic","Year 3 GPA","No","0.375225628643239","0.0502761381726489","-0.0642441819851572","0.814695439271636"
-"Sherman (Study 1)","2013","No","Majority subgroup-White","Year 3 GPA","No","-0.220448293198936","0.0390780742385605","-0.607897403379174","0.167000816981302"
-"Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 1 GPA","Yes","0.2888","0.02179","-0.00049","0.5781"
-"Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 2 GPA","Yes","0.42823","0.02206","0.13713","0.71932"
-"Sherman (Study 1)","2013","No","Interaction-Hispanic","Year 3 GPA","Yes","0.23901","0.02172","-0.04981","0.52783"
-"Sherman (Study 2)","2013","No","Minority subgroup-Hispanic","GPA","No","0.63427301984915","0.0767078500430288","0.0914378264761749","1.17710821322212"
-"Sherman (Study 2)","2013","No","Majority subgroup-White","GPA","No","-0.176693295113342","0.0419043705795315","-0.577908840660092","0.224522250433409"
-"Sherman (Study 2)","2013","No","Interaction-Hispanic","GPA","Yes","0.44773","0.02689","0.12635","0.76911"
-"Sherman (Study 2)","2013","No","Interaction-White","GPA","Yes","0.12934","0.02628","-0.18838","0.44707"
-"Shnabel (Study 1)","2013",NA,NA,NA,NA,NA,NA,NA,NA
-"Silverman (Study 2)","2014","No","Minority subgroup-Blind","Instructor-graded student progress","Yes","0.62534","0.1147","-0.03844","1.28913"
-"Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S1 Semester Grade","No","0.0780254417953394","0.0284034663523934","-0.252293716531407","0.408344600122086"
-"Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S2 Semester Grade","No","0.236758031615463","0.0285825833198304","-0.0946010135488235","0.568117076779749"
-"Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","S3 Semester Grade","No","0.369542888852208","0.0288711827578166","0.0365151727850812","0.702570604919335"
-"Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S1 Semester Grade","No","-0.0553351668222419","0.00658147169167804","-0.214339734313699","0.103669400669215"
-"Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S2 Semester Grade","No","-0.0162266289750747","0.00657916443808479","-0.175203323064107","0.142750065113958"
-"Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","S3 Semester Grade","No","-0.0356700666234302","0.00657999630773362","-0.194656810902562","0.123316677655702"
-"Tibbetts (Study 1a)","2016","No","Minority subgroup-First generation","GPA","No","0.278951236277508","0.0269334410372409","-0.042706508296059","0.600608980851075"
-"Tibbetts (Study 1a)","2016","No","Majority subgroup-Continuing generation","GPA","No","-0.056323523811882","0.00627307044244001","-0.211557997379923","0.0989109497561588"
-"Tibbetts (Study 1a)","2016","No","Interaction-First generation","GPA","Yes","0.344282814484675","0.0051523133405527","0.203597351379753","0.484968277589596"
-"Tibbetts (Study 1a)","2016","No","Interaction-Continuing generation","GPA","Yes","0.160170523819104","0.00509326916884875","0.0202934929139426","0.300047554724265"
-"Tibbetts (Study 1b)","2018","Yes","Minority subgroup-First generation","Course Grade","No","0.174606911969379","0.0137452484494677","-0.0551795234415044","0.404393347380262"
-"Tibbetts (Study 1b)","2018","Yes","Majority subgroup-Continuting generation","Course Grade","No","-0.134461511648807","0.0137262759689583","-0.364089305907771","0.0951662826101558"
-"Tibbetts (Study 1b)","2018","No","Minority subgroup-First generation","Course Grade","No","0.907650671441997","0.0201588144146133","0.629371575123657","1.18592976776034"
-"Tibbetts (Study 1b)","2018","No","Majority subgroup-Continuting generation","Course Grade","No","-0.177118902093351","0.0183369619602699","-0.442525541548756","0.0882877373620541"
-"Turetsky","under review","No","Minority subgroup-URM","Course point total","No","-0.268287005017533","0.0492567864542","-0.703278863336207","0.166704853301141"
-"Turetsky","under review","No","Majority subgroup-White and Asian","Course point total","No","0.151141690724014","0.0192878629318079","-0.121059578912504","0.423342960360533"
-"Turetsky","under review","No","Minority subgroup-Female","Course point total","No","0.0175050003835305","0.0208341376609595","-0.265396894076808","0.300406894843869"
-"Turetsky","under review","No","Majority subgroup-Male","Course point total","No","0.0649858799479663","0.0425952992152484","-0.339523808305012","0.469495568200944"
-"Turetsky","under review","No","Minority subgroup-URM","Biology track persistence","No","-0.0343944369581481","0.0488168746967759","-0.467439485310683","0.398650611394387"
-"Turetsky","under review","No","Majority subgroup-White and Asian","Biology track persistence","No","0.443429358481159","0.0197086795536798","0.168274709391385","0.718584007570934"
-"Turetsky","under review","No","Minority subgroup-Female","Biology track persistence","No","0.297999763958115","0.0210664324225293","0.0135251031356054","0.582474424780625"
-"Turetsky","under review","No","Majority subgroup-Male","Biology track persistence","No","0.28752425882105","0.0430194771218877","-0.11899455974892","0.694043077391021"
-"Woolf","2009","No","Majority subgroup-White","Summative written essay score","Yes","-0.189067349160416","0.0246736718726466","-0.496935656158864","0.118800957838032"
-"Woolf","2009","No","Minority subgroup-URM","Summative written essay score","Yes","0.0741459029878828","0.0235294523770753","-0.226499107581091","0.374790913556856"
-"Woolf","2009","No","Majority subgroup-White","OSCE score","Yes","0.283048211508554","0.0248110546014061","-0.0256760093574079","0.591772432374515"
-"Woolf","2009","No","Minority subgroup-URM","OSCE score","Yes","0.289583130668528","0.0237592716438282","-0.0125265574075941","0.59169281874465"
-"Wynne","2011","No","Minority subgroup-Black and Hispanic","Time 1 GPA in History","No","0.288256402791246","0.040421908226335","-0.105798283648775","0.682311089231267"
-"Wynne","2011","No","Minority subgroup-Black and Hispanic","Time 2 GPA in History","No","0.123739083274538","0.0400777452485554","-0.268634473426975","0.51611263997605"
-"Wynne","2011","No","Minority subgroup-Black","Time 1 GPA in History","No","0.272086360449758","0.0568709368292158","-0.195318562420904","0.73949128332042"
-"Wynne","2011","No","Minority subgroup-Black","Time 2 GPA in History","No","0.0620660438665026","0.0563657580089851","-0.403258292794203","0.527390380527209"
-"Wynne","2011","No","Minority subgroup-Hispanic","Time 1 GPA in History","No","0.325059749061425","0.139859444037928","-0.407923398737263","1.05804289686011"
-"Wynne","2011","No","Minority subgroup-Hispanic","Time 2 GPA in History","No","0.260567990822387","0.139170159176068","-0.470606704817656","0.99174268646243"
-"Wynne","2011","No","Main-Main","Time 1 GPA Overall","No","0.249069752628922","0.0403149938298092","-0.144463458998445","0.642602964256289"
-"Wynne","2011","No","Main-Main","Time 2 GPA in Overall","No","0.17929720208409","0.0401632326731849","-0.213494605900747","0.572089010068926"
-"Wynne","2011","No","Minority subgroup-Black","Time 1 GPA in Overall","No","0.238525724373237","0.0567475807640199","-0.228372010338548","0.705423459085022"
-"Wynne","2011","No","Minority subgroup-Black","Time 2 GPA in Overall","No","0.181281855900548","0.0565745917646502","-0.284903691453169","0.647467403254265"
-"Wynne","2011","No","Minority subgroup-Hispanic","Time 1 GPA in Overall","No","0.27339593271233","0.139295168320455","-0.458107076867731","1.00489894229239"
-"Wynne","2011","No","Minority subgroup-Hispanic","Time 2 GPA in Overall","No","0.188256875874752","0.138577841283819","-0.541360195439013","0.917873947188517"
-"Wynne","2011","No","Main-Main","MCAS ELA scores","No","0.237525073990147","0.040286469897083","-0.155868895385056","0.63091904336535"
-"Wynne","2011","No","Minority subgroup-Black","MCAS ELA scores","No","0.121787610419229","0.0564447972375312","-0.343862863896438","0.587438084734896"
-"Wynne","2011","No","Minority subgroup-Hispanic","MCAS ELA scores","No","0.536612526049743","0.143186297969557","-0.205037167092304","1.27826221919179"
-"Wynne","2011","No","Main-Main","MCAS Math scores","No","0.267200011052681","0.0403625208682525","-0.126565098898415","0.660965121003778"
-"Wynne","2011","No","Minority subgroup-Black","MCAS Math scores","No","0.315709968134715","0.0570555181219673","-0.152452849012166","0.783872785281597"
-"Wynne","2011","No","Minority subgroup-Hispanic","MCAS Math scores","No","0.0897887422848333","0.138078169708418","-0.638511747191661","0.818089231761328"
+"id","cluster","study","author","year","type_s","group","group_s","adapted","outcome","adjusted","es","v","se","lowerCI","upperCI"
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","Black","Race","No","GPA","No",0.2521,0.0036,0.0601,0.1342,0.37
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","Hispanic","Race","No","GPA","No",-0.0134,0.0036,0.0599,-0.1308,0.104
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","Asian","Race","No","GPA","No",0.134,0.0036,0.06,0.0165,0.2515
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","Female","Gender","No","GPA","No",-0.0874,0.0036,0.0599,-0.2048,0.0301
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","White","Race","No","GPA","No",0.0024,0.0036,0.0599,-0.115,0.1198
+1,"Baker, 2019","Baker, 2019","Baker","2019","Interaction","White","Race","No","GPA","No",0.0024,0.0036,0.0599,-0.115,0.1198
+1,"Baker, 2019","Baker, 2019","Baker","2019","Main","Main","None","No","GPA","No",-0.0158,0.0036,0.0602,-0.1337,0.1022
+1,"Baker, 2019","Baker, 2019","Baker","2019","Main","Main","None","No","Amount of time until withdraw from class","No",0.0843,0.0036,0.0602,-0.0337,0.2023
+2,"Bratter et al.","Bancroft, 2017","Bancroft","2017",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+3,"Bayly, 2017","Bayly, 2017","Bayly","2017","Minority subgroup","URM or First generation","Mixed","Yes","GPA","No",-0.1783,0.0104,0.1017,-0.3777,0.0212
+3,"Bayly, 2017","Bayly, 2017","Bayly","2017","Minority subgroup","URM or First generation","Mixed","No","GPA","No",-0.0896,0.0101,0.1007,-0.2869,0.1078
+3,"Bayly, 2017","Bayly, 2017","Bayly","2017","Minority subgroup","URM","Race","No","GPA","Yes",-0.0559,0.0137,0.117,-0.2852,0.1735
+3,"Bayly, 2017","Bayly, 2017","Bayly","2017","Minority subgroup","First generation","First generation","No","GPA","Yes",-0.0223,0.0181,0.1345,-0.2859,0.2413
+4,"Binning, under review","Binning, under review","Binning","under review","Minority subgroup","URM","Race","No","GPA","Yes",0.3629,0.0249,0.1579,0.0533,0.6725
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Black","Race","No","MCA reading score","Yes",0.023,0.0024,0.0489,-0.0729,0.1188
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Black","Race","No","MCA math score","Yes",0.0729,0.0029,0.0539,-0.0328,0.1785
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Hispanic","Race","No","MCA reading score","Yes",0.0548,0.007,0.0837,-0.1092,0.2187
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Hispanic","Race","No","MCA math score","Yes",0.0528,0.0054,0.0737,-0.0917,0.1972
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Female","Gender","No","MCA reading score","Yes",0.019,0.0015,0.039,-0.0574,0.0953
+5,"Borman, 2012","Borman, 2012","Borman","2012","Minority subgroup","Female","Gender","No","MCA math score","Yes",0.1039,0.0012,0.035,0.0354,0.1724
+5,"Borman, 2012","Borman, 2012","Borman","2012","Majority subgroup","Asian","Race","No","MCA reading score","Yes",-0.0659,0.0025,0.0499,-0.1636,0.0319
+5,"Borman, 2012","Borman, 2012","Borman","2012","Majority subgroup","Asian","Race","No","MCA math score","Yes",-0.0748,0.0021,0.0459,-0.1648,0.0151
+5,"Borman, 2012","Borman, 2012","Borman","2012","Majority subgroup","Male","Gender","No","MCA reading score","Yes",-0.022,0.0018,0.042,-0.1042,0.0603
+5,"Borman, 2012","Borman, 2012","Borman","2012","Majority subgroup","Male","Gender","No","MCA math score","Yes",-0.005,0.0015,0.039,-0.0813,0.0714
+6,"MWAP","Borman, 2015","Borman","2015",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","7th GPA","Yes",0.1099,0.004,0.0628,-0.0133,0.2331
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Fall Reading test","Yes",0,0.0043,0.0657,-0.1287,0.1287
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Fall Math test","Yes",0.0899,0.0043,0.0657,-0.0389,0.2187
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Reading test","Yes",0.01,0.0043,0.0657,-0.1187,0.1387
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Math test","Yes",0.0799,0.0043,0.0657,-0.0488,0.2087
+7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Language Usage test","Yes",0.04,0.0043,0.0657,-0.0888,0.1687
+8,"MWAP","Borman, 2018","Borman","2018","Interaction","URM","Race","No","7th-9th GPA","Yes",0.1739,0.0044,0.0661,0.0445,0.3034
+8,"MWAP","Borman, 2018","Borman","2018","Interaction","White and Asian","Race","No","7th-9th GPA","Yes",0.0353,0.0043,0.0659,-0.094,0.1645
+8,"MWAP","Borman, 2018","Borman","2018","Minority subgroup","URM","Race","No","7th-9th GPA","Yes",0.2022,0.0124,0.1114,-0.0161,0.4205
+9,"Bowen, 2013","Bowen, 2013","Bowen","2013","Minority subgroup","Black","Race","No","Social Studies grades","Yes",0.57,0.0316,0.1778,0.2214,0.9185
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Black","Race","No","Semester English grades","No",0.2044,0.0178,0.1335,-0.0571,0.466
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Black","Race","No","STAAR Reading","No",-0.0931,0.0177,0.1332,-0.3541,0.1679
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Black","Race","No","STAAR Algebra","No",-0.1994,0.0178,0.1334,-0.4609,0.0622
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Hispanic","Race","No","Semester English grades","No",-0.023,0.0073,0.0854,-0.1903,0.1443
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Hispanic","Race","No","STAAR Reading","No",-0.0899,0.0073,0.0854,-0.2573,0.0775
+10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Hispanic","Race","No","STAAR Algebra","No",-0.0215,0.0073,0.0854,-0.1888,0.1458
+11,"Churchill, 2018","Churchill, 2018","Churchill","2018","Main","Main","None","No","Music examination grade","No",0.2062,0.0601,0.2452,-0.2745,0.6869
+12,"Cohen et al.","Cohen (Study 1), 2006","Cohen (Study 1)","2006","Minority subgroup","Black","Race","No","GPA in targeted course","Yes",0.2589,0.0403,0.2008,-0.1347,0.6526
+12,"Cohen et al.","Cohen (Study 1), 2006","Cohen (Study 1)","2006","Interaction","White","Race","No","GPA in targeted course","Yes",0.0891,0.0361,0.1899,-0.2832,0.4613
+12,"Cohen et al.","Cohen (Study 1), 2006","Cohen (Study 1)","2006","Minority subgroup","Black","Race","No","GPA in non-targeted course","Yes",0.3058,0.081,0.2845,-0.2519,0.8635
+13,"Cohen et al.","Cohen (Study 2), 2006","Cohen (Study 2)","2006","Minority subgroup","Black","Race","No","GPA in targeted course","Yes",0.3387,0.0588,0.2425,-0.1367,0.8141
+13,"Cohen et al.","Cohen (Study 2), 2006","Cohen (Study 2)","2006","Interaction","White","Race","No","GPA in targeted course","Yes",0.0297,0.0303,0.1741,-0.3115,0.3709
+13,"Cohen et al.","Cohen (Study 2), 2006","Cohen (Study 2)","2006","Minority subgroup","Black","Race","No","GPA in non-targeted course","Yes",0.2073,0.0583,0.2414,-0.2659,0.6805
+14,"Cohen et al.","Cohen, 2009","Cohen","2009","Minority subgroup","Black","Race","No","GPA","Yes",0.24,0.023,0.1517,-0.0574,0.5374
+14,"Cohen et al.","Cohen, 2009","Cohen","2009","Majority subgroup","White","Race","No","GPA","Yes",-0.0696,0.0213,0.1459,-0.3556,0.2164
+15,"Cook, 2012","Cook, 2012","Cook","2012",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+16,"De Clercq, 2019","De Clercq, 2019","De Clercq","2019","Main","Main","None","No","Test score","No",-0.0473,0.0169,0.1301,-0.3023,0.2078
+16,"De Clercq, 2019","De Clercq, 2019","De Clercq","2019","Main","Main","None","No","Study time","No",-0.1209,0.0248,0.1574,-0.4294,0.1876
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","No",0.0211,0.0017,0.0413,-0.0598,0.102
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","No",0.0539,0.0017,0.0413,-0.027,0.1348
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","No",-0.0259,0.0017,0.0413,-0.1068,0.055
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","No",-0.0026,0.0017,0.0413,-0.0835,0.0783
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","Yes",-8e-04,0.0017,0.0413,-0.0817,0.0801
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","Yes",0.0547,0.0017,0.0413,-0.0262,0.1356
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","Yes",-0.0399,0.0017,0.0413,-0.1208,0.041
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","Yes",0.0058,0.0017,0.0413,-0.0751,0.0867
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Dutch","No",-0.0992,0.0145,0.1203,-0.335,0.1367
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","English","No",0.0086,0.0145,0.1203,-0.2272,0.2443
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Mathematics","No",-0.0747,0.0145,0.1203,-0.3105,0.1611
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","Dutch","No",-0.1575,0.0682,0.2611,-0.6693,0.3543
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","English","No",0.0785,0.068,0.2608,-0.4327,0.5897
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","Mathematics","No",-0.1224,0.0681,0.261,-0.6339,0.3891
+18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Minority subgroup","URM","Race","Yes","Cito scores","No",-0.0191,0.0233,0.1525,-0.3181,0.2799
+18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Minority subgroup","URM","Race","No","Cito scores","No",-0.0572,0.0226,0.1502,-0.3515,0.2371
+18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Majority subgroup","URM","Race","Yes","Cito scores","No",-0.0701,0.5003,0.7074,-1.4565,1.3163
+18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Majority subgroup","URM","Race","No","Cito scores","No",-0.4579,0.694,0.833,-2.0907,1.1748
+20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","Hispanic","Race","No","Course Difficulty Scores","No",0.4183,0.0219,0.1481,0.1281,0.7084
+20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","White","Race","No","Course Difficulty Scores","No",-0.1095,0.0215,0.1466,-0.3968,0.1777
+20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","Hispanic","Race","No","Course Difficulty Scores","Yes",0.478,0.0221,0.1485,0.1869,0.7692
+20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","White","Race","No","Course Difficulty Scores","Yes",-0.2191,0.0216,0.1469,-0.507,0.0688
+20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","Hispanic","Race","No","Course Difficulty Scores","Yes",0.478,0.0221,0.1485,0.1869,0.7692
+21,"Cohen et al.","Goyer (Study 2), 2017","Goyer (Study 2)","2017",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+22,"Gutmann, 2019","Gutmann, 2019","Gutmann","2019","Minority subgroup","Female","Gender","No","Physics 100 final grades","No",-0.2201,0.027,0.1644,-0.5422,0.1021
+22,"Gutmann, 2019","Gutmann, 2019","Gutmann","2019","Majority subgroup","Male","Gender","No","Physics 100 final grades","No",-0.327,0.0161,0.1269,-0.5757,-0.0783
+22,"Gutmann, 2019","Gutmann, 2019","Gutmann","2019","Minority subgroup","Female","Gender","No","Physics 212 final grades","No",-0.1156,0.0151,0.1229,-0.3565,0.1254
+22,"Gutmann, 2019","Gutmann, 2019","Gutmann","2019","Majority subgroup","Male","Gender","No","Physics 212 final grades","No",0.0851,0.0054,0.0734,-0.0588,0.229
+23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Minority subgroup","FSM","FSM status","No","GCSE Mathematics","No",0.4489,0.0322,0.1796,0.097,0.8008
+23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Majority subgroup","nonFSM","FSM status","No","GCSE Mathematics","No",0.0428,0.0092,0.0961,-0.1454,0.2311
+23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Minority subgroup","FSM","FSM status","No","GCSE Mathematics","Yes",0.5292,0.0325,0.1804,0.1756,0.8828
+23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Majority subgroup","nonFSM","FSM status","No","GCSE Mathematics","Yes",0.0525,0.0092,0.0961,-0.1358,0.2408
+26,"MWAP","Hanselman, 2014","Hanselman","2014",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",0.1008,0.0049,0.0698,-0.0361,0.2377
+24,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.0299,0.005,0.0708,-0.1688,0.1089
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","7th GPA","Yes",-0.002,0.0018,0.0419,-0.0842,0.0802
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","8th GPA","Yes",-0.0719,0.0034,0.0579,-0.1854,0.0416
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 7","Yes",-0.0849,0.0022,0.0469,-0.1768,0.0071
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",-0.0799,0.0019,0.0439,-0.166,0.0062
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 7","Yes",-0.005,0.003,0.0549,-0.1126,0.1026
+25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.005,0.0031,0.0559,-0.1146,0.1046
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","Biology Course Grade","No",-0.0579,0.0062,0.0788,-0.2124,0.0966
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","GPA","No",-0.0479,0.0062,0.0788,-0.2024,0.1065
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","Continuation","No",-0.0905,0.0105,0.1023,-0.291,0.11
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Minority subgroup","First generation","First generation","No","Biology Course Grade","No",0.2928,0.0263,0.162,-0.0248,0.6103
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Minority subgroup","First generation","First generation","No","GPA","No",0.3272,0.0263,0.1622,0.0092,0.6452
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Minority subgroup","First generation","First generation","No","Continuation","No",0.6134,0.0499,0.2234,0.1756,1.0511
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Interaction","First generation","First generation","No","Biology Course Grade","Yes",0.1803,0.005,0.0709,0.0413,0.3194
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Interaction","First generation","First generation","No","GPA","Yes",0.2006,0.005,0.071,0.0615,0.3397
+27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Interaction","First generation","First generation","No","Continuation","Yes",0.211,0.0051,0.0712,0.0715,0.3505
+28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","URM","Race","No","Biology course grade","Yes",-0.0739,0.0077,0.0877,-0.2459,0.098
+28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","White and Asian","Race","No","Biology course grade","Yes",0.0246,0.0077,0.0877,-0.1473,0.1965
+28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","First generation","First generation","No","Biology course grade","Yes",-0.1482,0.0077,0.0878,-0.3203,0.0239
+28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","Continuing generation","First generation","No","Biology course grade","Yes",0.0986,0.0077,0.0878,-0.0734,0.2707
+29,"Hayes (Study 1), 2019","Hayes (Study 1), 2019","Hayes (Study 1)","2019","Minority subgroup","Hispanic","Race","No","Semester Grade","No",-0.2961,0.0523,0.2287,-0.7444,0.1521
+30,"Hayes (Study 2), 2019","Hayes (Study 2), 2019","Hayes (Study 2)","2019","Minority subgroup","First generation","First generation","No","GPA","No",-0.1124,0.0514,0.2266,-0.5566,0.3318
+31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","Female","Gender","No","Exam grades","Yes",-0.0706,0.0021,0.0455,-0.1598,0.0186
+31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","Male","Gender","No","Exam grades","Yes",0.2784,0.0021,0.0457,0.1888,0.368
+31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","URM","Race","No","Exam grades","Yes",0.7665,0.0022,0.0471,0.6741,0.8588
+31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","White","Race","No","Exam grades","Yes",0.2784,0.0021,0.0457,0.1888,0.368
+32,"Kim, 2019","Kim, 2019","Kim","2019","Interaction","Female","Gender","Yes","GPA","Yes",0.2419,0.0182,0.1349,-0.0225,0.5062
+33,"Kinias (Study 2), 2016","Kinias (Study 2), 2016","Kinias (Study 2)","2016","Majority subgroup","Male","Gender","No","MBA core course grade","No",-0.1385,0.0151,0.1228,-0.3792,0.1021
+33,"Kinias (Study 2), 2016","Kinias (Study 2), 2016","Kinias (Study 2)","2016","Minority subgroup","Female","Gender","No","MBA core course grade","No",0.2924,0.0311,0.1764,-0.0533,0.638
+33,"Kinias (Study 2), 2016","Kinias (Study 2), 2016","Kinias (Study 2)","2016","Interaction","Female","Gender","No","MBA core course grade","Yes",0.2872,0.0102,0.101,0.0892,0.4852
+33,"Kinias (Study 2), 2016","Kinias (Study 2), 2016","Kinias (Study 2)","2016","Interaction","Male","Gender","No","MBA core course grade","Yes",-0.1315,0.0101,0.1006,-0.3287,0.0657
+34,"Miyake et al.","Kost-Smith, 2010","Kost-Smith","2010","Minority subgroup","Female","Gender","No","FMCE grade","Yes",0.4579,0.0437,0.209,0.0482,0.8675
+34,"Miyake et al.","Kost-Smith, 2010","Kost-Smith","2010","Minority subgroup","Male","Gender","No","FMCE grade","Yes",-0.0219,0.0206,0.1436,-0.3035,0.2596
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics course grade","No",0.0177,0.0279,0.167,-0.3097,0.3451
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics course grade","No",-0.2175,0.011,0.1051,-0.4235,-0.0116
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics course score","No",0.0155,0.0279,0.167,-0.3119,0.3429
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics course score","No",-0.1573,0.011,0.1049,-0.363,0.0483
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics exam score","No",0.0513,0.0279,0.1671,-0.2761,0.3788
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics exam score","No",-0.1372,0.011,0.1049,-0.3428,0.0683
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics course grade","Yes",0.1998,0.0279,0.1669,-0.1274,0.527
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics course grade","Yes",-0.0404,0.011,0.1046,-0.2455,0.1647
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics course score","Yes",0.1442,0.0279,0.1669,-0.1829,0.4713
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics course score","Yes",0.0374,0.011,0.1046,-0.1677,0.2425
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Minority subgroup","Female","Gender","No","Physics exam score","Yes",0.1194,0.0278,0.1669,-0.2077,0.4464
+35,"Miyake et al.","Kost-Smith, 2012","Kost-Smith","2012","Majority subgroup","Male","Gender","No","Physics exam score","Yes",-0.0845,0.011,0.1047,-0.2897,0.1206
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Introductory biology learning gains","Yes",0.0047,0.0303,0.1741,-0.3365,0.3459
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Biochemistry learning gains","Yes",0.0056,0.0216,0.147,-0.2826,0.2938
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Physics 1 learning gains","Yes",0.0126,0.0909,0.3015,-0.5783,0.6036
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Physics 2 learning gains","Yes",-0.0026,0.0449,0.212,-0.4181,0.4129
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Introductory biology learning gains","No",-0.1149,0.0154,0.1241,-0.3582,0.1284
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Biochemistry learning gains","No",-0.1386,0.1762,0.4197,-0.9613,0.684
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Physics 1 learning gains","No",0.2032,0.0619,0.2487,-0.2843,0.6907
+36,"Lauer, 2013","Lauer, 2013","Lauer","2013","Main","Main","None","No","Physics 2 learning gains","No",-0.3634,0.0328,0.1811,-0.7183,-0.0084
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Main","Main","None","No","Wave 1 Math scores","No",0.1089,0.0061,0.078,-0.044,0.2618
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Main","Main","None","No","Wave 2 Math scores","No",0.1661,0.0061,0.0781,0.0131,0.3191
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Female","Gender","No","Wave 1 Math scores","No",0.1995,0.0124,0.1116,-0.0192,0.4182
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Majority subgroup","Male","Gender","No","Wave 1 Math scores","No",-0.0499,0.0118,0.1087,-0.263,0.1632
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Turkish","Race","No","Wave 1 Math scores","No",0.3281,0.0307,0.1753,-0.0155,0.6717
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Arabic","Race","No","Wave 1 Math scores","No",0.238,0.0446,0.2111,-0.1757,0.6516
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Eastern European","Race","No","Wave 1 Math scores","No",-0.0695,0.0345,0.1857,-0.4335,0.2944
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Female","Gender","No","Wave 1 Math scores","Yes",0.0236,0.0061,0.0779,-0.1292,0.1763
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Turkish","Race","No","Wave 1 Math scores","Yes",0.1923,0.0061,0.0781,0.0391,0.3454
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Arabic","Race","No","Wave 1 Math scores","Yes",0.0589,0.0061,0.078,-0.0939,0.2117
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Eastern European","Race","No","Wave 1 Math scores","Yes",-0.1387,0.0061,0.078,-0.2917,0.0142
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","White","Race","No","Wave 1 Math scores","Yes",-0.1625,0.0061,0.0781,-0.3155,-0.0095
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Female","Gender","No","Wave 2 Math scores","No",0.1796,0.0124,0.1115,-0.039,0.3982
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Majority subgroup","Male","Gender","No","Wave 2 Math scores","No",0.1796,0.0119,0.1089,-0.0338,0.393
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Turkish","Race","No","Wave 2 Math scores","No",0.348,0.0308,0.1755,0.0041,0.6919
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Arabic","Race","No","Wave 2 Math scores","No",0.347,0.0449,0.2119,-0.0683,0.7623
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Minority subgroup","Eastern European","Race","No","Wave 2 Math scores","No",0.1987,0.0346,0.1861,-0.166,0.5634
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Female","Gender","No","Wave 2 Math scores","Yes",0.0359,0.0061,0.0779,-0.1168,0.1887
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Turkish","Race","No","Wave 2 Math scores","Yes",0.231,0.0061,0.0782,0.0777,0.3843
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Arabic","Race","No","Wave 2 Math scores","Yes",0.1776,0.0061,0.0781,0.0246,0.3307
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","Eastern European","Race","No","Wave 2 Math scores","Yes",0.1414,0.0061,0.078,-0.0116,0.2943
+37,"Lokhande, 2019","Lokhande, 2019","Lokhande","2019","Interaction","White","Race","No","Wave 2 Math scores","Yes",-0.0387,0.0061,0.078,-0.1915,0.1141
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","Biology mean exam score","No",-0.2542,0.0153,0.1235,-0.4963,-0.0121
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","Biology mean exam score","No",0.1901,0.0359,0.1895,-0.1814,0.5616
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","Biology final exam score","No",-0.2111,0.0152,0.1234,-0.4529,0.0307
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","Biology final exam score","No",0.3618,0.0363,0.1906,-0.0118,0.7355
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","Biology final course grade","No",-0.1959,0.0152,0.1233,-0.4376,0.0458
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","Biology final course grade","No",0.1058,0.0358,0.1893,-0.2651,0.4768
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","End-of-semester FMCE","No",-0.0748,0.0206,0.1437,-0.3564,0.2069
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","End-of-semester FMCE","No",0.2586,0.0429,0.2072,-0.1475,0.6646
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","Biology final exam score","Yes",-0.2171,0.0152,0.1234,-0.4589,0.0247
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","Biology final exam score","Yes",0.5564,0.0371,0.1927,0.1788,0.934
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Majority subgroup","Male","Gender","No","Biology final course grade","Yes",-0.2056,0.0152,0.1234,-0.4474,0.0361
+38,"Miyake et al.","Miyake, 2010","Miyake","2010","Minority subgroup","Female","Gender","No","Biology final course grade","Yes",0.365,0.0364,0.1907,-0.0087,0.7387
+39,"Peters, 2017","Peters, 2017","Peters","2017","Main","Main","None","No","Final grades","No",0,0.0181,0.1345,-0.2637,0.2637
+40,"Cohen et al.","Powers (Study 1), 2016","Powers (Study 1)","2016",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41,"Cohen et al.","Powers (Study 2), 2016","Powers (Study 2)","2016",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42,"Protzko, 2016","Protzko, 2016","Protzko","2016","Majority subgroup","White and Asian","Race","No","GPA","No",0.0903,0.0323,0.1797,-0.2619,0.4425
+42,"Protzko, 2016","Protzko, 2016","Protzko","2016","Minority subgroup","Black and Hispanic","Race","No","GPA","No",-0.0569,0.0336,0.1834,-0.4163,0.3025
+42,"Protzko, 2016","Protzko, 2016","Protzko","2016","Interaction","Black and Hispanic","Race","No","GPA","Yes",-0.0879,0.0107,0.1033,-0.2904,0.1146
+42,"Protzko, 2016","Protzko, 2016","Protzko","2016","Interaction","White","Race","No","GPA","Yes",-0.0012,0.0107,0.1033,-0.2037,0.2012
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Minority subgroup","Female","Gender","No","GPA","No",0.5185,0.1037,0.3221,-0.1129,1.1498
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Majority subgroup","Male","Gender","No","GPA","No",0.7064,0.1253,0.354,0.0125,1.4003
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Minority subgroup","Black and Hispanic","Race","No","GPA","No",0.8658,0.0844,0.2904,0.2966,1.4351
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Majority subgroup","White","Race","No","GPA","No",0.1877,0.1842,0.4292,-0.6535,1.0289
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Minority subgroup","Female","Gender","No","GPA","Yes",0.2165,0.1047,0.3235,-0.4176,0.8506
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Majority subgroup","Male","Gender","No","GPA","Yes",1.1962,0.1265,0.3557,0.4991,1.8933
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Minority subgroup","Black and Hispanic","Race","No","GPA","Yes",0.9461,0.0853,0.2921,0.3736,1.5186
+43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Majority subgroup","White","Race","No","GPA","Yes",0.0119,0.1961,0.4428,-0.8561,0.8798
+44,"Rapa, 2016","Rapa, 2016","Rapa","2016","Main","Main","None","Yes","GPA","No",0.5296,0.0784,0.2801,-0.0193,1.0786
+45,"MWAP","Rozek, 2015","Rozek","2015",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","Yes",0.1051,9e-04,0.0307,0.0449,0.1653
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Pass rates","Yes",0.1026,0.0022,0.0469,0.0106,0.1945
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Pass rates","Yes",0.1738,0.0342,0.185,-0.1888,0.5364
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","No",0.1026,9e-04,0.0307,0.0424,0.1628
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Pass rates","No",0.095,0.0022,0.0469,0.0031,0.187
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Pass rates","No",0.1763,0.0342,0.185,-0.1863,0.5389
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","Yes",0.059,9e-04,0.0299,3e-04,0.1177
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Attendance","Yes",0.1129,0.0021,0.0458,0.0232,0.2027
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Attendance","Yes",0.4149,0.0333,0.1824,0.0575,0.7723
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","No",0.0462,9e-04,0.0299,-0.0125,0.1048
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Attendance","No",0.1207,0.0021,0.0458,0.0309,0.2104
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Attendance","No",0.4916,0.0335,0.1831,0.1327,0.8506
+47,"Miyake et al.","Serra-Garcia (Study 1), under review","Serra-Garcia (Study 1)","under review",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Minority subgroup","Female","Gender","No","Physics quiz grade","No",0.2239,0.0715,0.2674,-0.3002,0.748
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Minority subgroup","Female","Gender","No","Physics final exam score","No",-0.2881,0.0718,0.2679,-0.8133,0.237
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Minority subgroup","Female","Gender","No","Physics final grade","No",-0.0065,0.0711,0.2666,-0.5291,0.5161
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Majority subgroup","Male","Gender","No","Physics quiz grade","No",-0.3911,0.0683,0.2614,-0.9035,0.1213
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Majority subgroup","Male","Gender","No","Physics final exam score","No",0.2891,0.0678,0.2604,-0.2213,0.7995
+48,"Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2), under review","Serra-Garcia (Study 2)","under review","Majority subgroup","Male","Gender","No","Physics final grade","No",-0.1337,0.0673,0.2595,-0.6423,0.3748
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Minority subgroup","Hispanic","Race","No","Year 1 GPA","No",0.5778,0.0515,0.2269,0.1331,1.0226
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Majority subgroup","White","Race","No","Year 1 GPA","No",-0.1117,0.0389,0.1972,-0.4983,0.2748
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Minority subgroup","Hispanic","Race","No","Year 2 GPA","No",0.6829,0.0523,0.2287,0.2345,1.1312
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Majority subgroup","White","Race","No","Year 2 GPA","No",0.0349,0.0388,0.1971,-0.3514,0.4212
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Minority subgroup","Hispanic","Race","No","Year 3 GPA","No",0.3752,0.0503,0.2242,-0.0642,0.8147
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Majority subgroup","White","Race","No","Year 3 GPA","No",-0.2204,0.0391,0.1977,-0.6079,0.167
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 1 GPA","Yes",0.2888,0.0218,0.1476,-5e-04,0.5781
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 2 GPA","Yes",0.4282,0.0221,0.1485,0.1371,0.7193
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 3 GPA","Yes",0.239,0.0217,0.1474,-0.0498,0.5278
+50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Minority subgroup","Hispanic","Race","No","GPA","No",0.6343,0.0767,0.277,0.0914,1.1771
+50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Majority subgroup","White","Race","No","GPA","No",-0.1767,0.0419,0.2047,-0.5779,0.2245
+50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Interaction","Hispanic","Race","No","GPA","Yes",0.4477,0.0269,0.164,0.1263,0.7691
+50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Interaction","White","Race","No","GPA","Yes",0.1293,0.0263,0.1621,-0.1884,0.4471
+51,"Cohen et al.","Shnabel (Study 1), 2013","Shnabel (Study 1)","2013",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+52,"Silverman (Study 2), 2014","Silverman (Study 2), 2014","Silverman (Study 2)","2014","Minority subgroup","Blind","Disability","No","Instructor-graded student progress","Yes",0.6253,0.1147,0.3387,-0.0384,1.2891
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S1 Semester Grade","No",0.078,0.0284,0.1685,-0.2523,0.4083
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S2 Semester Grade","No",0.2368,0.0286,0.1691,-0.0946,0.5681
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S3 Semester Grade","No",0.3695,0.0289,0.1699,0.0365,0.7026
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S1 Semester Grade","No",-0.0553,0.0066,0.0811,-0.2143,0.1037
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S2 Semester Grade","No",-0.0162,0.0066,0.0811,-0.1752,0.1428
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S3 Semester Grade","No",-0.0357,0.0066,0.0811,-0.1947,0.1233
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","GPA","No",0.279,0.0269,0.1641,-0.0427,0.6006
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","GPA","No",-0.0563,0.0063,0.0792,-0.2116,0.0989
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","First generation","First generation","No","GPA","Yes",0.3443,0.0052,0.0718,0.2036,0.485
+53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","Continuing generation","First generation","No","GPA","Yes",0.1602,0.0051,0.0714,0.0203,0.3
+54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","Yes","Course Grade","No",0.1746,0.0137,0.1172,-0.0552,0.4044
+54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"Yes","Course Grade","No",-0.1345,0.0137,0.1172,-0.3641,0.0952
+54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","No","Course Grade","No",0.9077,0.0202,0.142,0.6294,1.1859
+54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"No","Course Grade","No",-0.1771,0.0183,0.1354,-0.4425,0.0883
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Course point total","No",-0.2683,0.0493,0.2219,-0.7033,0.1667
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Course point total","No",0.1511,0.0193,0.1389,-0.1211,0.4233
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Course point total","No",0.0175,0.0208,0.1443,-0.2654,0.3004
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Course point total","No",0.065,0.0426,0.2064,-0.3395,0.4695
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Biology track persistence","No",-0.0344,0.0488,0.2209,-0.4674,0.3987
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Biology track persistence","No",0.4434,0.0197,0.1404,0.1683,0.7186
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Biology track persistence","No",0.298,0.0211,0.1451,0.0135,0.5825
+55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Biology track persistence","No",0.2875,0.043,0.2074,-0.119,0.694
+56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","Summative written essay score","Yes",-0.1891,0.0247,0.1571,-0.4969,0.1188
+56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","Summative written essay score","Yes",0.0741,0.0235,0.1534,-0.2265,0.3748
+56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","OSCE score","Yes",0.283,0.0248,0.1575,-0.0257,0.5918
+56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","OSCE score","Yes",0.2896,0.0238,0.1541,-0.0125,0.5917
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 1 GPA in History","No",0.2883,0.0404,0.2011,-0.1058,0.6823
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 2 GPA in History","No",0.1237,0.0401,0.2002,-0.2686,0.5161
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in History","No",0.2721,0.0569,0.2385,-0.1953,0.7395
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in History","No",0.0621,0.0564,0.2374,-0.4033,0.5274
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in History","No",0.3251,0.1399,0.374,-0.4079,1.058
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in History","No",0.2606,0.1392,0.3731,-0.4706,0.9917
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 1 GPA Overall","No",0.2491,0.0403,0.2008,-0.1445,0.6426
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 2 GPA in Overall","No",0.1793,0.0402,0.2004,-0.2135,0.5721
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in Overall","No",0.2385,0.0567,0.2382,-0.2284,0.7054
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in Overall","No",0.1813,0.0566,0.2379,-0.2849,0.6475
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in Overall","No",0.2734,0.1393,0.3732,-0.4581,1.0049
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in Overall","No",0.1883,0.1386,0.3723,-0.5414,0.9179
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS ELA scores","No",0.2375,0.0403,0.2007,-0.1559,0.6309
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS ELA scores","No",0.1218,0.0564,0.2376,-0.3439,0.5874
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS ELA scores","No",0.5366,0.1432,0.3784,-0.205,1.2783
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS Math scores","No",0.2672,0.0404,0.2009,-0.1266,0.661
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS Math scores","No",0.3157,0.0571,0.2389,-0.1525,0.7839
+57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS Math scores","No",0.0898,0.1381,0.3716,-0.6385,0.8181

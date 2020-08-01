@@ -56,7 +56,7 @@ clean_master <- function(kost, purdie, turetsky){
   
 # clean master data and create project clusters
    
-dat_s <- dat %>% 
+dat <- dat %>% 
   as.data.frame() %>% 
   `colnames<-`( c("author", "year", "adapted", "type",  "outcome", 
                   "adjusted", "es", "v", "lowerCI", "upperCI")) %>% 

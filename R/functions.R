@@ -44,3 +44,8 @@ B2d <- function(B,n){
   d = res(r = r,n = n)
   return(d)
 }
+
+
+
+
+
