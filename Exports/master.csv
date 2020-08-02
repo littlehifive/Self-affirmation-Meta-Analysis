@@ -49,17 +49,9 @@
 13,"Cohen et al.","Cohen (Study 2), 2006","Cohen (Study 2)","2006","Minority subgroup","Black","Race","No","GPA in non-targeted course","Yes",0.2073,0.0583,0.2414,-0.2659,0.6805
 14,"Cohen et al.","Cohen, 2009","Cohen","2009","Minority subgroup","Black","Race","No","GPA","Yes",0.24,0.023,0.1517,-0.0574,0.5374
 14,"Cohen et al.","Cohen, 2009","Cohen","2009","Majority subgroup","White","Race","No","GPA","Yes",-0.0696,0.0213,0.1459,-0.3556,0.2164
-15,"Cook, 2012","Cook, 2012","Cook","2012",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+15,"Cohen et al.","Cook (Study 1), 2012","Cook (Study 1)","2012",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 16,"De Clercq, 2019","De Clercq, 2019","De Clercq","2019","Main","Main","None","No","Test score","No",-0.0473,0.0169,0.1301,-0.3023,0.2078
 16,"De Clercq, 2019","De Clercq, 2019","De Clercq","2019","Main","Main","None","No","Study time","No",-0.1209,0.0248,0.1574,-0.4294,0.1876
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","No",0.0211,0.0017,0.0413,-0.0598,0.102
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","No",0.0539,0.0017,0.0413,-0.027,0.1348
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","No",-0.0259,0.0017,0.0413,-0.1068,0.055
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","No",-0.0026,0.0017,0.0413,-0.0835,0.0783
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","Yes",-8e-04,0.0017,0.0413,-0.0817,0.0801
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","Yes",0.0547,0.0017,0.0413,-0.0262,0.1356
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","Yes",-0.0399,0.0017,0.0413,-0.1208,0.041
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","Yes",0.0058,0.0017,0.0413,-0.0751,0.0867
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Dutch","No",-0.0992,0.0145,0.1203,-0.335,0.1367
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","English","No",0.0086,0.0145,0.1203,-0.2272,0.2443
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Mathematics","No",-0.0747,0.0145,0.1203,-0.3105,0.1611
@@ -70,6 +62,14 @@
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Minority subgroup","URM","Race","No","Cito scores","No",-0.0572,0.0226,0.1502,-0.3515,0.2371
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Majority subgroup","URM","Race","Yes","Cito scores","No",-0.0701,0.5003,0.7074,-1.4565,1.3163
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Majority subgroup","URM","Race","No","Cito scores","No",-0.4579,0.694,0.833,-2.0907,1.1748
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","No",0.0211,0.0017,0.0413,-0.0598,0.102
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","No",0.0539,0.0017,0.0413,-0.027,0.1348
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","No",-0.0259,0.0017,0.0413,-0.1068,0.055
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","No",-0.0026,0.0017,0.0413,-0.0835,0.0783
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","Yes",-8e-04,0.0017,0.0413,-0.0817,0.0801
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","Yes",0.0547,0.0017,0.0413,-0.0262,0.1356
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","Yes",-0.0399,0.0017,0.0413,-0.1208,0.041
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","Yes",0.0058,0.0017,0.0413,-0.0751,0.0867
 20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","Hispanic","Race","No","Course Difficulty Scores","No",0.4183,0.0219,0.1481,0.1281,0.7084
 20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","White","Race","No","Course Difficulty Scores","No",-0.1095,0.0215,0.1466,-0.3968,0.1777
 20,"Sherman et al.","Goyer (Study 1), 2017","Goyer (Study 1)","2017","Interaction","Hispanic","Race","No","Course Difficulty Scores","Yes",0.478,0.0221,0.1485,0.1869,0.7692
@@ -84,15 +84,15 @@
 23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Majority subgroup","nonFSM","FSM status","No","GCSE Mathematics","No",0.0428,0.0092,0.0961,-0.1454,0.2311
 23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Minority subgroup","FSM","FSM status","No","GCSE Mathematics","Yes",0.5292,0.0325,0.1804,0.1756,0.8828
 23,"Hadden, 2019","Hadden, 2019","Hadden","2019","Majority subgroup","nonFSM","FSM status","No","GCSE Mathematics","Yes",0.0525,0.0092,0.0961,-0.1358,0.2408
-26,"MWAP","Hanselman, 2014","Hanselman","2014",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",0.1008,0.0049,0.0698,-0.0361,0.2377
-24,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.0299,0.005,0.0708,-0.1688,0.1089
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","7th GPA","Yes",-0.002,0.0018,0.0419,-0.0842,0.0802
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","8th GPA","Yes",-0.0719,0.0034,0.0579,-0.1854,0.0416
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 7","Yes",-0.0849,0.0022,0.0469,-0.1768,0.0071
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",-0.0799,0.0019,0.0439,-0.166,0.0062
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 7","Yes",-0.005,0.003,0.0549,-0.1126,0.1026
-25,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.005,0.0031,0.0559,-0.1146,0.1046
+24,"MWAP","Hanselman, 2014","Hanselman","2014",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",0.1008,0.0049,0.0698,-0.0361,0.2377
+25,"MWAP","Hanselman (Study 1), 2017","Hanselman (Study 1)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.0299,0.005,0.0708,-0.1688,0.1089
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","7th GPA","Yes",-0.002,0.0018,0.0419,-0.0842,0.0802
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","8th GPA","Yes",-0.0719,0.0034,0.0579,-0.1854,0.0416
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 7","Yes",-0.0849,0.0022,0.0469,-0.1768,0.0071
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Mathematcis, Grade 8","Yes",-0.0799,0.0019,0.0439,-0.166,0.0062
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 7","Yes",-0.005,0.003,0.0549,-0.1126,0.1026
+26,"MWAP","Hanselman (Study 2), 2017","Hanselman (Study 2)","2017","Minority subgroup","Black and Hispanic","Race","No","WKCE Reading, Grade 8","Yes",-0.005,0.0031,0.0559,-0.1146,0.1046
 27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","Biology Course Grade","No",-0.0579,0.0062,0.0788,-0.2124,0.0966
 27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","GPA","No",-0.0479,0.0062,0.0788,-0.2024,0.1065
 27,"Harackiewicz et al.","Harackiewicz, 2014","Harackiewicz","2014","Majority subgroup","Continuing generation","First generation","No","Continuation","No",-0.0905,0.0105,0.1023,-0.291,0.11

@@ -271,7 +271,7 @@ Cook2012 <- function(){
   
   rbind(
   # leave empty to avoid double count with Cohen 2006, 2009
-  c("Cook", "2012", rep(NA,8))
+  c("Cook (Study 1)", "2012", rep(NA,8))
   )
 }
 

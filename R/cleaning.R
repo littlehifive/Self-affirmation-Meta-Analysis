@@ -66,6 +66,12 @@ dat <- dat %>%
     se = sqrt(v)) %>%
   group_by(study) %>% 
   mutate(id = cur_group_id()) %>%
+  mutate(id = case_when(
+    study %in% c("Hanselman (Study 1), 2017") ~ 25L,
+    study %in% c("Hanselman (Study 2), 2017") ~ 26L,
+    study %in% c("Hanselman, 2014") ~ 24L,
+    TRUE ~ id)
+  ) %>%
   mutate(cluster = case_when(
     study %in% c("Bancroft, 2017","Bratter, 2016") ~ "Bratter et al.",
     study %in% c("Cohen (Study 1), 2006","Cohen (Study 2), 2006","Cohen, 2009", 
@@ -94,8 +100,24 @@ dat <- dat %>%
   )) %>% 
   select(id, cluster, study, author, year, type_s, group, group_s, 
          adapted, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
-  mutate_at(vars(es:upperCI), round, digits = 4)
+  mutate_at(vars(es:upperCI), round, digits = 4) %>%
+  arrange(id)
 
 return(dat)
 
+}
+
+
+clean_moderator <- function(dat.mod){
+  
+  dat.mod.s <- dat.mod %>%
+    janitor::clean_names() %>%
+    mutate(timing = case_when(
+      early == 1 & before_stress == 0 ~ "early",
+      early == 0 & before_stress == 1 ~ "before_stress",
+      early == 1 & before_stress == 1 ~ "both",
+      early == 0 & before_stress == 0 ~ "neither"
+    )) %>% 
+    select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias)
+  
 }

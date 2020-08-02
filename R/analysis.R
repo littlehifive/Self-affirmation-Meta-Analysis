@@ -1,6 +1,6 @@
 # Main analysis of average treatment effect
 
-# run multilevel analysis
+# Run multilevel analysis
 run_meta_mlm <- function(data, random){
   
   model <- metafor::rma.mv(es, 
@@ -14,6 +14,7 @@ run_meta_mlm <- function(data, random){
 
 }
 
+# Extract multilevel results
 extract_mlm_results <- function(model){
   
   results <- summary(model)
@@ -29,8 +30,7 @@ extract_mlm_results <- function(model){
   
 }
 
-
-# Multilevel models 
+# Print multilevel results
 print_mlm_results <- function(model_mlm_all_outcomes,
                               model_mlm_all_primary_outcomes,
                               model_mlm_all_secondary_outcomes,
@@ -72,7 +72,7 @@ combined_mlm_results = bind_rows(
   return(combined_mlm_results)
 }
 
-# run study/cluster level pooled models
+# Run study/cluster level pooled models
 
 run_meta_level <- function(data, level){
   
@@ -89,7 +89,7 @@ run_meta_level <- function(data, level){
                          comb.fixed = FALSE,
                          comb.random = TRUE,
                          method.tau = "SJ",
-                         hakn = TRUE,
+                         hakn = TRUE,#IntHout, J., Ioannidis, J. P., & Borm, G. F. (2014). The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method. BMC medical research methodology, 14(1), 25.
                          prediction=TRUE,
                          sm="g")
   
@@ -97,6 +97,7 @@ run_meta_level <- function(data, level){
   
 }
 
+# Extract single level results
 extract_level_results <- function(model){
   
   results <- summary(model)
@@ -117,6 +118,7 @@ extract_level_results <- function(model){
   return(output)
 }
 
+# Print single level results
 print_level_results <- function(model_level_all_outcomes,
                                 model_level_all_primary_outcomes,
                                 model_level_all_secondary_outcomes,
@@ -162,7 +164,7 @@ print_level_results <- function(model_level_all_outcomes,
   
 }
 
-# forest plot
+# Draw forest plots
 
 print_level_forest <- function(model, level){
   
@@ -176,7 +178,8 @@ print_level_forest <- function(model, level){
   return(forest)
 }
 
-# this is specific to study level
+# Draw funnel plots (separate specificity for study vs. cluster level models )
+
 print_study_level_funnel <- function(model){
 
   # some manual editing here to avoid overlapping texts 
@@ -185,7 +188,9 @@ print_study_level_funnel <- function(model){
   meta::funnel(model,
                xlab = "Hedges' g",
                ylab = "Reverse-scaled Standard Errors\n(Top = More Precision)",
-               studlab = F, cex.lab = 1.2, font.lab = 2)
+               studlab = F, cex.lab = 1.2, font.lab = 2,
+               contour = c(.90,.90,.95,.99),
+               col.contour=c("white","gray50","gray75", "gray90"))
 
   studlist <-c("Harackiewicz, 2014",
                "Tibbetts (Study 1a), 2016",
@@ -266,6 +271,9 @@ print_study_level_funnel <- function(model){
   text(model$TE[model$studlab %in% c("Borman, 2016")]+0.05,
        model$seTE[model$studlab %in% c("Borman, 2016")],
        model$studlab[model$studlab %in% c("Borman, 2016")],cex=.8)
+  
+  legend(0.6, 0, c("p > 0.1", "0.05 < p < 0.1","0.01 < p < 0.05", "p < 0.01"),bty = "n",
+         fill=c("white","gray50","gray75", "gray90"))
 }
 
 print_cluster_level_funnel <- function(model){
@@ -276,7 +284,9 @@ print_cluster_level_funnel <- function(model){
   meta::funnel(model,
                xlab = "Hedges' g",
                ylab = "Reverse-scaled Standard Errors\n(Top = More Precision)",
-               studlab = F, cex.lab = 1.2, font.lab = 2)
+               studlab = F, cex.lab = 1.2, font.lab = 2,
+               contour = c(.90,.90,.95,.99),
+               col.contour=c("white","gray50","gray75", "gray90"))
   
   studlist <-c("Baker, 2019",
                "Borman, 2012",
@@ -324,8 +334,17 @@ print_cluster_level_funnel <- function(model){
        model$seTE[model$studlab %in% c("Protzko, 2016")],
        model$studlab[model$studlab %in% c("Protzko, 2016")],cex=.8)
   
+  legend(0.6, 0, c("p > 0.1", "0.05 < p < 0.1","0.01 < p < 0.05", "p < 0.01"),bty = "n",
+         fill=c("white","gray50","gray75", "gray90"))
 
 }
 
-
-
+# Draw trim & fill funnel plots
+print_level_trimfill <- function(model){
+  
+  meta::funnel(trimfill(model),
+               xlab = "Hedges' g",
+               ylab = "Reverse-scaled Standard Errors\n(Top = More Precision)",
+               studlab = F, cex.lab = 1.2, font.lab = 2)
+               
+}

@@ -20,6 +20,6 @@
 library(drake)
 
 r_make()
-
+r_sankey_drake_graph()
 r_vis_drake_graph()
 r_outdated()
