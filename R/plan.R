@@ -15,13 +15,13 @@ the_plan <- drake_plan(
 # 2. Calculation and cleaning -----------------------------------------------------------
 
   # derive the cleaned master dataset
-  dat = clean_master(kost, purdie, turetsky),
+  dat.s = clean_master(kost, purdie, turetsky),
   
   dat.mod = clean_moderator(mod),
 
-  dat.full = left_join(dat, 
-                       select(dat.mod, -c(year, author)),
-                       by = "id"),
+  dat = left_join(dat.s, 
+                  select(dat.mod, -c(year, author)),
+                  by = "id"),
 
 
 # 3. Write data --------------------------------------------------------------
@@ -34,9 +34,9 @@ the_plan <- drake_plan(
       if (isTRUE(F_EXPORT_DATA)) {
         message("Writing processed datasets")
         
-        write.csv(dat, file.path(here::here(), "Exports/master.csv"), row.names = F)
+        write.csv(dat.s, file.path(here::here(), "Exports/master.csv"), row.names = F)
         write.csv(dat.mod, file.path(here::here(), "Exports/moderators.csv"), row.names = F)
-        write.csv(dat.full, file.path(here::here(), "Exports/master_mod_merged.csv"), row.names = F)
+        write.csv(dat, file.path(here::here(), "Exports/master_mod_merged.csv"), row.names = F)
 
       }
       
@@ -562,3 +562,7 @@ export_cluster_level_diagnostics = target(
 )
 
 # 5. Subgroup analysis --------------------------------------------------------
+
+
+
+

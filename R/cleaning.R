@@ -110,7 +110,7 @@ return(dat)
 
 clean_moderator <- function(dat.mod){
   
-  dat.mod.s <- dat.mod %>%
+  dat.mod <- dat.mod %>%
     janitor::clean_names() %>%
     mutate(timing = case_when(
       early == 1 & before_stress == 0 ~ "early",
@@ -120,4 +120,5 @@ clean_moderator <- function(dat.mod){
     )) %>% 
     select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias)
   
+  return(dat.mod)
 }

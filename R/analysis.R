@@ -1,4 +1,4 @@
-# Main analysis of average treatment effect
+# Main analysis of average treatment effect ------------------
 
 # Run multilevel analysis
 run_meta_mlm <- function(data, random){
@@ -348,3 +348,25 @@ print_level_trimfill <- function(model){
                studlab = F, cex.lab = 1.2, font.lab = 2)
                
 }
+
+
+# Moderator analysis -------------------------------------------------------
+
+#temp <- sapply(dat.mod, table)
+
+run_mod <- function(mod, random, data){
+  
+  model.mods <- rma.mv(es, 
+                       v, 
+                       random = random, 
+                       tdist = TRUE, 
+                       data = data,
+                       method = "REML",
+                       mods = as.formula(mod))
+  
+  return(model.mods)
+}
+
+#run_mod_numeric(mod = "~  timing -1",
+#               random = list(~ 1|cluster),
+#               data = data_all_outcomes_minority)
