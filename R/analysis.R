@@ -352,7 +352,6 @@ print_level_trimfill <- function(model){
 
 # Moderator analysis -------------------------------------------------------
 
-#temp <- sapply(dat.mod, table)
 
 run_mod <- function(mod, random, data){
   
@@ -367,6 +366,26 @@ run_mod <- function(mod, random, data){
   return(model.mods)
 }
 
-#run_mod_numeric(mod = "~  timing -1",
-#               random = list(~ 1|cluster),
-#               data = data_all_outcomes_minority)
+# model.mods <- run_mod_numeric(mod = "~ timing - 1",
+#                random = list(~ 1|cluster),
+#                data = data_all_outcomes_minority)
+
+
+extract_mod_results <- function(model.mods){
+  
+  df <- data.frame(coef = rownames(model.mods$b),
+                   estimate = model.mods$b[,1],
+                   se = model.mods$se, 
+                   tval = model.mods$zval, # I specified tdist = T
+                   pval = model.mods$pval,
+                   ci.lb =  model.mods$ci.lb,
+                   ci.ub =  model.mods$ci.ub)
+                   
+  df[,-1] <- round(df[,-1], digits = 5)
+  rownames(df) <- NULL
+  
+  return(df)
+}
+
+# need to work on codes for each moderator...
+
