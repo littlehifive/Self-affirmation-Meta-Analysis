@@ -352,12 +352,12 @@ print_level_trimfill <- function(model){
 
 # Moderator analysis -------------------------------------------------------
 
-
+# run multilevel models with moderators at different levels
 run_mod <- function(mod, random, data){
   
   model.mods <- rma.mv(es, 
                        v, 
-                       random = random, 
+                       random = list(as.formula(random)), 
                        tdist = TRUE, 
                        data = data,
                        method = "REML",
@@ -366,11 +366,7 @@ run_mod <- function(mod, random, data){
   return(model.mods)
 }
 
-# model.mods <- run_mod_numeric(mod = "~ timing - 1",
-#                random = list(~ 1|cluster),
-#                data = data_all_outcomes_minority)
-
-
+# extract results for models with moderators
 extract_mod_results <- function(model.mods){
   
   df <- data.frame(coef = rownames(model.mods$b),
@@ -387,5 +383,31 @@ extract_mod_results <- function(model.mods){
   return(df)
 }
 
-# need to work on codes for each moderator...
-
+# print moderator results
+print_mod_results <- function(mod.coding,
+                              data = data_all_outcomes_minority){
+  
+  mod.coding.s <- mod.coding %>%
+    filter(pass_n_threshold == "yes")
+  
+  mod_df = data.frame(
+    coef = NULL,
+    estimate = NULL,
+    se = NULL,    
+    tval = NULL,
+    pval = NULL,
+    ci.lb = NULL,
+    ci.ub = NULL
+  )
+    
+  for (i in 1:nrow(mod.coding.s)) {
+    
+    mod_results <- extract_mod_results(run_mod(mod = mod.coding.s$mod[i], 
+                          random = mod.coding.s$random[i], 
+                          data = data))
+    mod_df <- bind_rows(mod_df, mod_results)
+  }
+  
+  return(mod_df)
+  
+}

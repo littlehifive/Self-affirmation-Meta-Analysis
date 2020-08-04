@@ -66,7 +66,7 @@
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","No",0.0539,0.0017,0.0413,-0.027,0.1348
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","No",-0.0259,0.0017,0.0413,-0.1068,0.055
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","No",-0.0026,0.0017,0.0413,-0.0835,0.0783
-19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","Yes",-8e-04,0.0017,0.0413,-0.0817,0.0801
+19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Black","Race","No","Final grades in the treated subject","Yes",-0.0008,0.0017,0.0413,-0.0817,0.0801
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Hispanic","Race","No","Final grades in the treated subject","Yes",0.0547,0.0017,0.0413,-0.0262,0.1356
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","Female","Gender","No","Final grades in the treated subject","Yes",-0.0399,0.0017,0.0413,-0.1208,0.041
 19,"Dee, 2015","Dee, 2015","Dee","2015","Interaction","White","Race","No","Final grades in the treated subject","Yes",0.0058,0.0017,0.0413,-0.0751,0.0867
@@ -190,16 +190,16 @@
 43,"Purdie-Greenaway, under review","Purdie-Greenaway, under review","Purdie-Greenaway","under review","Majority subgroup","White","Race","No","GPA","Yes",0.0119,0.1961,0.4428,-0.8561,0.8798
 44,"Rapa, 2016","Rapa, 2016","Rapa","2016","Main","Main","None","Yes","GPA","No",0.5296,0.0784,0.2801,-0.0193,1.0786
 45,"MWAP","Rozek, 2015","Rozek","2015",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","Yes",0.1051,9e-04,0.0307,0.0449,0.1653
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","Yes",0.1051,0.0009,0.0307,0.0449,0.1653
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Pass rates","Yes",0.1026,0.0022,0.0469,0.0106,0.1945
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Pass rates","Yes",0.1738,0.0342,0.185,-0.1888,0.5364
-46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","No",0.1026,9e-04,0.0307,0.0424,0.1628
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Pass rates","No",0.1026,0.0009,0.0307,0.0424,0.1628
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Pass rates","No",0.095,0.0022,0.0469,0.0031,0.187
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Pass rates","No",0.1763,0.0342,0.185,-0.1863,0.5389
-46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","Yes",0.059,9e-04,0.0299,3e-04,0.1177
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","Yes",0.059,0.0009,0.0299,0.0003,0.1177
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Attendance","Yes",0.1129,0.0021,0.0458,0.0232,0.2027
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Attendance","Yes",0.4149,0.0333,0.1824,0.0575,0.7723
-46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","No",0.0462,9e-04,0.0299,-0.0125,0.1048
+46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Main","Main","None","Yes","Attendance","No",0.0462,0.0009,0.0299,-0.0125,0.1048
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Functional skills",NA,"Yes","Attendance","No",0.1207,0.0021,0.0458,0.0309,0.2104
 46,"Schwalbe, 2018","Schwalbe, 2018","Schwalbe","2018","Minority subgroup","Black Caribbeans","Race","Yes","Attendance","No",0.4916,0.0335,0.1831,0.1327,0.8506
 47,"Miyake et al.","Serra-Garcia (Study 1), under review","Serra-Garcia (Study 1)","under review",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -215,7 +215,7 @@
 49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Majority subgroup","White","Race","No","Year 2 GPA","No",0.0349,0.0388,0.1971,-0.3514,0.4212
 49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Minority subgroup","Hispanic","Race","No","Year 3 GPA","No",0.3752,0.0503,0.2242,-0.0642,0.8147
 49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Majority subgroup","White","Race","No","Year 3 GPA","No",-0.2204,0.0391,0.1977,-0.6079,0.167
-49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 1 GPA","Yes",0.2888,0.0218,0.1476,-5e-04,0.5781
+49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 1 GPA","Yes",0.2888,0.0218,0.1476,-0.0005,0.5781
 49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 2 GPA","Yes",0.4282,0.0221,0.1485,0.1371,0.7193
 49,"Sherman et al.","Sherman (Study 1), 2013","Sherman (Study 1)","2013","Interaction","Hispanic","Race","No","Year 3 GPA","Yes",0.239,0.0217,0.1474,-0.0498,0.5278
 50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Minority subgroup","Hispanic","Race","No","GPA","No",0.6343,0.0767,0.277,0.0914,1.1771

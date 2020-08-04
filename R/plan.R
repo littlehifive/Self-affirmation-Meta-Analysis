@@ -12,6 +12,9 @@ the_plan <- drake_plan(
 
   mod = read.csv(file.path(here::here(),"Imports/extraction_basic_revised.csv"), as.is = T),
 
+# coding scheme of each moderator (for multilevel analysis of moderators)
+  mod.coding = read.csv(file.path(here::here(),"Imports/moderator_coding.csv"), as.is = T),
+
 # 2. Calculation and cleaning -----------------------------------------------------------
 
   # derive the cleaned master dataset
@@ -557,12 +560,29 @@ export_cluster_level_diagnostics = target(
     condition = isTRUE(F_EXPORT_DATA),
     mode = "condition"
   )
-)
-
-)
+),
 
 # 5. Subgroup analysis --------------------------------------------------------
 
+mlm_mod_results_all_outcomes_minority = 
+  print_mod_results(mod.coding = mod.coding,
+                    data = data_all_outcomes_minority),
+
+export_mlm_mod_results = target(
+  command = {
+    if (isTRUE(F_EXPORT_DATA)) {
+      message("Writing moderator model results")
+      
+      write.csv(mlm_mod_results_all_outcomes_minority, file.path(here::here(), "Exports/moderator_results.csv"), row.names = F)
+    }
+    
+    Sys.time()
+  },
+  trigger = trigger(
+    condition = isTRUE(F_EXPORT_DATA),
+    mode = "condition"
+  )
+)
 
 
-
+)

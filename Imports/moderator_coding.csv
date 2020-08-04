@@ -1,50 +1,37 @@
-﻿vars,description,type,level,random,mod,pass_n_threshold
-id,,character,study,NA,NA,
-year,,numeric,study,list(~ 1|cluster/study),"""~year""",
-author,,character,study,NA,NA,
-paper_type,,character,study,list(~ 1|cluster/study),"""~paper_type-1""",
-n_school,,numeric,study,list(~ 1|cluster/study),"""~n_school""",
-pop_school,,numeric,study,list(~ 1|cluster/study),"""~pop_school""",
-samplesize,,numeric,study,list(~ 1|cluster/study),"""~samplesize""",
-setting_type,,character,cluster,list(~ 1|cluster),"""~setting_type-1""",
-setting,,character,cluster,NA,NA,
-edu_level,,character,study,NA,NA,
-identity_type,,character,cluster,list(~ 1|cluster),"""identity_type-1""",
-identity_dis,,character,?,NA,NA,
-identity_adv,,,,NA,NA,
-density_female,,numeric,study,list(~ 1|cluster/study),"""density_female""",
-density_URM,,numeric,study,list(~ 1|cluster/study),"""density_URM""",
-density_firstgen,,numeric,study,list(~ 1|cluster/study),"""density_firstgen""",
-density_freelunch,,numeric,study,list(~ 1|cluster/study),"""density_freelunch""",
-n_domains,,numeric,?,,,
-duration,,,,,,
-duration_rough_month,,,,,,
-number,,,,,,
-number_rough,,,,,,
-primary_outcome,,,,,,
-secondary_outcome,,,,,,
-control_type,,,,,,
-affirm_type,,,,,,
-adaptation,,,,,,
-reinforcement,,,,,,
-appropriate_reading_level,,,,,,
-privacy,,,,,,
-ungraded,,,,,,
-ordinary,,,,,,
-known_teacher,,,,,,
-delivered_in_classroom,,,,,,
-good_for_you,,,,,,
-early,,,,,,
-before_stress,,,,,,
-timing,,,,,,
-random_sequence_generation,,,,,,
-allocation_concealment,,,,,,
-blinding_of_participants_and_personnel,,,,,,
-blinding_of_outcome_assessment,,,,,,
-incomplete_outcome_data,,,,,,
-selective_reporting,,,,,,
-other_sources_of_bias,,,,,,
-type_s,,character,effectsize,list(~ 1|cluster),"""type_s""",
-group_s,,character,effectsize,list(~ 1|cluster),"""group_s""",
-adapted,,character,effectsize,list(~ 1|cluster),"""adapted""",
-adjusted,,character,effectsize,list(~ 1|cluster),"""adjusted""",
+﻿vars,coding,type,level,random,mod,pass_n_threshold
+year,NA,categorical,study,~ 1|cluster/study,~year,yes
+paper_type,"Conference,Conference & Journal,Institutional report,Journal,Journal & Thesis,Thesis",categorical,study,~ 1|cluster/study,~paper_type-1,yes
+n_school,NA,continuous,study,~ 1|cluster/study,~n_school,yes
+pop_school,NA,continuous,study,~ 1|cluster/study,~pop_school,yes
+samplesize,NA,continuous,study,~ 1|cluster/study,~samplesize,yes
+setting_type,"other,pre-secondary,primary,secondary,tertiary",categorical,cluster,~ 1|cluster,~setting_type-1,yes
+identity_type,"disability,first-generation,FSM,gender,mixed,race",categorical,cluster,~ 1|cluster,~identity_type-1,yes
+density_female,NA,continuous,study,~ 1|cluster/study,~density_female,yes
+density_urm,NA,continuous,study,~ 1|cluster/study,~density_urm,yes
+density_firstgen,NA,continuous,study,~ 1|cluster/study,~density_firstgen,yes
+density_freelunch,NA,continuous,study,~ 1|cluster/study,~density_freelunch,yes
+n_domains,NA,continuous,study,~ 1|cluster/study,~n_domains,yes
+duration_rough_month,NA,continuous,study,~ 1|cluster/study,~duration_rough_month,yes
+number_rough,NA,continuous,study,~ 1|cluster/study,~number_rough,yes
+control_type,"mixed,neutral,none,other",categorical,study,~ 1|cluster/study,~control_type-1,yes
+affirm_type,"independent,independent & interdependent",binary,cluster,~ 1|cluster,~affirm_type-1,no
+adaptation,"yes,no",binary,cluster,~ 1|cluster,~adaptation,yes
+reinforcement,"yes,no",binary,cluster,~ 1|cluster,~reinforcement,yes
+appropriate_reading_level,"yes,no",binary,cluster,~ 1|cluster,~appropriate_reading_level,no
+privacy,"yes,no",binary,cluster,~ 1|cluster,~privacy,no
+ungraded,"yes,no",binary,cluster,~ 1|cluster,~ungraded,yes
+ordinary,"yes,no",binary,cluster,~ 1|cluster,~ordinary,yes
+known_teacher,"yes,no",binary,cluster,~ 1|cluster,~known_teacher,yes
+delivered_in_classroom,"class,mixed,online",categorical,cluster,~ 1|cluster,~delivered_in_classroom-1,yes
+good_for_you,"yes,no",binary,cluster,~ 1|cluster,~good_for_you,no
+timing,"before_stress,early,both,neither",binary,cluster,~ 1|cluster,~timing-1,yes
+random_sequence_generation,"high,low,unclear",categorical,study,~ 1|cluster/study,~random_sequence_generation-1,no
+allocation_concealment,"high,low,unclear",categorical,study,~ 1|cluster/study,~allocation_concealment-1,no
+blinding_of_participants_and_personnel,"high,low,unclear",categorical,study,~ 1|cluster/study,~blinding_of_participants_and_personnel-1,no
+blinding_of_outcome_assessment,"high,low,unclear",categorical,study,~ 1|cluster/study,~blinding_of_outcome_assessment-1,no
+incomplete_outcome_data,"high,low,unclear",categorical,study,~ 1|cluster/study,~incomplete_outcome_data-1,yes
+selective_reporting,"high,low,unclear",categorical,study,~ 1|cluster/study,~selective_reporting-1,no
+other_sources_of_bias,"high,low,unclear",categorical,study,~ 1|cluster/study,~other_sources_of_bias-1,no
+group_s,"Disability,First generation,FSM status,Gender,Mixed,None,Race",categorical,effectsize,~ 1|cluster,~group_s-1,yes
+adapted,"yes,no",categorical,effectsize,~ 1|cluster,~adapted,yes
+adjusted,"yes,no",categorical,effectsize,~ 1|cluster,~adjusted,yes

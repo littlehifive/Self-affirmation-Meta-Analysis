@@ -112,12 +112,19 @@ clean_moderator <- function(dat.mod){
   
   dat.mod <- dat.mod %>%
     janitor::clean_names() %>%
-    mutate(timing = case_when(
+    mutate(
+      timing = case_when(
       early == 1 & before_stress == 0 ~ "early",
       early == 0 & before_stress == 1 ~ "before_stress",
       early == 1 & before_stress == 1 ~ "both",
-      early == 0 & before_stress == 0 ~ "neither"
-    )) %>% 
+      early == 0 & before_stress == 0 ~ "neither"),
+    
+      setting_type = recode(setting_type, 
+                            `university` = "tertiary",
+                            `high school` = "secondary",
+                            `middle school` = "pre-secondary",
+                            `primary school` = "primary")
+    ) %>% 
     select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias)
   
   return(dat.mod)
