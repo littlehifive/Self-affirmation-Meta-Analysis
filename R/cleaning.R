@@ -46,6 +46,7 @@ clean_master <- function(kost, purdie, turetsky){
      Sherman2013(),
      Shnabel2013(),
      Silverman2014(),
+     Simmons2011(),
      Tibbetts2016(),
      Tibbetts2018(),
      TuretskyUR(turetsky),

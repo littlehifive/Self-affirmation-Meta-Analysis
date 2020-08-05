@@ -224,47 +224,49 @@
 50,"Sherman (Study 2), 2013","Sherman (Study 2), 2013","Sherman (Study 2)","2013","Interaction","White","Race","No","GPA","Yes",0.1293,0.0263,0.1621,-0.1884,0.4471
 51,"Cohen et al.","Shnabel (Study 1), 2013","Shnabel (Study 1)","2013",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 52,"Silverman (Study 2), 2014","Silverman (Study 2), 2014","Silverman (Study 2)","2014","Minority subgroup","Blind","Disability","No","Instructor-graded student progress","Yes",0.6253,0.1147,0.3387,-0.0384,1.2891
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S1 Semester Grade","No",0.078,0.0284,0.1685,-0.2523,0.4083
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S2 Semester Grade","No",0.2368,0.0286,0.1691,-0.0946,0.5681
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S3 Semester Grade","No",0.3695,0.0289,0.1699,0.0365,0.7026
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S1 Semester Grade","No",-0.0553,0.0066,0.0811,-0.2143,0.1037
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S2 Semester Grade","No",-0.0162,0.0066,0.0811,-0.1752,0.1428
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S3 Semester Grade","No",-0.0357,0.0066,0.0811,-0.1947,0.1233
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","GPA","No",0.279,0.0269,0.1641,-0.0427,0.6006
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","GPA","No",-0.0563,0.0063,0.0792,-0.2116,0.0989
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","First generation","First generation","No","GPA","Yes",0.3443,0.0052,0.0718,0.2036,0.485
-53,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","Continuing generation","First generation","No","GPA","Yes",0.1602,0.0051,0.0714,0.0203,0.3
-54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","Yes","Course Grade","No",0.1746,0.0137,0.1172,-0.0552,0.4044
-54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"Yes","Course Grade","No",-0.1345,0.0137,0.1172,-0.3641,0.0952
-54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","No","Course Grade","No",0.9077,0.0202,0.142,0.6294,1.1859
-54,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"No","Course Grade","No",-0.1771,0.0183,0.1354,-0.4425,0.0883
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Course point total","No",-0.2683,0.0493,0.2219,-0.7033,0.1667
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Course point total","No",0.1511,0.0193,0.1389,-0.1211,0.4233
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Course point total","No",0.0175,0.0208,0.1443,-0.2654,0.3004
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Course point total","No",0.065,0.0426,0.2064,-0.3395,0.4695
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Biology track persistence","No",-0.0344,0.0488,0.2209,-0.4674,0.3987
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Biology track persistence","No",0.4434,0.0197,0.1404,0.1683,0.7186
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Biology track persistence","No",0.298,0.0211,0.1451,0.0135,0.5825
-55,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Biology track persistence","No",0.2875,0.043,0.2074,-0.119,0.694
-56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","Summative written essay score","Yes",-0.1891,0.0247,0.1571,-0.4969,0.1188
-56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","Summative written essay score","Yes",0.0741,0.0235,0.1534,-0.2265,0.3748
-56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","OSCE score","Yes",0.283,0.0248,0.1575,-0.0257,0.5918
-56,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","OSCE score","Yes",0.2896,0.0238,0.1541,-0.0125,0.5917
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 1 GPA in History","No",0.2883,0.0404,0.2011,-0.1058,0.6823
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 2 GPA in History","No",0.1237,0.0401,0.2002,-0.2686,0.5161
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in History","No",0.2721,0.0569,0.2385,-0.1953,0.7395
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in History","No",0.0621,0.0564,0.2374,-0.4033,0.5274
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in History","No",0.3251,0.1399,0.374,-0.4079,1.058
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in History","No",0.2606,0.1392,0.3731,-0.4706,0.9917
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 1 GPA Overall","No",0.2491,0.0403,0.2008,-0.1445,0.6426
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 2 GPA in Overall","No",0.1793,0.0402,0.2004,-0.2135,0.5721
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in Overall","No",0.2385,0.0567,0.2382,-0.2284,0.7054
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in Overall","No",0.1813,0.0566,0.2379,-0.2849,0.6475
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in Overall","No",0.2734,0.1393,0.3732,-0.4581,1.0049
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in Overall","No",0.1883,0.1386,0.3723,-0.5414,0.9179
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS ELA scores","No",0.2375,0.0403,0.2007,-0.1559,0.6309
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS ELA scores","No",0.1218,0.0564,0.2376,-0.3439,0.5874
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS ELA scores","No",0.5366,0.1432,0.3784,-0.205,1.2783
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS Math scores","No",0.2672,0.0404,0.2009,-0.1266,0.661
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS Math scores","No",0.3157,0.0571,0.2389,-0.1525,0.7839
-57,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS Math scores","No",0.0898,0.1381,0.3716,-0.6385,0.8181
+53,"Simmons, 2011","Simmons, 2011","Simmons","2011","Minority subgroup","Black","Race","No","Fall zscored GPA","No",-0.2404,0.0858,0.2929,-0.8144,0.3337
+53,"Simmons, 2011","Simmons, 2011","Simmons","2011","Minority subgroup","Black","Race","No","Winter zscored GPA","No",-0.2508,0.0858,0.293,-0.825,0.3235
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S1 Semester Grade","No",0.078,0.0284,0.1685,-0.2523,0.4083
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S2 Semester Grade","No",0.2368,0.0286,0.1691,-0.0946,0.5681
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","S3 Semester Grade","No",0.3695,0.0289,0.1699,0.0365,0.7026
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S1 Semester Grade","No",-0.0553,0.0066,0.0811,-0.2143,0.1037
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S2 Semester Grade","No",-0.0162,0.0066,0.0811,-0.1752,0.1428
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","S3 Semester Grade","No",-0.0357,0.0066,0.0811,-0.1947,0.1233
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Minority subgroup","First generation","First generation","No","GPA","No",0.279,0.0269,0.1641,-0.0427,0.6006
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Majority subgroup","Continuing generation","First generation","No","GPA","No",-0.0563,0.0063,0.0792,-0.2116,0.0989
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","First generation","First generation","No","GPA","Yes",0.3443,0.0052,0.0718,0.2036,0.485
+54,"Harackiewicz et al.","Tibbetts (Study 1a), 2016","Tibbetts (Study 1a)","2016","Interaction","Continuing generation","First generation","No","GPA","Yes",0.1602,0.0051,0.0714,0.0203,0.3
+55,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","Yes","Course Grade","No",0.1746,0.0137,0.1172,-0.0552,0.4044
+55,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"Yes","Course Grade","No",-0.1345,0.0137,0.1172,-0.3641,0.0952
+55,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Minority subgroup","First generation","First generation","No","Course Grade","No",0.9077,0.0202,0.142,0.6294,1.1859
+55,"Tibbetts (Study 1b), 2018","Tibbetts (Study 1b), 2018","Tibbetts (Study 1b)","2018","Majority subgroup","Continuting generation",NA,"No","Course Grade","No",-0.1771,0.0183,0.1354,-0.4425,0.0883
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Course point total","No",-0.2683,0.0493,0.2219,-0.7033,0.1667
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Course point total","No",0.1511,0.0193,0.1389,-0.1211,0.4233
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Course point total","No",0.0175,0.0208,0.1443,-0.2654,0.3004
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Course point total","No",0.065,0.0426,0.2064,-0.3395,0.4695
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","URM","Race","No","Biology track persistence","No",-0.0344,0.0488,0.2209,-0.4674,0.3987
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","White and Asian","Race","No","Biology track persistence","No",0.4434,0.0197,0.1404,0.1683,0.7186
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Minority subgroup","Female","Gender","No","Biology track persistence","No",0.298,0.0211,0.1451,0.0135,0.5825
+56,"Turetsky, under review","Turetsky, under review","Turetsky","under review","Majority subgroup","Male","Gender","No","Biology track persistence","No",0.2875,0.043,0.2074,-0.119,0.694
+57,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","Summative written essay score","Yes",-0.1891,0.0247,0.1571,-0.4969,0.1188
+57,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","Summative written essay score","Yes",0.0741,0.0235,0.1534,-0.2265,0.3748
+57,"Woolf, 2009","Woolf, 2009","Woolf","2009","Majority subgroup","White","Race","No","OSCE score","Yes",0.283,0.0248,0.1575,-0.0257,0.5918
+57,"Woolf, 2009","Woolf, 2009","Woolf","2009","Minority subgroup","URM","Race","No","OSCE score","Yes",0.2896,0.0238,0.1541,-0.0125,0.5917
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 1 GPA in History","No",0.2883,0.0404,0.2011,-0.1058,0.6823
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black and Hispanic","Race","No","Time 2 GPA in History","No",0.1237,0.0401,0.2002,-0.2686,0.5161
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in History","No",0.2721,0.0569,0.2385,-0.1953,0.7395
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in History","No",0.0621,0.0564,0.2374,-0.4033,0.5274
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in History","No",0.3251,0.1399,0.374,-0.4079,1.058
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in History","No",0.2606,0.1392,0.3731,-0.4706,0.9917
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 1 GPA Overall","No",0.2491,0.0403,0.2008,-0.1445,0.6426
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","Time 2 GPA in Overall","No",0.1793,0.0402,0.2004,-0.2135,0.5721
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 1 GPA in Overall","No",0.2385,0.0567,0.2382,-0.2284,0.7054
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","Time 2 GPA in Overall","No",0.1813,0.0566,0.2379,-0.2849,0.6475
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 1 GPA in Overall","No",0.2734,0.1393,0.3732,-0.4581,1.0049
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","Time 2 GPA in Overall","No",0.1883,0.1386,0.3723,-0.5414,0.9179
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS ELA scores","No",0.2375,0.0403,0.2007,-0.1559,0.6309
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS ELA scores","No",0.1218,0.0564,0.2376,-0.3439,0.5874
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS ELA scores","No",0.5366,0.1432,0.3784,-0.205,1.2783
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Main","Main","None","No","MCAS Math scores","No",0.2672,0.0404,0.2009,-0.1266,0.661
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Black","Race","No","MCAS Math scores","No",0.3157,0.0571,0.2389,-0.1525,0.7839
+58,"Wynne, 2011","Wynne, 2011","Wynne","2011","Minority subgroup","Hispanic","Race","No","MCAS Math scores","No",0.0898,0.1381,0.3716,-0.6385,0.8181

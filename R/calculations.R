@@ -1,4 +1,4 @@
-# calculation script
+# calculation script by article
 
 #  dat <- data.frame(study = NA, author = NA, year = NA, adapted = NA, type = NA,  outcome = NA, adjusted = NA, es = NA, v = NA, lowerCI = NA, upperCI = NA)
 
@@ -1103,8 +1103,19 @@ Silverman2014 <- function(){
   
 }
 
-
-# 45. Tibbetts 2016 -------------------------------------------------------
+# 45. Simmons 2011 ------------------------------------------------------
+Simmons2011 <- function(){
+  rbind(
+    
+    c("Simmons","2011","No","Minority subgroup-Black","Fall zscored GPA","No",
+      extract_g(esc_mean_sd(-0.11, 1.02, 24, 0.13, 0.94, 23, es.type = "g"))),
+    c("Simmons","2011","No","Minority subgroup-Black","Winter zscored GPA","No",
+      extract_g(esc_mean_sd(-0.07, 0.87, 24, 0.17, 1.01, 23, es.type = "g")))  
+    
+  )
+  
+}
+# 46. Tibbetts 2016 -------------------------------------------------------
 
 Tibbetts2016 <- function(){
   
@@ -1136,7 +1147,7 @@ Tibbetts2016 <- function(){
 }
 
 
-# 46. Tibbetts 2018 --------------------------------------------------------------------
+# 47. Tibbetts 2018 --------------------------------------------------------------------
 
 
 Tibbetts2018 <- function(){
@@ -1158,7 +1169,7 @@ Tibbetts2018 <- function(){
 }
 
 
-# 47. Turetsky under review -----------------------------------------------
+# 48. Turetsky under review -----------------------------------------------
 
 TuretskyUR <- function(turetsky){
 
@@ -1206,7 +1217,7 @@ TuretskyUR <- function(turetsky){
 }
 
 
-# 48. Woolf 2009 ----------------------------------------------------------
+# 49. Woolf 2009 ----------------------------------------------------------
 
 Woolf2009 <- function(){
   
@@ -1226,7 +1237,7 @@ Woolf2009 <- function(){
 }
 
 
-# 49. Wynne 2011---------------------------------------------------------------
+# 50. Wynne 2011---------------------------------------------------------------
 
 
 Wynne2011 <- function(){
