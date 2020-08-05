@@ -34,21 +34,12 @@ the_plan <- drake_plan(
   
   export_processed_dat = target(
     command = {
-      if (isTRUE(F_EXPORT_DATA)) {
-        message("Writing processed datasets")
-        
+      message("Writing master datasets")
         write.csv(dat.s, file.path(here::here(), "Exports/master.csv"), row.names = F)
         write.csv(dat.mod, file.path(here::here(), "Exports/moderators.csv"), row.names = F)
         write.csv(dat, file.path(here::here(), "Exports/master_mod_merged.csv"), row.names = F)
-
       }
-      
-      Sys.time()
-    },
-    trigger = trigger(
-      condition = isTRUE(F_EXPORT_DATA),
-      mode = "condition"
-    )
+
   ),
 
 
@@ -193,20 +184,12 @@ combined_mlm_results_majority = print_mlm_results(model_mlm_all_outcomes_majorit
 
 export_mlm_results = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing multilevel model results")
       
       write.csv(combined_mlm_results_minority, file.path(here::here(), "Exports/MLM results_minority.csv"), row.names = F)
       write.csv(combined_mlm_results_majority, file.path(here::here(), "Exports/MLM results_majority.csv"), row.names = F)
       
       }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 ## 4.3 Study-level pooled analysis--------------------------------------------------------
@@ -296,20 +279,12 @@ combined_study_level_results_main = extract_level_results(model = model_study_le
 
 export_study_level_results = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing study-level model results")
       
       write.csv(combined_study_level_results_minority, file.path(here::here(), "Exports/study-level results_minority.csv"), row.names = F)
       write.csv(combined_study_level_results_majority, file.path(here::here(), "Exports/study-level results_majority.csv"), row.names = F)
       write.csv(combined_study_level_results_main, file.path(here::here(), "Exports/study-level results_main.csv"), row.names = F)
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 
@@ -317,7 +292,6 @@ export_study_level_results = target(
 
 export_study_level_plots = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing study-level plots")
       
       pdf(file = file.path(here::here(),"Exports/study-level forestplot_minority.pdf"), 
@@ -353,13 +327,6 @@ export_study_level_plots = target(
       dev.off()
       
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 ## 4.5 Study level diagnostic tests--------------------------------------------------------
@@ -377,19 +344,11 @@ failsafe_study_level_results = gtools::smartbind(
 
 export_study_level_diagnostics = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing study-level model results")
       
       write.csv(eggers_test_study_level_results, file.path(here::here(), "Exports/study-level eggers_minority.csv"), row.names = F)
       write.csv(failsafe_study_level_results, file.path(here::here(), "Exports/study-level failsafe_minority.csv"), row.names = F)
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
   
@@ -473,19 +432,11 @@ combined_cluster_level_results_majority = print_level_results(model_cluster_leve
 
 export_cluster_level_results = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing cluster-level model results")
       
       write.csv(combined_cluster_level_results_minority, file.path(here::here(), "Exports/cluster-level results_minority.csv"), row.names = F)
       write.csv(combined_cluster_level_results_majority, file.path(here::here(), "Exports/cluster-level results_majority.csv"), row.names = F)
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 
@@ -493,7 +444,7 @@ export_cluster_level_results = target(
 
 export_cluster_level_plots = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
+
       message("Writing cluster-level plots")
       
       pdf(file = file.path(here::here(),"Exports/cluster-level forestplot_minority.pdf"), 
@@ -524,12 +475,6 @@ export_cluster_level_plots = target(
       
     }
     
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 ## 4.8 Cluster-level diagnostic tests--------------------------------------------------------
@@ -547,19 +492,11 @@ failsafe_cluster_level_results = gtools::smartbind(
 
 export_cluster_level_diagnostics = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing cluster-level model results")
       
       write.csv(eggers_test_cluster_level_results, file.path(here::here(), "Exports/cluster-level eggers_minority.csv"), row.names = F)
       write.csv(failsafe_cluster_level_results, file.path(here::here(), "Exports/cluster-level failsafe_minority.csv"), row.names = F)
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
 ),
 
 # 5. Subgroup analysis --------------------------------------------------------
@@ -570,18 +507,11 @@ mlm_mod_results_all_outcomes_minority =
 
 export_mlm_mod_results = target(
   command = {
-    if (isTRUE(F_EXPORT_DATA)) {
       message("Writing moderator model results")
       
       write.csv(mlm_mod_results_all_outcomes_minority, file.path(here::here(), "Exports/moderator_results.csv"), row.names = F)
     }
-    
-    Sys.time()
-  },
-  trigger = trigger(
-    condition = isTRUE(F_EXPORT_DATA),
-    mode = "condition"
-  )
+
 )
 
 

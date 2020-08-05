@@ -66,6 +66,7 @@ dat <- dat %>%
     se = sqrt(v)) %>%
   group_by(study) %>% 
   mutate(id = cur_group_id()) %>%
+  ungroup() %>%
   mutate(id = case_when(
     study %in% c("Hanselman (Study 1), 2017") ~ 25L,
     study %in% c("Hanselman (Study 2), 2017") ~ 26L,
@@ -108,9 +109,9 @@ return(dat)
 }
 
 
-clean_moderator <- function(dat.mod){
+clean_moderator <- function(mod){
   
-  dat.mod <- dat.mod %>%
+  dat.mod <- mod %>%
     janitor::clean_names() %>%
     mutate(
       timing = case_when(
@@ -124,7 +125,7 @@ clean_moderator <- function(dat.mod){
                             `high school` = "secondary",
                             `middle school` = "pre-secondary",
                             `primary school` = "primary")
-    ) %>% 
+    ) %>%
     select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias)
   
   return(dat.mod)

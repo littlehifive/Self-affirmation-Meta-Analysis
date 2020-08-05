@@ -13,7 +13,7 @@ density_freelunch,NA,continuous,study,~ 1|cluster/study,~density_freelunch,yes
 n_domains,NA,continuous,study,~ 1|cluster/study,~n_domains,yes
 duration_rough_month,NA,continuous,study,~ 1|cluster/study,~duration_rough_month,yes
 number_rough,NA,continuous,study,~ 1|cluster/study,~number_rough,yes
-control_type,"mixed,neutral,none,other",categorical,study,~ 1|cluster/study,~control_type-1,yes
+control_type,"mixed,neutral,none,other",categorical,cluster,~ 1|cluster,~control_type-1,yes
 affirm_type,"independent,independent & interdependent",binary,cluster,~ 1|cluster,~affirm_type-1,no
 adaptation,"yes,no",binary,cluster,~ 1|cluster,~adaptation,yes
 reinforcement,"yes,no",binary,cluster,~ 1|cluster,~reinforcement,yes
