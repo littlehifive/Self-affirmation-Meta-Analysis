@@ -454,7 +454,7 @@ export_cluster_level_plots = target(
                                level = "cluster")
       
       pdf(file = file.path(here::here(),"Exports/cluster-level forestplot_majority.pdf"), 
-          width = 10, height = 8)
+          width = 10, height = 6)
       
       print_level_forest(model = model_cluster_level_all_outcomes_majority,
                                level = "cluster")
