@@ -100,8 +100,12 @@ dat <- dat %>%
     group %in% c("Blind") ~ "Disability",
     group %in% c("Main") ~ "None"
   )) %>% 
+  mutate(      
+    # z-scored adapted for the use of moderator composite
+    adapted_z = if_else(adapted == "Yes", 1, 0),
+    adapted_z = binary_scale(1 - adapted_z)) %>%
   select(id, cluster, study, author, year, type_s, group, group_s, 
-         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
+         adapted, adapted_z, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
   mutate_at(vars(es:upperCI), round, digits = 4) %>%
   arrange(id)
 
@@ -127,7 +131,40 @@ clean_moderator <- function(mod){
                             `middle school` = "pre-secondary",
                             `primary school` = "primary")
     ) %>%
-    select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias)
+    mutate(
+      
+      # z-score promising moderators to create composites
+      
+      # timing
+      timing_z = case_when(
+        early == 1 & before_stress == 0 ~ 2L,
+        early == 0 & before_stress == 1 ~ 1L, 
+        early == 1 & before_stress == 1 ~ 1L,
+        early == 0 & before_stress == 0 ~ 0L),
+      timing_z = as.numeric(scale(timing_z)),
+      
+      # ordinary
+      ordinary_z = binary_scale(ordinary),
+      
+      # duration
+      duration_rough_month_z = as.numeric(scale(duration_rough_month)),
+      
+      # density_freelunch
+      density_freelunch_z = as.numeric(scale(1 - density_freelunch)),
+      
+      # in class
+      delivered_in_classroom_z = case_when(
+        delivered_in_classroom == "class" ~ 2L,
+        delivered_in_classroom == "online" ~ 1L, 
+        delivered_in_classroom == "mixed" ~ 0L),
+      delivered_in_classroom_z = as.numeric(scale(delivered_in_classroom_z)),
+      
+      # affirm other in control group
+      
+      control_type_z = if_else(control_type == "other", 1, 0),
+      control_type_z = binary_scale(control_type_z)
+        ) %>%
+    select(id:before_stress, timing, random_sequence_generation:other_sources_of_bias, timing_z:control_type_z)
   
   return(dat.mod)
 }

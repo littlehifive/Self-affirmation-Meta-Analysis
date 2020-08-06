@@ -15,6 +15,7 @@ the_plan <- drake_plan(
 # coding scheme of each moderator (for multilevel analysis of moderators)
   mod.coding = read.csv(file.path(here::here(),"Imports/moderator_coding.csv"), as.is = T),
 
+
 # 2. Calculation and cleaning -----------------------------------------------------------
 
   # derive the cleaned master dataset
@@ -35,7 +36,7 @@ the_plan <- drake_plan(
   export_processed_dat = target(
     command = {
       message("Writing master datasets")
-        write.csv(dat.s, file.path(here::here(), "Exports/master.csv"), row.names = F)
+        write.csv(dat.s %>% select(!adapted_z), file.path(here::here(), "Exports/master.csv"), row.names = F)
         write.csv(dat.mod, file.path(here::here(), "Exports/moderators.csv"), row.names = F)
         write.csv(dat, file.path(here::here(), "Exports/master_mod_merged.csv"), row.names = F)
       }
@@ -512,7 +513,22 @@ export_mlm_mod_results = target(
       write.csv(mlm_mod_results_all_outcomes_minority, file.path(here::here(), "Exports/moderator_results.csv"), row.names = F)
     }
 
-)
+),
 
+# 6. Assessment of bias
+# subset moderator data for risk of bias assessment
+dat.rob = dat.mod %>% select(other_sources_of_bias:random_sequence_generation),
+
+export_revman_plot = target(
+  command = {
+    message("Writing revman plot")
+    
+    # saving the ggplot using ggsave() instead of pdf()
+    ggsave(filename = file.path(here::here(),"Exports/revman.pdf"),
+           plot = print_revman(dat.rob),
+           width = 16,
+           height = 8)
+    }
+)
 
 )

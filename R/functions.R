@@ -840,4 +840,12 @@ failsafe.test <- function(data,level,type){
   
 }
 
+# z score binary variables
+binary_scale <- function(var){
+  
+    z = (var-mean(var,na.rm = T))/(2*sd(var,na.rm = T)^2)
+    return(z)
+
+}
+
 

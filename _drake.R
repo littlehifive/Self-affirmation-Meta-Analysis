@@ -8,7 +8,6 @@
 # functions.R: All other functions used in your project
 # cleaning.R: Functions related to cleaning steps
 # plan.R: The drake plan
-source(here::here("R/environment.R"))
 source(here::here("R/packages.R"))
 source(here::here("R/functions.R"))
 source(here::here("R/calculations.R"))
