@@ -1,4 +1,13 @@
 # meta-regression
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority,
+                   method = "REML",
+                   mods = ~ adapted - 1)
+model.mods
 
 model.mods<-rma.mv(es, 
                    v, 

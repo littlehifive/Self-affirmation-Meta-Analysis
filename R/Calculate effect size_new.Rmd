@@ -5179,7 +5179,7 @@ summary(model.mods, digits = 5)
 # samplesize (-*)
 model.mods<-rma.mv(es, 
                    v, 
-                   random = list( ~ 1 | cluster/study), 
+                   random = list( ~ 1 | cluster), 
                    tdist = TRUE, 
                    data = dat.s,
                    method = "REML",
