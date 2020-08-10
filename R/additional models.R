@@ -1,4 +1,23 @@
 # meta-regression
+
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority %>% filter(group_s == "Gender" & 
+                                                                cluster %in% c("Baker, 2019",
+                                                                             "Gutmann, 2019",
+                                                                             "Jordt, 2017",
+                                                                             "Kim, 2019",
+                                                                             "Kinias (Study 2), 2016",
+                                                                             "Miyake et al.",
+                                                                             "Serra-Garcia (Study 2), under review",
+                                                                             "Turetsky, under review")),
+                   method = "REML")
+model.mods
+
+
 model.mods<-rma.mv(es, 
                    v, 
                    random = list( 

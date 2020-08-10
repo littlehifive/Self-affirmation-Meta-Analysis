@@ -36,7 +36,7 @@ the_plan <- drake_plan(
   export_processed_dat = target(
     command = {
       message("Writing master datasets")
-        write.csv(dat.s %>% select(!adapted_z), file.path(here::here(), "Exports/master.csv"), row.names = F)
+        write.csv(dat.s, file.path(here::here(), "Exports/master.csv"), row.names = F)
         write.csv(dat.mod, file.path(here::here(), "Exports/moderators.csv"), row.names = F)
         write.csv(dat, file.path(here::here(), "Exports/master_mod_merged.csv"), row.names = F)
       }

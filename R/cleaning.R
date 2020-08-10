@@ -100,12 +100,12 @@ dat <- dat %>%
     group %in% c("Blind") ~ "Disability",
     group %in% c("Main") ~ "None"
   )) %>% 
-  mutate(      
-    # z-scored adapted for the use of moderator composite
-    adapted_z = if_else(adapted == "Yes", 1, 0),
-    adapted_z = binary_scale(1 - adapted_z)) %>%
+  #mutate(      
+  #  # z-scored adapted for the use of moderator composite
+  #  adapted_z = if_else(adapted == "Yes", 1, 0),
+  #  adapted_z = binary_scale(1 - adapted_z)) %>%
   select(id, cluster, study, author, year, type_s, group, group_s, 
-         adapted, adapted_z, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
+         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
   mutate_at(vars(es:upperCI), round, digits = 4) %>%
   arrange(id)
 

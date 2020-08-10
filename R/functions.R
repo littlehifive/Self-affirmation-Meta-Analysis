@@ -821,7 +821,8 @@ failsafe.test <- function(data,level,type){
         group_by(eval(as.name(!!level))) %>% 
         summarise(es = mean(es),
                   se = mean(se),
-                  .groups = "drop_last"),
+                  .groups = "drop_last"), 
+      # note this is unweighted here, so the average effect size would be slightly different from the main analysis
       type = type)
   
   if(type == "Rosenthal"){
