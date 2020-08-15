@@ -302,22 +302,18 @@ Cohen2006 <- function(){
     extract_g(esc_B(0.26, 1, 25, 25,es.type = "g")),
     0.68/1, 
     0.44/1),
-  #c("Cohen (Study 1)","2006","No","Interaction-Black","GPA in targeted course","Yes",
-  #  extract_g(esc_B(0.09+0.29, 1, 55.5, 55.5,es.type = "g"))),
+
   c("Cohen (Study 1)","2006","No","Interaction-White","GPA in targeted course","Yes",
     extract_g(esc_B(0.09, 1, 55.5, 55.5,es.type = "g")),
     NA, NA),
   c("Cohen (Study 1)","2006","No","Minority subgroup-Black","GPA in non-targeted course","Yes",
     extract_g(esc_B(0.31, 1, 25, 25,es.type = "g")),
     NA, NA),
-  #c("Cohen (Study 1)","2006","No","Interaction-Black","GPA in non-targeted course","Yes",
-  #  extract_g(esc_B(0.45, 1, 55.5, 55.5,es.type = "g"))),
+
   c("Cohen (Study 2)","2006","No","Minority subgroup-Black","GPA in targeted course","Yes",
     extract_g(esc_B(0.34, 1, 34.5, 34.5,es.type = "g")),
     0.82/1, 
     0.11/1),
-  #c("Cohen (Study 2)","2006","No","Interaction-Black","GPA in targeted course","Yes",
-  ## extract_g(esc_B(0.52, 1, 66, 66,es.type = "g"))),
   c("Cohen (Study 2)","2006","No","Interaction-White","GPA in targeted course","Yes",
     extract_g(esc_B(0.03, 1, 66, 66,es.type = "g")),
     NA, NA),
@@ -1232,9 +1228,11 @@ Protzko2016 <- function(){
       extract_g(esc_mean_sd(3.262, 0.603, 124/2, 2.051, 1.073, 119/2, es.type = "g"))[1],NA),
     
     c("Protzko","2016","No","Interaction-Black and Hispanic","GPA","Yes",
-      extract_g(esc_B(-0.07-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g"))),
+      extract_g(esc_B(-0.07-0.1-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g")),
+      NA, -(0.07-0.02+0.004)/0.8060284),
     c("Protzko","2016","No","Interaction-White","GPA","Yes",
-      extract_g(esc_B(-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g")))
+      extract_g(esc_B(-0.001, sqrt(( (152-1) * 1.043 ^2 + (223-1) * 0.593 ^2  ) / (328-33+134-54-2)), (328-33+134-54)/2, (328-33+134-54)/2, es.type = "g")),
+      NA,NA)
       )
   
 }
