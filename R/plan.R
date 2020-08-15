@@ -7,6 +7,7 @@ the_plan <- drake_plan(
   kost = haven::read_dta(file.path(here::here(),"Imports/Kost-smith.dta")),
   purdie = haven::read_sav(file.path(here::here(),"Imports/Purdie-Greenaway.sav")),
   turetsky = read.csv(file.path(here::here(),"Imports/Turetsky under review.csv"), as.is = T),
+  goyer = openxlsx::read.xlsx(file.path(here::here(),"Imports/Goyer.xlsx")),
   
 # extraction sheet for basic info and moderators
 

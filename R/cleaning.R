@@ -1,6 +1,6 @@
 # cleaning script
 
-clean_master <- function(kost, purdie, turetsky){
+clean_master <- function(kost, purdie, turetsky, goyer){
    dat <- rbind(
      Baker2019(),
      Bancroft2017(),
@@ -19,7 +19,7 @@ clean_master <- function(kost, purdie, turetsky){
      DeClercq2019(),
      Dee2015(),
      deJong2016(),
-     Goyer2017(),
+     Goyer2017(goyer),
      Gutmann2019(),
      Hadden2019(),
      Hanselman2014(),
@@ -94,7 +94,7 @@ dat <- dat %>%
                  "Turkish", "Arabic", "Eastern European", "White and Asian", 
                  "Black Caribbeans") ~ "Race",
     group %in% c("First generation","Continuing generation") ~ "First generation",
-    group %in% c("URM or First generation") ~ "Mixed",
+    group %in% c("URM or First generation", "URM and Female", "White and Male") ~ "Mixed",
     group %in% c("FSM","nonFSM") ~ "FSM status",
     group %in% c("Female","Male")  ~ "Gender",
     group %in% c("Blind") ~ "Disability",
