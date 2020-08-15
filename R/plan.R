@@ -6,8 +6,10 @@ the_plan <- drake_plan(
 # effect sizes from these three studies were calculated using the original datasets
   kost = haven::read_dta(file.path(here::here(),"Imports/Kost-smith.dta")),
   purdie = haven::read_sav(file.path(here::here(),"Imports/Purdie-Greenaway.sav")),
-  turetsky = read.csv(file.path(here::here(),"Imports/Turetsky under review.csv"), as.is = T),
+  turetsky = read.csv(file.path(here::here(),"Imports/Turetsky.csv"), as.is = T),
   goyer = openxlsx::read.xlsx(file.path(here::here(),"Imports/Goyer.xlsx")),
+  serragarcia = haven::read_dta(file.path(here::here(),"Imports/Serra-Garcia Study 2.dta")),
+
   
 # extraction sheet for basic info and moderators
 
