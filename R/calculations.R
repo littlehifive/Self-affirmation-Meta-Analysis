@@ -28,13 +28,9 @@ Baker2019 <- function(){
       extract_g(esc_B(-0.114+0.003, 1.27, 564, 551,es.type = "g")),
       NA,NA),   
     
-    c("Baker", "2019", "No", "Interaction-White", "GPA", "No", 
+    c("Baker", "2019", "No", "Interaction-White and Male", "GPA", "No", 
       extract_g(esc_B(0.003, 1.27, 564, 551,es.type = "g")),
-      NA,NA), 
-    
-    c("Baker", "2019", "No", "Interaction-White", "GPA", "No", 
-      extract_g(esc_B(0.003, 1.27, 564, 551,es.type = "g")),
-      NA,NA)     
+      NA,NA) 
   
     
     #c("Baker", "2019", "No", "Main", "GPA", "No", 
@@ -115,35 +111,35 @@ Borman2012 <- function(){
     
     # Minority subgroup
     c("Borman","2012","No","Minority subgroup-Black","MCA reading score","Yes",
-      dv2g(0.023, 0.049^2, 401-1),
+      dv2g(0.023, 0.049^2, 401),
       NA,NA),
     c("Borman","2012","No","Minority subgroup-Black","MCA math score","Yes",
-      dv2g(0.073, 0.054^2, 403-1),
+      dv2g(0.073, 0.054^2, 403),
       NA,NA),
     c("Borman","2012","No","Minority subgroup-Hispanic","MCA reading score","Yes",
-      dv2g(0.055, 0.084^2, 187-1),
+      dv2g(0.055, 0.084^2, 187),
       NA,NA),
     c("Borman","2012","No","Minority subgroup-Hispanic","MCA math score","Yes",
-      dv2g(0.053, 0.074^2, 186-1),
+      dv2g(0.053, 0.074^2, 186),
       NA,NA),
     c("Borman","2012","No","Minority subgroup-Female","MCA reading score","Yes",
-      dv2g(0.019, 0.039^2, 651-1),
+      dv2g(0.019, 0.039^2, 651),
       NA,NA),
     c("Borman","2012","No","Minority subgroup-Female","MCA math score","Yes",
-      dv2g(0.104, 0.035^2, 654-1),
+      dv2g(0.104, 0.035^2, 654),
       NA,NA),
     # Majority subgroup
     c("Borman","2012","No","Majority subgroup-Asian","MCA reading score","Yes",
-      dv2g(-0.066, 0.050^2, 341-1),
+      dv2g(-0.066, 0.050^2, 341),
       NA,NA),
     c("Borman","2012","No","Majority subgroup-Asian","MCA math score","Yes",
-      dv2g(-0.075, 0.046^2, 342-1),
+      dv2g(-0.075, 0.046^2, 342),
       NA,NA),
     c("Borman","2012","No","Majority subgroup-Male","MCA reading score","Yes",
-      dv2g(-0.022, 0.042^2, 667-1),
+      dv2g(-0.022, 0.042^2, 667),
       NA,NA),
     c("Borman","2012","No","Majority subgroup-Male","MCA math score","Yes",
-      dv2g(-0.005, 0.039^2, 668-1),
+      dv2g(-0.005, 0.039^2, 668),
       NA,NA)
     
   )
@@ -515,19 +511,11 @@ Goyer2017 <- function(goyer){
       extract_g(esc_mean_se(goyer[5,12], goyer[5,13], goyer[5,14], goyer[5,6], goyer[5,7], goyer[5,8], es.type = "g"))[1], NA
     ),
     
-    #c("Goyer (Study 1)","2017","No","Majority subgroup-White","Enrollment in AVID","No",
-    #  extract_g(esc_mean_se(goyer[5,9], goyer[5,10], goyer[5,11], goyer[5,12], goyer[5,13], goyer[5,14], es.type = "g")),
-    #  NA,NA  
-    #),
     c("Goyer (Study 1)","2017","No","Minority subgroup-Hispanic","Enrollment in AVID","Yes",
       extract_g(esc_mean_se(goyer[6,3], goyer[6,4], goyer[6,5], goyer[6,6], goyer[6,7], goyer[6,8], es.type = "g")),
       NA,extract_g(esc_mean_se(goyer[6,12], goyer[6,13], goyer[6,14], goyer[6,6], goyer[6,7], goyer[6,8], es.type = "g"))[1]
     ),
     
-    #c("Goyer (Study 1)","2017","No","Majority subgroup-White","Enrollment in AVID","Yes",
-    #  extract_g(esc_mean_se(goyer[6,9], goyer[6,10], goyer[6,11], goyer[6,12], goyer[6,13], goyer[6,14], es.type = "g")),
-    #  NA,NA  
-    #), 
     
     # enrollment in main high school
     
@@ -1173,6 +1161,7 @@ Miyake2010 <- function(){
         c("Miyake","2010","No","Minority subgroup-Female","Biology final exam score","Yes",
           extract_g(esc_mean_sd(68.5, 14.9, 69, 60.2, 14.7, 47, es.type = "g")),
           NA,NA),
+        
         c("Miyake","2010","No","Majority subgroup-Male","Biology final course grade","Yes",
           extract_g(esc_mean_sd(73.7, 9.7, 178, 75.7, 9.7, 105, es.type = "g")),
           NA,extract_g(esc_mean_sd(75.7, 9.7, 105, 68.2, 11.1, 47, es.type = "g"))[1]),

@@ -64,7 +64,8 @@ dat <- dat %>%
   mutate_at(vars(es:control_residual_gap), as.numeric) %>% 
   mutate(
     study = paste(author, year, sep = ", "),
-    se = sqrt(v)) %>%
+    se = sqrt(v),
+    control_both_gap = if_else(is.na(control_residual_gap) == F, control_residual_gap, control_raw_gap)) %>%
   group_by(study) %>% 
   mutate(id = cur_group_id()) %>%
   ungroup() %>%
@@ -105,8 +106,8 @@ dat <- dat %>%
   #  adapted_z = if_else(adapted == "Yes", 1, 0),
   #  adapted_z = binary_scale(1 - adapted_z)) %>%
   select(id, cluster, study, author, year, type_s, group, group_s, 
-         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI, control_raw_gap, control_residual_gap) %>% 
-  mutate_at(vars(es:control_residual_gap), round, digits = 4) %>%
+         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI, control_raw_gap, control_residual_gap, control_both_gap) %>% 
+  mutate_at(vars(es:control_both_gap), round, digits = 4) %>%
   arrange(id)
 
 return(dat)

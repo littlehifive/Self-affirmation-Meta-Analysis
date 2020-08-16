@@ -7,7 +7,7 @@ extract_g <- function(x){
 
 # Reported effect size and variance to Hedges' g
 dv2g <- function(d,v_d,n){
-  J= 1- 3/ (4*n-9)
+  J= 1- 3/ (4*(n-1)-9)
   g = J*d
   v_g = J^2 * v_d
   lowerCI = g - 1.96 * sqrt(v_g)

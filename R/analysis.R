@@ -206,7 +206,10 @@ print_study_level_funnel <- function(model){
                "Lokhande, 2019",
                "Kinias (Study 2), 2016",
                "Woolf, 2009",
-               "Borman, 2016")
+               "Borman, 2016",
+               "Bratter, 2016",
+               "Goyer (Study 2), 2017",
+               "Sherman (Study 1), 2013")
                
   text(model$TE[!model$studlab %in% studlist],
        model$seTE[!model$studlab %in% studlist]+0.005,
@@ -220,7 +223,7 @@ print_study_level_funnel <- function(model){
        model$seTE[model$studlab %in% c("Tibbetts (Study 1a), 2016")],
        model$studlab[model$studlab %in% c("Tibbetts (Study 1a), 2016")],cex=.8)
 
-  text(model$TE[model$studlab %in% c("Schwalbe, 2018")]+0.055,
+  text(model$TE[model$studlab %in% c("Schwalbe, 2018")]+0.052,
        model$seTE[model$studlab %in% c("Schwalbe, 2018")],
        model$studlab[model$studlab %in% c("Schwalbe, 2018")],cex=.8)
 
@@ -240,7 +243,7 @@ print_study_level_funnel <- function(model){
        model$seTE[model$studlab %in% c("Borman, 2012")]-0.006,
        model$studlab[model$studlab %in% c("Borman, 2012")],cex=.8)
 
-  text(model$TE[model$studlab %in% c("Baker, 2019")]+0.042,
+  text(model$TE[model$studlab %in% c("Baker, 2019")]-0.042,
        model$seTE[model$studlab %in% c("Baker, 2019")],
        model$studlab[model$studlab %in% c("Baker, 2019")],cex=.8)
 
@@ -271,6 +274,18 @@ print_study_level_funnel <- function(model){
   text(model$TE[model$studlab %in% c("Borman, 2016")]+0.05,
        model$seTE[model$studlab %in% c("Borman, 2016")],
        model$studlab[model$studlab %in% c("Borman, 2016")],cex=.8)
+  
+  text(model$TE[model$studlab %in% c("Bratter, 2016")]+0.05,
+       model$seTE[model$studlab %in% c("Bratter, 2016")],
+       model$studlab[model$studlab %in% c("Bratter, 2016")],cex=.8)
+  
+  text(model$TE[model$studlab %in% c("Goyer (Study 2), 2017")]+0.068,
+       model$seTE[model$studlab %in% c("Goyer (Study 2), 2017")],
+       model$studlab[model$studlab %in% c("Goyer (Study 2), 2017")],cex=.8)
+  
+  text(model$TE[model$studlab %in% c("Sherman (Study 1), 2013")]-0.075,
+       model$seTE[model$studlab %in% c("Sherman (Study 1), 2013")],
+       model$studlab[model$studlab %in% c("Sherman (Study 1), 2013")],cex=.8)
   
   legend(0.6, 0, c("p > 0.1", "0.05 < p < 0.1","0.01 < p < 0.05", "p < 0.01"),bty = "n",
          fill=c("white","gray50","gray75", "gray90"))
