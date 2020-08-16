@@ -34,7 +34,6 @@ selective_reporting,"high,low,unclear",categorical,study,~ 1|cluster/study,~sele
 other_sources_of_bias,"high,low,unclear",categorical,study,~ 1|cluster/study,~other_sources_of_bias-1,no
 group_s,"Disability,First generation,FSM status,Gender,Mixed,None,Race",categorical,effectsize,~ 1|cluster,~group_s-1,yes
 adapted,"yes,no",categorical,effectsize,~ 1|cluster,~adapted,yes
-adjusted,"yes,no",categorical,effectsize,~ 1|cluster,~adjusted,yes
 control_raw_gap,NA,continuous,effectsize,~ 1|cluster,~control_raw_gap,yes
 control_residual_gap,NA,continuous,effectsize,~ 1|cluster,~control_residual_gap,yes
 control_both_gap,NA,continuous,effectsize,~ 1|cluster,~control_both_gap,yes
