@@ -22,7 +22,7 @@ the_plan <- drake_plan(
 # 2. Calculation and cleaning -----------------------------------------------------------
 
   # derive the cleaned master dataset
-  dat.s = clean_master(kost, purdie, turetsky),
+  dat.s = clean_master(kost, purdie, turetsky, goyer, serragarcia),
   
   dat.mod = clean_moderator(mod),
 

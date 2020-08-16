@@ -272,7 +272,7 @@ pcurve <- function(x, effect.estimation = FALSE, N, dmin = 0, dmax = 1){
   # Flat null
   binom.r=1-pbinom(q=prop25.obs*ksig- 1, prob=.5, size=ksig)
   # Power of 33% null
-  binom.33=ppoibin(kk=prop25.obs*ksig,pp=prop25[p<.05])
+  binom.33=poibin::ppoibin(kk=prop25.obs*ksig,pp=prop25[p<.05])
   # Save binomial results
   binomial=c(mean(prop25.sig), prop25.obs, binom.r, binom.33)
   

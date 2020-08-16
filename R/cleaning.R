@@ -1,6 +1,6 @@
 # cleaning script
 
-clean_master <- function(kost, purdie, turetsky, goyer){
+clean_master <- function(kost, purdie, turetsky, goyer, serragarcia){
    dat <- rbind(
      Baker2019(),
      Bancroft2017(),
@@ -42,7 +42,7 @@ clean_master <- function(kost, purdie, turetsky, goyer){
      Rapa2016(),
      Rozek2015(),
      Schwalbe2018(),
-     SerraGarciaUR(),
+     SerraGarciaUR(serragarcia),
      Sherman2013(),
      Shnabel2013(),
      Silverman2014(),
@@ -60,8 +60,8 @@ clean_master <- function(kost, purdie, turetsky, goyer){
 dat <- dat %>% 
   as.data.frame() %>% 
   `colnames<-`( c("author", "year", "adapted", "type",  "outcome", 
-                  "adjusted", "es", "v", "lowerCI", "upperCI")) %>% 
-  mutate_at(vars(es:upperCI), as.numeric) %>% 
+                  "adjusted", "es", "v", "lowerCI", "upperCI", "control_raw_gap", "control_residual_gap")) %>% 
+  mutate_at(vars(es:control_residual_gap), as.numeric) %>% 
   mutate(
     study = paste(author, year, sep = ", "),
     se = sqrt(v)) %>%
@@ -105,8 +105,8 @@ dat <- dat %>%
   #  adapted_z = if_else(adapted == "Yes", 1, 0),
   #  adapted_z = binary_scale(1 - adapted_z)) %>%
   select(id, cluster, study, author, year, type_s, group, group_s, 
-         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI) %>% 
-  mutate_at(vars(es:upperCI), round, digits = 4) %>%
+         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI, control_raw_gap, control_residual_gap) %>% 
+  mutate_at(vars(es:control_residual_gap), round, digits = 4) %>%
   arrange(id)
 
 return(dat)

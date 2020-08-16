@@ -490,21 +490,21 @@ Goyer2017 <- function(goyer){
     # enrollment in remedial clinics (reverse code)
 
     c("Goyer (Study 1)","2017","No","Minority subgroup-Hispanic","Non-enrollment in remedial clinics","No",
-      -extract_g(esc_mean_se(goyer[3,3], goyer[3,4], goyer[3,5], goyer[3,6], goyer[3,7], goyer[3,8], es.type = "g")),
-      -extract_g(esc_mean_se(goyer[3,12], goyer[3,13], goyer[3,14], goyer[3,6], goyer[3,7], goyer[3,8], es.type = "g"))[1], NA
+      extract_g(esc_mean_se(goyer[3,6], goyer[3,7], goyer[3,8], goyer[3,3], goyer[3,4], goyer[3,5], es.type = "g")),
+      extract_g(esc_mean_se(goyer[3,6], goyer[3,7], goyer[3,8], goyer[3,12], goyer[3,13], goyer[3,14], es.type = "g"))[1], NA
     ),
     
     c("Goyer (Study 1)","2017","No","Majority subgroup-White","Non-enrollment in remedial clinics","No",
-      -extract_g(esc_mean_se(goyer[3,9], goyer[3,10], goyer[3,11], goyer[3,12], goyer[3,13], goyer[3,14], es.type = "g")),
+      extract_g(esc_mean_se(goyer[3,12], goyer[3,13], goyer[3,14],goyer[3,9], goyer[3,10], goyer[3,11],  es.type = "g")),
       NA,NA  
     ),
     c("Goyer (Study 1)","2017","No","Minority subgroup-Hispanic","Non-enrollment in remedial clinics","Yes",
-      -extract_g(esc_mean_se(goyer[4,3], goyer[4,4], goyer[4,5], goyer[4,6], goyer[4,7], goyer[4,8], es.type = "g")),
-      NA,-extract_g(esc_mean_se(goyer[4,12], goyer[4,13], goyer[4,14], goyer[4,6], goyer[4,7], goyer[4,8], es.type = "g"))[1]
+      extract_g(esc_mean_se(goyer[4,6], goyer[4,7], goyer[4,8], goyer[4,3], goyer[4,4], goyer[4,5],  es.type = "g")),
+      NA,extract_g(esc_mean_se(goyer[4,6], goyer[4,7], goyer[4,8],goyer[4,12], goyer[4,13], goyer[4,14],  es.type = "g"))[1]
     ),
     
     c("Goyer (Study 1)","2017","No","Majority subgroup-White","Non-enrollment in remedial clinics","Yes",
-      -extract_g(esc_mean_se(goyer[4,9], goyer[4,10], goyer[4,11], goyer[4,12], goyer[4,13], goyer[4,14], es.type = "g")),
+      extract_g(esc_mean_se(goyer[4,12], goyer[4,13], goyer[4,14],goyer[4,9], goyer[4,10], goyer[4,11],  es.type = "g")),
       NA,NA  
     ), 
     
@@ -1630,7 +1630,8 @@ Tibbetts2018 <- function(){
       extract_g(esc_mean_sd(2.18, 0.74, 438/4, 1.25, 1.24, 438/4, es.type = "g")),
       extract_g(esc_mean_sd(2.54, 1.15, 438/4, 1.25, 1.24, 438/4, es.type = "g"))[1],NA),
     c("Tibbetts (Study 1b)","2018","No","Majority subgroup-Continuting generation","Course Grade","No",
-      extract_g(esc_mean_sd(2.34, 1.1, 438/4, 2.54, 1.15, 438/4, es.type = "g")))
+      extract_g(esc_mean_sd(2.34, 1.1, 438/4, 2.54, 1.15, 438/4, es.type = "g")),
+      NA,NA)
     
   )
   
@@ -1709,7 +1710,7 @@ Woolf2009 <- function(){
 
     c("Woolf","2009","No","Minority subgroup-URM","OSCE score","Yes",
       extract_g(esc_mean_sd(0.001, 1, 95, -0.286, 0.97, 77, es.type = "g")),
-      NA,extract_g(esc_mean_sd(-0.002, 0.96, 84, -0.286, 0.97, 77, es.type = "g"))),
+      NA,extract_g(esc_mean_sd(-0.002, 0.96, 84, -0.286, 0.97, 77, es.type = "g"))[1]),
     c("Woolf","2009","No","Majority subgroup-White","OSCE score","Yes",
       extract_g(esc_mean_sd(0.271, 0.96, 79, -0.002, 0.96, 84, es.type = "g")),
       NA,NA)
