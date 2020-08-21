@@ -197,11 +197,11 @@ Borman2018 <- function(){
   rbind(
     
   c("Borman","2018","No","Interaction-URM","9th GPA","Yes",
-    extract_g(esc_B(0.177+0.036,1.02,920/2,920/2, es.type = "g")),
+    extract_g(esc_B(0.177+0.036,0.177/0.174,920/2,920/2, es.type = "g")),
     (3.3137931034482757-2.232758620689655)/(0.177/0.174), # or grade 6 achievement gap = 0.66/0.65
     0.331/1.02), # webplotdigitizer
   c("Borman","2018","No","Interaction-White and Asian","9th GPA","Yes",
-    extract_g(esc_B(0.036,1.02,920/2,920/2, es.type = "g")),
+    extract_g(esc_B(0.036,0.177/0.174,920/2,920/2, es.type = "g")),
     NA,NA)
   #c("Borman","2018","No","Minority subgroup-URM","7th-9th GPA","Yes",
   #  extract_g(esc_B(0.206,1.02,324/2,324/2, es.type = "g"))) # duplicative analysis
@@ -216,7 +216,7 @@ Bowen2013 <- function(){
   
   rbind(
     c("Bowen","2013","No","Minority subgroup-Black","Social Studies grades","Yes",
-      d2g(0.57 / (1- 3/ (4*(58+74)-1)), 58,74),
+      d2g(0.57 / (1- 3/ (4*(58+74)-1)), 58,74), # g back to d then to g just to use the pre-built function to calculate variance
       NA,NA) # majority is black
   )
 }
@@ -390,13 +390,14 @@ deJong2016 <- function(){
     extract_g(esc_mean_sd(6.55, 1.12, 144, 6.63, 1.01, 133, es.type = "g")),
     extract_g(esc_mean_sd(7.07, 1.10, 31, 6.63, 1.01, 133, es.type = "g"))[1], NA),
   
-  c("de Jong (Study 1)","2016","No","Majority subgroup-URM","Dutch","No",
+  # Native Dutch (labeled as White just for coding purposes)
+  c("de Jong (Study 1)","2016","No","Majority subgroup-White","Dutch","No",
     extract_g(esc_mean_sd(6.94, 0.95, 28, 7.09, 0.93, 31, es.type = "g")),
     NA,NA),
-  c("de Jong (Study 1)","2016","No","Majority subgroup-URM","English","No",
+  c("de Jong (Study 1)","2016","No","Majority subgroup-White","English","No",
     extract_g(esc_mean_sd(7, 1.22, 28, 6.9, 1.29, 31, es.type = "g")),
     NA,NA),
-  c("de Jong (Study 1)","2016","No","Majority subgroup-URM","Mathematics","No",
+  c("de Jong (Study 1)","2016","No","Majority subgroup-White","Mathematics","No",
     extract_g(esc_mean_sd(6.93, 1.16, 28, 7.07, 1.1, 31, es.type = "g")),
     NA,NA),
   
@@ -809,7 +810,7 @@ Hayes2019 <- function(){
     
     # Study 2: # only 1st year student in the sample
     c("Hayes (Study 2)","2019","No","Minority subgroup-First generation","GPA","No",
-      extract_g(esc_mean_se(2.86,0.1,39,2.93,0.1,39,es.type = "g")),
+      extract_g(esc_mean_se(2.86,0.1,187/2,2.93,0.1,187/2,es.type = "g")),
       NA,NA)
   )
   
@@ -1608,6 +1609,7 @@ Tibbetts2018 <- function(){
   
   rbind(
     
+    # Combined VA condition vs. Control condition 
     c("Tibbetts (Study 1b)","2018","Yes","Minority subgroup-First generation","Course Grade","No",
       extract_g(esc_mean_sd(2.52, 1, 438/2, 2.33, 1.24, 438/4, es.type = "g")),
       extract_g(esc_mean_sd(2.63, 1.14, 438/4, 2.33, 1.24, 438/4, es.type = "g"))[1],NA),
@@ -1615,6 +1617,7 @@ Tibbetts2018 <- function(){
       extract_g(esc_mean_sd(2.47, 1.21, 438/2, 2.63, 1.14, 438/4, es.type = "g")),
       NA,NA),
     
+    # Independent VA condition vs. Control condition 
     c("Tibbetts (Study 1b)","2018","No","Minority subgroup-First generation","Course Grade","No",
       extract_g(esc_mean_sd(2.18, 0.74, 438/4, 1.25, 1.24, 438/4, es.type = "g")),
       extract_g(esc_mean_sd(2.54, 1.15, 438/4, 1.25, 1.24, 438/4, es.type = "g"))[1],NA),

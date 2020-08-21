@@ -26,8 +26,8 @@
 7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Reading test","Yes",0,0.0043,0.0657,-0.1287,0.1287,0.9232,0.0971,0.0971
 7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Math test","Yes",0.0799,0.0043,0.0657,-0.0488,0.2087,0.9265,0.1484,0.1484
 7,"MWAP","Borman, 2016","Borman","2016","Interaction","URM","Race","No","Spring Language Usage test","Yes",0.0999,0.0043,0.0657,-0.0289,0.2287,NA,0.0842,0.0842
-8,"MWAP","Borman, 2018","Borman","2018","Interaction","URM","Race","No","9th GPA","Yes",0.2097,0.0044,0.0661,0.0801,0.3393,1.0627,0.3245,0.3245
-8,"MWAP","Borman, 2018","Borman","2018","Interaction","White and Asian","Race","No","9th GPA","Yes",0.0353,0.0043,0.0659,-0.094,0.1645,NA,NA,NA
+8,"MWAP","Borman, 2018","Borman","2018","Interaction","URM","Race","No","9th GPA","Yes",0.2103,0.0044,0.0661,0.0807,0.3399,1.0627,0.3245,0.3245
+8,"MWAP","Borman, 2018","Borman","2018","Interaction","White and Asian","Race","No","9th GPA","Yes",0.0353,0.0043,0.0659,-0.0939,0.1646,NA,NA,NA
 9,"Bowen, 2013","Bowen, 2013","Bowen","2013","Minority subgroup","Black","Race","No","Social Studies grades","Yes",0.57,0.0316,0.1778,0.2214,0.9185,NA,NA,NA
 10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Black","Race","No","Semester English grades","No",0.2044,0.0178,0.1335,-0.0571,0.466,NA,0.5615,0.5615
 10,"Bratter et al.","Bratter, 2016","Bratter","2016","Minority subgroup","Black","Race","No","STAAR Reading","No",-0.0931,0.0177,0.1332,-0.3541,0.1679,NA,0.3333,0.3333
@@ -57,9 +57,9 @@
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Dutch","No",-0.0992,0.0145,0.1203,-0.335,0.1367,0.3867,NA,0.3867
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","English","No",0.0086,0.0145,0.1203,-0.2272,0.2443,-0.0388,NA,-0.0388
 17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Minority subgroup","URM","Race","No","Mathematics","No",-0.0747,0.0145,0.1203,-0.3105,0.1611,0.4263,NA,0.4263
-17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","Dutch","No",-0.1575,0.0682,0.2611,-0.6693,0.3543,NA,NA,NA
-17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","English","No",0.0785,0.068,0.2608,-0.4327,0.5897,NA,NA,NA
-17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","URM","Race","No","Mathematics","No",-0.1224,0.0681,0.261,-0.6339,0.3891,NA,NA,NA
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","White","Race","No","Dutch","No",-0.1575,0.0682,0.2611,-0.6693,0.3543,NA,NA,NA
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","White","Race","No","English","No",0.0785,0.068,0.2608,-0.4327,0.5897,NA,NA,NA
+17,"de Jong (Study 1), 2016","de Jong (Study 1), 2016","de Jong (Study 1)","2016","Majority subgroup","White","Race","No","Mathematics","No",-0.1224,0.0681,0.261,-0.6339,0.3891,NA,NA,NA
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Minority subgroup","URM","Race","Yes","Cito scores","No",-0.0191,0.0233,0.1525,-0.3181,0.2799,0.0962,NA,0.0962
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Minority subgroup","URM","Race","No","Cito scores","No",-0.0572,0.0226,0.1502,-0.3515,0.2371,0.0962,NA,0.0962
 18,"de Jong (Study 2), 2016","de Jong (Study 2), 2016","de Jong (Study 2)","2016","Majority subgroup","White","Race","Yes","Cito scores","No",-0.0701,0.5003,0.7074,-1.4565,1.3163,NA,NA,NA
@@ -128,7 +128,7 @@
 28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","First generation","First generation","No","Biology course grade","Yes",-0.1482,0.0077,0.0878,-0.3203,0.0239,NA,NA,NA
 28,"Harackiewicz, 2016","Harackiewicz, 2016","Harackiewicz","2016","Interaction","Continuing generation","First generation","No","Biology course grade","Yes",0.0986,0.0077,0.0878,-0.0734,0.2707,NA,NA,NA
 29,"Hayes (Study 1), 2019","Hayes (Study 1), 2019","Hayes (Study 1)","2019","Minority subgroup","Hispanic","Race","No","Semester Grade","No",-0.2961,0.0523,0.2287,-0.7444,0.1521,NA,NA,NA
-30,"Hayes (Study 2), 2019","Hayes (Study 2), 2019","Hayes (Study 2)","2019","Minority subgroup","First generation","First generation","No","GPA","No",-0.1124,0.0514,0.2266,-0.5566,0.3318,NA,NA,NA
+30,"Hayes (Study 2), 2019","Hayes (Study 2), 2019","Hayes (Study 2)","2019","Minority subgroup","First generation","First generation","No","GPA","No",-0.0725,0.0214,0.1463,-0.3592,0.2143,NA,NA,NA
 31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","URM and Female","Mixed","No","Exam grades","Yes",0.2601,0.0021,0.0457,0.1705,0.3496,NA,0.5756,0.5756
 31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","White and Male","Mixed","No","Exam grades","Yes",0.1934,0.0021,0.0456,0.1041,0.2828,NA,NA,NA
 31,"Jordt, 2017","Jordt, 2017","Jordt","2017","Interaction","URM","Race","No","Exam grades","No",0.5161,0.0021,0.0462,0.4254,0.6067,1.2752,NA,1.2752
