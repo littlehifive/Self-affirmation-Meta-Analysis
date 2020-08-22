@@ -209,7 +209,8 @@ print_study_level_funnel <- function(model){
                "Borman, 2016",
                "Bratter, 2016",
                "Goyer (Study 2), 2017",
-               "Sherman (Study 1), 2013")
+               "Sherman (Study 1), 2013",
+               "Hayes (Study 2), 2019")
                
   text(model$TE[!model$studlab %in% studlist],
        model$seTE[!model$studlab %in% studlist]+0.005,
@@ -287,6 +288,10 @@ print_study_level_funnel <- function(model){
        model$seTE[model$studlab %in% c("Sherman (Study 1), 2013")],
        model$studlab[model$studlab %in% c("Sherman (Study 1), 2013")],cex=.8)
   
+  text(model$TE[model$studlab %in% c("Hayes (Study 2), 2019")],
+       model$seTE[model$studlab %in% c("Hayes (Study 2), 2019")]-0.005,
+       model$studlab[model$studlab %in% c("Hayes (Study 2), 2019")],cex=.8)
+  
   legend(0.6, 0, c("p > 0.1", "0.05 < p < 0.1","0.01 < p < 0.05", "p < 0.01"),bty = "n",
          fill=c("white","gray50","gray75", "gray90"))
 }
@@ -310,7 +315,8 @@ print_cluster_level_funnel <- function(model){
                "Bayly, 2017",
                "Kim, 2019",
                "Harackiewicz et al.",
-               "Protzko, 2016"
+               "Miyake et al.",
+               "Hayes (Study 2), 2019"
                )
   
   text(model$TE[!model$studlab %in% studlist],
@@ -345,10 +351,15 @@ print_cluster_level_funnel <- function(model){
        model$seTE[model$studlab %in% c("Harackiewicz et al.")]-0.006,
        model$studlab[model$studlab %in% c("Harackiewicz et al.")],cex=.8)
   
-  text(model$TE[model$studlab %in% c("Protzko, 2016")]+0.05,
-       model$seTE[model$studlab %in% c("Protzko, 2016")],
-       model$studlab[model$studlab %in% c("Protzko, 2016")],cex=.8)
+  text(model$TE[model$studlab %in% c("Miyake et al.")]-0.045,
+       model$seTE[model$studlab %in% c("Miyake et al.")],
+       model$studlab[model$studlab %in% c("Miyake et al.")],cex=.8)
   
+  text(model$TE[model$studlab %in% c("Hayes (Study 2), 2019")]+0.065,
+       model$seTE[model$studlab %in% c("Hayes (Study 2), 2019")],
+       model$studlab[model$studlab %in% c("Hayes (Study 2), 2019")],cex=.8)
+  
+
   legend(0.6, 0, c("p > 0.1", "0.05 < p < 0.1","0.01 < p < 0.05", "p < 0.01"),bty = "n",
          fill=c("white","gray50","gray75", "gray90"))
 

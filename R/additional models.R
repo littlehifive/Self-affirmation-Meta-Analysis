@@ -52,10 +52,13 @@ model.mods
 
 # exploratory analysis
 dat$fidelity_implementation <- rowSums(dat[,c("timing_z","ordinary_z", 
-                                                      "duration_rough_month_z", "density_freelunch_z",
-                                                      "delivered_in_classroom_z", "control_type_z")], na.rm = T)
+                                              "duration_rough_month_z", "adapted_z",
+                                              "delivered_in_classroom_z", "control_type_z")], na.rm = T)
+dat$fidelity_implementation_z <- as.numeric(scale(dat$fidelity_implementation))
 
-dat$fidelity_contextual <- dat$density_freelunch_z
+dat$fidelity_contextual <- rowSums(dat[,c("density_freelunch_z", "control_residual_gap_z")], na.rm = T)
+dat$fidelity_contextual_z <- as.numeric(scale(dat$fidelity_contextual))
+
 
 dat.s <- dat %>%
   filter(type_s %in% c("Minority subgroup", "Interaction"),
@@ -68,7 +71,7 @@ implementation <-rma.mv(es,
                         tdist = TRUE, 
                         data = dat.s,
                         method = "REML",
-                        mods = ~  fidelity_implementation)
+                        mods = ~  fidelity_implementation_z)
 summary(implementation, digits = 5)
 
 contextual <-rma.mv(es, 
@@ -77,17 +80,17 @@ contextual <-rma.mv(es,
                         tdist = TRUE, 
                         data = dat.s,
                         method = "REML",
-                        mods = ~  fidelity_contextual)
+                        mods = ~  fidelity_contextual_z)
 summary(contextual, digits = 5)
 
 
-dat.s$fidelity_implementation_p1sd <- dat.s$fidelity_implementation + sd(dat.s$fidelity_implementation,na.rm = T)
+dat.s$fidelity_implementation_p1sd <- dat.s$fidelity_implementation_z + sd(dat.s$fidelity_implementation_z,na.rm = T)
 
-dat.s$fidelity_implementation_m1sd <- dat.s$fidelity_implementation - sd(dat.s$fidelity_implementation,na.rm = T)
+dat.s$fidelity_implementation_m1sd <- dat.s$fidelity_implementation_z - sd(dat.s$fidelity_implementation_z,na.rm = T)
 
-dat.s$fidelity_contextual_p1sd <- dat.s$fidelity_contextual + sd(dat.s$fidelity_contextual,na.rm = T)
+dat.s$fidelity_contextual_p1sd <- dat.s$fidelity_contextual_z + sd(dat.s$fidelity_contextual_z,na.rm = T)
 
-dat.s$fidelity_contextual_m1sd <- dat.s$fidelity_contextual - sd(dat.s$fidelity_contextual,na.rm = T)
+dat.s$fidelity_contextual_m1sd <- dat.s$fidelity_contextual_z - sd(dat.s$fidelity_contextual_z,na.rm = T)
 
 
 model.mods<-rma.mv(es, 
@@ -96,7 +99,7 @@ model.mods<-rma.mv(es,
                    tdist = TRUE, 
                    data = dat.s,
                    method = "REML",
-                   mods = ~  fidelity_implementation_p1sd)
+                   mods = ~  fidelity_implementation_p1sd + fidelity_contextual_z)
 summary(model.mods, digits = 5)
 
 model.mods<-rma.mv(es, 
@@ -105,7 +108,7 @@ model.mods<-rma.mv(es,
                    tdist = TRUE, 
                    data = dat.s,
                    method = "REML",
-                   mods = ~  fidelity_implementation_m1sd)
+                   mods = ~  fidelity_implementation_m1sd + fidelity_contextual_z)
 summary(model.mods, digits = 5)
 
 model.mods<-rma.mv(es, 
@@ -114,7 +117,7 @@ model.mods<-rma.mv(es,
                    tdist = TRUE, 
                    data = dat.s,
                    method = "REML",
-                   mods = ~  fidelity_contextual_p1sd)
+                   mods = ~  fidelity_contextual_p1sd + fidelity_implementation_z)
 summary(model.mods, digits = 5)
 
 model.mods<-rma.mv(es, 
@@ -123,7 +126,7 @@ model.mods<-rma.mv(es,
                    tdist = TRUE, 
                    data = dat.s,
                    method = "REML",
-                   mods = ~  fidelity_contextual_m1sd)
+                   mods = ~  fidelity_contextual_m1sd + fidelity_implementation_z)
 summary(model.mods, digits = 5)
 
 
