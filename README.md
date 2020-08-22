@@ -8,7 +8,7 @@ Run `r_make()` to run the workflow in a fresh new R process, and run `r_vis_drak
 ### 1. Imports
 - `extraction_basic_revised.csv` is the extraction sheet for all study-level information.
 - `moderator_coding.csv` helps with moderator analysis because moderators might be on different levels.
-- `Turetsky under review.csv`, `Purdie-Greenaway.sav`, and `Kost-smith.dta` are the three original datasets that we used to calculate effect sizes for these three studies.
+- `Turetsky under review.csv`, `Purdie-Greenaway.sav`, `Kost-smith.dta`, `Serra-Garcia Study 2.dta` are the four original datasets that we used to calculate effect sizes for these three studies. `Goyer.xlsx` contains the numbers extracted from plots using `WebPlotDigitizer`.
 
 ### 2. R scripts
 - `packages.R` contains all necessary R packages.
