@@ -1,5 +1,6 @@
-# meta-regression
+# additional models
 
+# check if studies with gender as the threatening identity have large effect size
 model.mods<-rma.mv(es, 
                    v, 
                    random = list( 
@@ -17,17 +18,18 @@ model.mods<-rma.mv(es,
                    method = "REML")
 model.mods
 
-
+# percentage of free lunch status only for non-college students
 model.mods<-rma.mv(es, 
                    v, 
                    random = list( 
                      ~ 1 | cluster/study), 
                    tdist = TRUE, 
-                   data = data_all_outcomes_minority,
+                   data = data_all_outcomes_minority[data_all_outcomes_minority$setting_type != "tertiary",],
                    method = "REML",
-                   mods = ~ adapted - 1)
+                   mods = ~ density_freelunch)
 model.mods
 
+# duration controlling for number
 model.mods<-rma.mv(es, 
                    v, 
                    random = list( 
@@ -38,7 +40,73 @@ model.mods<-rma.mv(es,
                    mods = ~ duration_rough_month + number_rough)
 model.mods
 
+# interaction between resources and gap size
+data_all_outcomes_minority$resources <- 1-data_all_outcomes_minority$density_freelunch
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority[data_all_outcomes_minority$setting_type != "tertiary",],
+                   method = "REML",
+                   mods = ~ control_residual_gap * resources)
+model.mods
 
+data_all_outcomes_minority$resources_z <- as.numeric(scale(data_all_outcomes_minority$resources))
+data_all_outcomes_minority$control_residual_gap_z <- as.numeric(scale(data_all_outcomes_minority$control_residual_gap))
+
+data_all_outcomes_minority$resources_p1sd <- data_all_outcomes_minority$resources_z + sd(data_all_outcomes_minority$resources_z, na.rm = T)
+data_all_outcomes_minority$resources_m1sd <- data_all_outcomes_minority$resources_z - sd(data_all_outcomes_minority$resources_z, na.rm = T)
+data_all_outcomes_minority$control_residual_gap_p1sd <- data_all_outcomes_minority$control_residual_gap_z + sd(data_all_outcomes_minority$control_residual_gap_z, na.rm = T)
+data_all_outcomes_minority$control_residual_gap_m1sd <- data_all_outcomes_minority$control_residual_gap_z - sd(data_all_outcomes_minority$control_residual_gap_z, na.rm = T)
+
+# simple effect test
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority[data_all_outcomes_minority$setting_type != "tertiary",],
+                   method = "REML",
+                   mods = ~ control_residual_gap_m1sd + resources_m1sd)
+model.mods
+
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority[data_all_outcomes_minority$setting_type != "tertiary",],
+                   method = "REML",
+                   mods = ~ control_residual_gap_p1sd + resources_p1sd)
+model.mods
+
+
+# simple slope plot
+test <- data_all_outcomes_minority %>% select(es, resources, control_residual_gap) %>% na.omit()
+
+x <- test$resources
+test$resources_3group <-
+  case_when(x > mean(x,na.rm = T)+sd(x, na.rm = T) ~ "high (+1SD)",
+            x < mean(x,na.rm = T)+sd(x, na.rm = T) & x > mean(x, na.rm = T)-sd(x, na.rm = T) ~ "average",
+            x < mean(x,na.rm = T)-sd(x, na.rm = T) ~ "low (-1SD)")
+
+test$resources_3group <- factor(test$resources_3group, levels = c("low (-1SD)", "average", "high (+1SD)"))
+
+ggplot(test,aes(x = control_residual_gap, y = es, group = resources_3group, color = resources_3group)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "lm", fill = NA, fullrange = F) + coord_cartesian(ylim = c(-0.5,1))+
+  labs(color = "Percentage ineligible\nfor free/reduced meal/lunch\n(availability of resources)", 
+       x = "\nResidual gap in control group\n(presence of psychological threat)", 
+       y = "Affirmation effect\n") +
+  theme_bw()+
+  theme(    legend.position = c(.95, 0.06),
+            legend.justification = c("right", "bottom"),
+            legend.box.just = "right",
+            legend.margin = margin(6, 6, 6, 6),
+            legend.box.background = element_rect(colour = "black"))
+
+# timing
 data_all_outcomes_minority <- data_all_outcomes_minority %>%
   mutate(before_stress = if_else(timing == "before_stress", 1, 0),
          both = if_else(timing == "both", 1, 0),
@@ -58,22 +126,14 @@ model.mods<-rma.mv(es,
                    mods = ~ early + before_stress)
 model.mods
 
-model.mods<-rma.mv(es, 
-                   v, 
-                   random = list( 
-                     ~ 1 | cluster/study), 
-                   tdist = TRUE, 
-                   data = data_all_outcomes_minority,
-                   method = "REML",
-                   mods = ~ duration_rough_month + ordinary + adapted + timing + delivered_in_classroom + density_freelunch)
-model.mods
+
 
 # exploratory analysis
 dat$fidelity_implementation <- rowSums(dat[,c("ordinary_z", 
                                               "duration_rough_month_z")], na.rm = T)
 dat$fidelity_implementation_z <- as.numeric(scale(dat$fidelity_implementation))
 
-dat$fidelity_contextual <- rowSums(dat[,c("density_freelunch_z", "control_residual_gap_z")], na.rm = T)
+dat$fidelity_contextual <- rowSums(dat[,c("density_freelunch_z", "control_both_gap_z")], na.rm = T)
 dat$fidelity_contextual_z <- as.numeric(scale(dat$fidelity_contextual))
 
 
@@ -165,4 +225,11 @@ model.mods<-rma.mv(es,
            mods = ~  fidelity_implementation_p1sd + fidelity_contextual_p1sd)
 summary(model.mods, digits = 5)
 
+
+# multimodal inference
+multimodel.inference(TE = "es", 
+                     seTE = "se",
+                     data = data_all_outcomes_minority,
+                     predictors = c("density_freelunch", "ordinary", "duration_rough_month","adapted"),
+                     interaction = TRUE)
 

@@ -106,9 +106,9 @@ dat <- dat %>%
    adapted_z = if_else(adapted == "Yes", 1, 0),
    adapted_z = binary_scale(1 - adapted_z),
     # z-scored control_residual_gap for the use of moderator composite
-    control_residual_gap_z = as.numeric(scale(control_residual_gap))) %>%
+    control_both_gap_z = as.numeric(scale(control_both_gap))) %>%
   select(id, cluster, study, author, year, type_s, group, group_s, 
-         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI, control_raw_gap, control_residual_gap, control_both_gap, adapted_z, control_residual_gap_z) %>% 
+         adapted, outcome, adjusted, es, v, se, lowerCI, upperCI, control_raw_gap, control_residual_gap, control_both_gap, adapted_z, control_both_gap_z) %>% 
   mutate_at(vars(es:control_both_gap), round, digits = 4) %>%
   arrange(id)
 
