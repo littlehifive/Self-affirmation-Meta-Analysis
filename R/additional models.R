@@ -93,13 +93,14 @@ test$resources_3group <-
 
 test$resources_3group <- factor(test$resources_3group, levels = c("low (-1SD)", "average", "high (+1SD)"))
 
-ggplot(test,aes(x = control_residual_gap, y = es, group = resources_3group, color = resources_3group)) +
+ggplot(test,aes(x = control_residual_gap, y = es, group = resources_3group, linetype = resources_3group)) +
   geom_point(alpha = 0.2) +
-  geom_smooth(method = "lm", fill = NA, fullrange = F) + coord_cartesian(ylim = c(-0.5,1))+
-  labs(color = "Percentage ineligible\nfor free/reduced meal/lunch\n(availability of resources)", 
+  geom_smooth(method = "lm", fill = NA, fullrange = T, color = "black") + coord_cartesian(ylim = c(-0.5,1))+
+  labs(linetype = "Percentage ineligible\nfor free/reduced meal/lunch\n(availability of resources)", 
        x = "\nResidual gap in control group\n(presence of psychological threat)", 
-       y = "Affirmation effect\n") +
-  theme_bw()+
+       y = "Affirmation effect among\ndisadvantaged students\n") +
+  scale_linetype_manual( values = c("dotted", "dashed", "solid")) +
+  theme_bw() +
   theme(    legend.position = c(.95, 0.06),
             legend.justification = c("right", "bottom"),
             legend.box.just = "right",
