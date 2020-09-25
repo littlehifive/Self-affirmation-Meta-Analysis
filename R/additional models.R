@@ -228,9 +228,10 @@ summary(model.mods, digits = 5)
 
 
 # multimodal inference
-multimodel.inference(TE = "es", 
-                     seTE = "se",
-                     data = data_all_outcomes_minority,
-                     predictors = c("density_freelunch", "ordinary", "duration_rough_month","adapted"),
-                     interaction = TRUE)
+# library(dmetar)
+#multimodel.inference(TE = "es", 
+#                     seTE = "se",
+#                     data = data_all_outcomes_minority,
+#                     predictors = c("density_freelunch", "ordinary", "duration_rough_month","adapted"),
+#                     interaction = TRUE)
 
