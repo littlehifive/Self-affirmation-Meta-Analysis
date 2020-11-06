@@ -1,5 +1,41 @@
 # additional models
 
+# as per editor's request, create percentage of "threatened students" as a moderator
+# to match the targeted threatening status in the study
+
+#purdie.s <- purdie[is.na(purdie$Condition) == F,] # 74 in affirmation & control
+#purdie.s$Condition <- ifelse(purdie.s$Condition == 1, "Affirm", "Control")
+#prop.table(table(purdie.s$Race, purdie.s$Gender))
+
+# prop.table(table(turetsky$Race, turetsky$Gender))
+
+data_all_outcomes_minority <- data_all_outcomes_minority %>%
+  mutate(density_dis = case_when(
+    identity_type == "first-generation" ~ density_firstgen,
+    identity_type == "gender" ~ density_female,
+    identity_type == "race" ~ density_urm,
+    identity_type == "FSM" ~ density_freelunch,
+    study == "Baker, 2019" ~ density_urm,
+    study == "Borman, 2012" ~ density_urm,
+    study == "Harackiewicz, 2016" ~ density_firstgen,
+    study == "Jordt, 2017" ~ density_urm,
+    study == "Lokhande, 2019" ~ density_urm,
+    study == "Purdie-Greenaway, under review" ~ 0.8918919,
+    study == "Turetsky, under review" ~ 0.9014085,
+    study == "Silverman (Study 2), 2014" ~ 1)) # sample has 100% blind students
+
+
+model.mods<-rma.mv(es, 
+                   v, 
+                   random = list( 
+                     ~ 1 | cluster/study), 
+                   tdist = TRUE, 
+                   data = data_all_outcomes_minority,
+                   method = "REML",
+                   mods = ~ density_dis)
+model.mods # no moderation effect
+
+
 # check if studies with gender as the threatening identity have large effect size
 model.mods<-rma.mv(es, 
                    v, 
