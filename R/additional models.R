@@ -134,7 +134,7 @@ ggplot(test,aes(x = control_residual_gap, y = es, group = resources_3group, line
   geom_smooth(method = "lm", fill = NA, fullrange = T, color = "black") + coord_cartesian(ylim = c(-0.5,1))+
   labs(linetype = "Percentage ineligible\nfor free/reduced meal/lunch\n(availability of resources)", 
        x = "\nResidual gap in control group\n(presence of psychological threat)", 
-       y = "Affirmation effect among\ndisadvantaged students\n") +
+       y = "Affirmation effect among\nidentity-threatened students\n") +
   scale_linetype_manual( values = c("dotted", "dashed", "solid")) +
   theme_bw() +
   theme(    legend.position = c(.95, 0.06),
